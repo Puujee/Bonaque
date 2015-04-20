@@ -96,7 +96,7 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="khU-mE-sD1">
                         <rect key="frame" x="236" y="211" width="40" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                         <state key="normal" image="ic_plus">
@@ -105,19 +105,6 @@
                         </state>
                         <connections>
                             <action selector="addButtonClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bbd-ox-PSl"/>
-                        </connections>
-                    </button>
-                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="AQR-Ty-CBP">
-                        <rect key="frame" x="187" y="211" width="40" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <inset key="insetFor6xAndEarlier" minX="0.0" minY="0.0" maxX="60" maxY="60"/>
-                        <state key="normal" image="ic-remove">
-                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="removeButtonClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0a1-ke-uFa"/>
                         </connections>
                     </button>
                 </subviews>
@@ -129,7 +116,6 @@
                 <outlet property="addButton" destination="khU-mE-sD1" id="NbK-lf-mW7"/>
                 <outlet property="chartView" destination="KeG-Jh-7cT" id="zSt-eL-Y8C"/>
                 <outlet property="currentLitreLabel" destination="qQT-EI-YWB" id="AwO-1l-nJH"/>
-                <outlet property="decreaseButton" destination="AQR-Ty-CBP" id="Tyr-t5-D0O"/>
                 <outlet property="firstContentLabel" destination="V9Z-86-J1k" id="uKs-hW-nWC"/>
                 <outlet property="firstTitleLabel" destination="Uzo-zB-gsY" id="tWd-ny-eZ1"/>
                 <outlet property="litreLabel" destination="TJm-6x-Y4Z" id="9TD-cy-V27"/>
@@ -145,7 +131,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ic-remove" width="52" height="52"/>
         <image name="ic_plus" width="52" height="52"/>
         <image name="man_new" width="300" height="257"/>
     </resources>

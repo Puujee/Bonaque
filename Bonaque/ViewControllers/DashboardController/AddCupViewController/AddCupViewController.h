@@ -8,6 +8,15 @@
 
 #import "AbstractViewController.h"
 
-@interface AddCupViewController : AbstractViewController
+@protocol AddCupViewControllerDelegate <NSObject>
+
+-(void)addCupCompleted:(Cup *)cup;
+
+@end
+
+@interface AddCupViewController : AbstractViewController{
+    id<AddCupViewControllerDelegate> delegate;
+}
+@property (nonatomic, strong) id<AddCupViewControllerDelegate> delegate;
 
 @end

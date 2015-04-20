@@ -23,6 +23,7 @@
 
 @implementation AddCupViewController
 @synthesize itemArray = _itemArray;
+@synthesize delegate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -123,6 +124,7 @@
             [self.view.window addSubview:pickerContainer];
             [pickerContainer showContentView];
         }
+        [delegate addCupCompleted:cup];
         [self.navigationController popViewControllerAnimated:YES];
     }
     else{
@@ -140,6 +142,7 @@
 
 -(void)didFinishAddCup{
     [self checkShowDialog];
+    [delegate addCupCompleted:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

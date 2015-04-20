@@ -20,7 +20,7 @@
 #import "PurposeViewController.h"
 #import "UIView+Toast.h"
 
-@interface DashboardViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, AddWaterViewDelegate, UpdateWeightViewDelegate, MainCollectionViewCellDelegate>{
+@interface DashboardViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, AddWaterViewDelegate, UpdateWeightViewDelegate, MainCollectionViewCellDelegate, AddCupViewControllerDelegate>{
     
     UICollectionView *mainCollectionView;
     
@@ -109,21 +109,43 @@
     [mainCollectionView reloadData];
     [self checkWeightReminder];
     
-    [self.view makeToast:@"bla" duration:4 position:[NSValue valueWithCGPoint:self.view.center] undoButton:^{
-        ATLog(@"askdjfhakjsd ");
-    }];
+
 }
 
 -(void)addWater{
     AddCupViewController *viewController = [[AddCupViewController alloc] initWithNibName:nil bundle:nil];
 //    viewController.item = randomAdvice;
+    viewController.delegate = self;
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+-(void)addCupCompleted:(Cup *)cup{
+    int lastDrinked = (int)[USERDEF integerForKey:kLAST_DRINKED_ML];
+    [self.view makeToast:[NSString stringWithFormat:@"Та %d мл ус уулаа.", lastDrinked] duration:4 position:[NSValue valueWithCGPoint:CGPointMake(self.view.center.x, CGRectGetHeight(self.view.frame) - 60)] undoButton:^{
+        int lastDrinked = (int)[USERDEF integerForKey:kLAST_DRINKED_ML];
+        if (lastDrinked > 0) {
+            [USERDEF setInteger:0 forKey:kLAST_DRINKED_ML];
+            PersonLog *lastLog = [DATABASE getTodaysPersonLog];
+            
+            float currentSize = lastLog.currentWaterLitre.floatValue - lastDrinked;
+            float dailyGoal = lastLog.waterGoal.floatValue ;
+            float percent = currentSize/(dailyGoal/100);
+            lastLog.currentWaterLitre = [NSNumber numberWithFloat:currentSize];
+            lastLog.currentWaterPercent = [NSNumber numberWithFloat:percent];
+            NSError *error = nil;
+            if (![DATABASE.personLogFetchedResultController   performFetch:&error]) {
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            }
+            [DATABASE saveChanges];
+            [mainCollectionView reloadData];
+        }
+    }];
 }
 
 #pragma mark    UpdateWeightViewDelegate
 
 -(void)didFinishUpdateWeight{
-    ATLog();
     [mainCollectionView reloadData];
 }
 

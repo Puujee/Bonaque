@@ -156,14 +156,7 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    if (!isFirst) {
-        isFirst = YES;
-        CGRect rect = _percentMaskedView.frame;
-        rect.origin.y = progresTopMargin;
-        rect.size.height = 0 ;
-        _percentMaskedView.frame = rect;
-    }
- 
+
     PersonLog *lastItem = [DATABASE getTodaysPersonLog];
     float diff = lastItem.waterGoal.floatValue - lastItem.currentWaterLitre.floatValue;
     if (diff < 0) {
@@ -220,16 +213,23 @@
     _thirdTitleLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - titleWidth, CGRectGetMaxY(_secondContentLabel.frame) + margin, titleWidth, titleHeight);
     _thirdContentLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - contentWidth - (titleWidth - contentWidth)/2 , CGRectGetMaxY(_thirdTitleLabel.frame) + margin, contentWidth, titleHeight);
     
-    {
+    if (!isFirst) {
+        isFirst = YES;
+        CGRect rect = _percentMaskedView.frame;
+        rect.origin.y = progresTopMargin;
+        rect.size.height = 0 ;
+        _percentMaskedView.frame = rect;
         [_addButton removeFromSuperview];
         [_addButton setTranslatesAutoresizingMaskIntoConstraints:YES];
         _addButton.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - buttonHeight, CGRectGetHeight(self.frame) - buttonHeight - botMargin, buttonHeight, buttonHeight);
         [self addSubview:_addButton];
         
-        [_decreaseButton removeFromSuperview];
-        [_decreaseButton setTranslatesAutoresizingMaskIntoConstraints:YES];
-        _decreaseButton.frame = CGRectMake(CGRectGetMinX(_addButton.frame) - rightMargin/3 - buttonHeight, CGRectGetHeight(self.frame) - buttonHeight - botMargin, buttonHeight, buttonHeight);
-        [self addSubview:_decreaseButton];
+        ATLog(@"%@", _addButton.frame);
+        
+//        [_decreaseButton removeFromSuperview];
+//        [_decreaseButton setTranslatesAutoresizingMaskIntoConstraints:YES];
+//        _decreaseButton.frame = CGRectMake(CGRectGetMinX(_addButton.frame) - rightMargin/3 - buttonHeight, CGRectGetHeight(self.frame) - buttonHeight - botMargin, buttonHeight, buttonHeight);
+//        [self addSubview:_decreaseButton];
         
     }
     

@@ -16,10 +16,11 @@ static const NSTimeInterval CSToastFadeDuration = 0.2;
 static const NSString * CSToastTimerKey         = @"CSToastTimerKey";
 static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
 static const NSString * CSToastTapCallbackKey   = @"CSToastTapCallbackKey1";
+static const float ToastViewTag = 102;
 
 typedef void (^ActionBlock)();
 
-dActionBlock _actionBlock;
+ActionBlock _actionBlock;
 
 @implementation UIView (Toast)
 
@@ -98,6 +99,7 @@ dActionBlock _actionBlock;
     wrapperView.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin);
     wrapperView.layer.cornerRadius = 10;
     wrapperView.clipsToBounds = YES;
+    wrapperView.tag = ToastViewTag;
 //    wrapperView.layer.shadowColor = [UIColor blackColor].CGColor;
 //    wrapperView.layer.shadowOpacity = 10;
 //    wrapperView.layer.shadowRadius = 10;
@@ -106,7 +108,7 @@ dActionBlock _actionBlock;
     wrapperView.backgroundColor = [UIColorFromRGB(0xffc107) colorWithAlphaComponent:0.9];
     
     titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, (CGRectGetWidth(wrapperView.frame) - 20)/3*1.7, 40)];
-    titleLabel.font = [UIFont boldSystemFontOfSize:13];
+    titleLabel.font = [UIFont boldSystemFontOfSize:14];
     titleLabel.textAlignment = NSTextAlignmentLeft;
     titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     titleLabel.textColor = [UIColor whiteColor];
@@ -132,6 +134,8 @@ dActionBlock _actionBlock;
 }
 
 - (void)toastUndoButtonClicked{
+    UIView *toast = [self viewWithTag:ToastViewTag];
+    [self hideToast:toast];
     _actionBlock();
 }
 
