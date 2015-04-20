@@ -87,8 +87,8 @@
     if (purposeLog) {
         if (purposeLog.daysRemaining.intValue == 0) {
             FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-            content.contentURL = [NSURL URLWithString:@"https://developers.facebook.com"];
-            content.contentTitle =  [NSString stringWithFormat:@"%@ цом авлаа.", item.title];
+            content.contentURL = [NSURL URLWithString:ITUNES_DOWNLOAD_URL];
+            content.contentTitle =  [NSString stringWithFormat:@"%@ цол авлаа.", item.title];
             content.contentDescription = [NSString stringWithFormat:@"%@ өдөр ус уув.", item.days];
             [FBSDKShareDialog showFromViewController:self
                                          withContent:content

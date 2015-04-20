@@ -210,13 +210,13 @@
 			<string>Үндсэн дэлгэц</string>
 			<string>График</string>
 			<string>Зөвлөгөө</string>
-			<string>Цом</string>
+			<string>Цол</string>
 			<string>Тохиргоо</string>
 		</array>
 		<key>advices</key>
 		<string>Зөвлөгөө</string>
 		<key>purposes</key>
-		<string>Цом</string>
+		<string>Цол</string>
 		<key>settings</key>
 		<string>Тохиргоо</string>
 		<key>cancel</key>

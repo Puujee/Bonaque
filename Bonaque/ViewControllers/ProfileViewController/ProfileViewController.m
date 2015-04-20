@@ -127,7 +127,7 @@
                     label.textAlignment = NSTextAlignmentLeft;
                     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
                     label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:12];
-                    label.text = @"Та одоогоор цом аваагүй байна.";
+                    label.text = @"Та одоогоор цол аваагүй байна.";
                     label.backgroundColor = CLEAR_COLOR;
                     label.numberOfLines = 1;
                     label.lineBreakMode = NSLineBreakByWordWrapping;

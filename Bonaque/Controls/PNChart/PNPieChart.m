@@ -49,7 +49,11 @@
     if(self){
         _items = [NSArray arrayWithArray:items];
         _outerCircleRadius  = CGRectGetWidth(self.bounds) / 2;
-        _innerCircleRadius  = _outerCircleRadius - 10;
+        float width = 30;
+        if ([UIScreen isiPhone6] || [UIScreen isiPhone6Plus]) {
+            width = 40;
+        }
+        _innerCircleRadius  = _outerCircleRadius - width;
         
         _descriptionTextColor = [UIColor whiteColor];
         _descriptionTextFont  = [UIFont fontWithName:@"Avenir-Medium" size:18.0];

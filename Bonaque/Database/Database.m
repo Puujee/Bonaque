@@ -434,13 +434,13 @@ Database *sharedDatabase;
 
 -(NSArray *)getAdviceLanguageArray{
     NSArray *adviceArray = [self.adviceFetchedResultController fetchedObjects];
-    NSMutableArray *tempArray = [NSMutableArray array];
-    for (Advice *item in adviceArray) {
-        if (item.language.intValue == [USERDEF integerForKey:kSELECTED_LANGUAGE]) {
-            [tempArray addObject:item];
-        }
-    }
-    return tempArray;
+//    NSMutableArray *tempArray = [NSMutableArray array];
+//    for (Advice *item in adviceArray) {
+//        if (item.language.intValue == [USERDEF integerForKey:kSELECTED_LANGUAGE]) {
+//            [tempArray addObject:item];
+//        }
+//    }
+    return adviceArray;
 }
 
 -(NSArray *)getpurposeLanguageArray{

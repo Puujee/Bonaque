@@ -28,7 +28,6 @@
 }
 + (BOOL)isiPhone6Plus
 {
-    ATLog(@"%@", [[UIScreen mainScreen] bounds].size.height);
     return [[UIScreen mainScreen] bounds].size.height == 736;
 }
 @end

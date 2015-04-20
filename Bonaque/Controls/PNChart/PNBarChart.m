@@ -185,9 +185,10 @@
     for (NSNumber *valueString in _yValues) {
         
         PNBar *bar;
-        
+        PNChartLabel *label;
         if (_bars.count == _yValues.count) {
             bar = [_bars objectAtIndex:index];
+            label = (PNChartLabel *)[self viewWithTag:300+index];
         }else{
             CGFloat barWidth;
             CGFloat barXPosition;
@@ -232,6 +233,18 @@
             
             [_bars addObject:bar];
             [self addSubview:bar];
+            
+            label = [[PNChartLabel alloc] initWithFrame:CGRectMake(barXPosition - 1,
+                                                                                  self.frame.size.height - chartCavanHeight - kXLabelHeight - _chartMargin,
+                                                                                  barWidth + 2,
+                                                                                  20)];
+            label.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:9];
+            label.tag = index + 300;
+            label.textColor = _labelTextColor;
+            [label setTextAlignment:NSTextAlignmentCenter];
+            
+            [_yChartLabels addObject:label];
+            [self addSubview:label];
         }
         
         //Height Of Bar
@@ -243,7 +256,16 @@
             grade = 0;
         }
         bar.grade = grade;
-        
+        if (grade != 0) {
+            label.text = [NSString stringWithFormat:@"%.f", value];
+            ATLog(@"%@", grade);
+            if (grade > 1) {
+                grade = 1;
+            }
+            CGRect rect = label.frame;
+            rect.origin.y = chartCavanHeight * (1 - grade);
+            label.frame = rect;
+        }
         index += 1;
     }
 }

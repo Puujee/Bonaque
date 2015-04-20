@@ -103,12 +103,23 @@
     _item = item;
     label.text =  [NSString stringWithFormat:@"%@ ml", item.ml];
     imageView.image = [UIImage imageNamed:_item.icon];
+    [self setNeedsLayout];
+
 }
 
 -(void)layoutSubviews{
     [super layoutSubviews];
     bgView.frame = self.contentView.bounds;
     imageView.frame = CGRectMake(0, 0, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 15);
+    if (_item.ml.intValue >= 330) {
+        imageView.frame = CGRectMake(0, 10, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 45);
+    }
+    else if (_item.ml.intValue == 500){
+        imageView.frame = CGRectMake(0, 10, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 35);
+    }
+    else if (_item.ml.intValue == 500){
+        imageView.frame = CGRectMake(0, 10, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 25);
+    }
     label.frame  = CGRectMake(10, CGRectGetHeight(bgView.frame) - 40, CGRectGetWidth(bgView.bounds) - 20, 20);
 }
 

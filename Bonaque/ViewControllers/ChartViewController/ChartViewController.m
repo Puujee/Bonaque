@@ -77,9 +77,9 @@
         segmentedControl.selectedSegmentIndex = 0;
         [segmentContainerView addSubview:segmentedControl];
     }
-    [scrollView addSubview:segmentContainerView];
+//    [scrollView addSubview:segmentContainerView];
     
-    UIView *titleContainer = [[UIView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(segmentContainerView.frame) + 10, CGRectGetWidth(self.view.frame) - 20, 50)];
+    UIView *titleContainer = [[UIView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.view.frame) - 20, 50)];
     titleContainer.backgroundColor = [UIColor whiteColor];
     [titleContainer.layer setCornerRadius:4];
     titleContainer.clipsToBounds = YES;
@@ -377,7 +377,6 @@
         NSDate *nextDate = [gregorian dateByAddingComponents:compsToAdd toDate:datez options:0];
         [month addObject:nextDate];
     }
-    ATLog(@"%@", month);
     return month;
 }
 

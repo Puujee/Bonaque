@@ -1,9 +1,10 @@
 {
   "images" : [
     {
+      "heightClass" : "regular",
       "idiom" : "iphone",
-      "scale" : "1x",
-      "heightClass" : "regular"
+      "filename" : "woman_new-568h@2x.png",
+      "scale" : "1x"
     },
     {
       "heightClass" : "regular",
@@ -12,9 +13,10 @@
       "scale" : "2x"
     },
     {
+      "heightClass" : "regular",
       "idiom" : "iphone",
-      "scale" : "3x",
-      "heightClass" : "regular"
+      "filename" : "man_new-568h@2x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

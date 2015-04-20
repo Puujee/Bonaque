@@ -21,9 +21,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    [_adviceImageView.layer setCornerRadius:25];
-    _adviceImageView.clipsToBounds = YES;
-    
+//    [_adviceImageView.layer setCornerRadius:25];
+//    _adviceImageView.clipsToBounds = YES;
+    _adviceImageView.backgroundColor = CLEAR_COLOR;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
 //    _shareButton.shareContent = content;

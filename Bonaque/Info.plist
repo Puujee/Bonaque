@@ -24,6 +24,10 @@
 	<string>503095606427413</string>
 	<key>FacebookDisplayName</key>
 	<string>Bonaqua</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mogul PopularScript.ttf</string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>

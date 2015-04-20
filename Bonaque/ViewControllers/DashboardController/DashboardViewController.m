@@ -93,6 +93,7 @@
         UpdateWeightView *pickerContainer = [[UpdateWeightView alloc] initWithFrame:self.view.window.bounds];
         pickerContainer.delegate = self;
         pickerContainer.tag  = 201;
+        pickerContainer.title = @"Таны өнөөдрийн жин";
         [self.view.window addSubview:pickerContainer];
         
         [pickerContainer showContentView];
@@ -205,7 +206,6 @@
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        ATLog(@"%@", CGSizeMake(CGRectGetWidth(self.view.bounds) - 20, (CGRectGetHeight(self.view.bounds) /3*2 - 20)));
         if ([UIScreen isiPhone4]) {
             return CGSizeMake(CGRectGetWidth(self.view.bounds) - 20, 257);
         }

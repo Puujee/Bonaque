@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B25AC2E1ACFE82500AA7ACD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B25AC2D1ACFE82500AA7ACD /* main.m */; };
 		0B25AC311ACFE82500AA7ACD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B25AC301ACFE82500AA7ACD /* AppDelegate.m */; };
-		0B25AC391ACFE82500AA7ACD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B25AC381ACFE82500AA7ACD /* Images.xcassets */; };
 		0B25AC481ACFE82500AA7ACD /* BonaqueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B25AC471ACFE82500AA7ACD /* BonaqueTests.m */; };
 		0B25AC591ACFEB4B00AA7ACD /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B25AC581ACFEB4B00AA7ACD /* Database.m */; };
 		0B25AC5E1ACFEB5400AA7ACD /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B25AC5B1ACFEB5400AA7ACD /* Utils.m */; };
@@ -44,6 +43,8 @@
 		0B6319B51ADA8AAB003A3543 /* PNScatterChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6319A51ADA8AAB003A3543 /* PNScatterChart.m */; };
 		0B6319B61ADA8AAB003A3543 /* PNScatterChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6319A71ADA8AAB003A3543 /* PNScatterChartData.m */; };
 		0B6319B71ADA8AAB003A3543 /* PNScatterChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6319A91ADA8AAB003A3543 /* PNScatterChartDataItem.m */; };
+		0B6A613C1AE574B200A0BDE9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6A613B1AE574B200A0BDE9 /* Images.xcassets */; };
+		0B6A613E1AE578FF00A0BDE9 /* Mogul PopularScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B6A613D1AE578FF00A0BDE9 /* Mogul PopularScript.ttf */; };
 		0B6B4F661AE23C390043CB0B /* PurposeCongrulateDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4F651AE23C390043CB0B /* PurposeCongrulateDialog.m */; };
 		0B6C8E471AE0DF9F004A2BBA /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C8E451AE0DF9F004A2BBA /* CircleProgressView.m */; };
 		0B6C8E481AE0DF9F004A2BBA /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C8E461AE0DF9F004A2BBA /* CircleProgressView.swift */; };
@@ -123,7 +124,6 @@
 		0B25AC2D1ACFE82500AA7ACD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B25AC2F1ACFE82500AA7ACD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B25AC301ACFE82500AA7ACD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B25AC381ACFE82500AA7ACD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B25AC411ACFE82500AA7ACD /* BonaqueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonaqueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B25AC461ACFE82500AA7ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B25AC471ACFE82500AA7ACD /* BonaqueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonaqueTests.m; sourceTree = "<group>"; };
@@ -193,6 +193,8 @@
 		0B6319A71ADA8AAB003A3543 /* PNScatterChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChartData.m; sourceTree = "<group>"; };
 		0B6319A81ADA8AAB003A3543 /* PNScatterChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNScatterChartDataItem.h; sourceTree = "<group>"; };
 		0B6319A91ADA8AAB003A3543 /* PNScatterChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChartDataItem.m; sourceTree = "<group>"; };
+		0B6A613B1AE574B200A0BDE9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0B6A613D1AE578FF00A0BDE9 /* Mogul PopularScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mogul PopularScript.ttf"; sourceTree = "<group>"; };
 		0B6B4F641AE23C390043CB0B /* PurposeCongrulateDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurposeCongrulateDialog.h; sourceTree = "<group>"; };
 		0B6B4F651AE23C390043CB0B /* PurposeCongrulateDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurposeCongrulateDialog.m; sourceTree = "<group>"; };
 		0B6C8E431AE0DF9F004A2BBA /* CircleProgressView-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CircleProgressView-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -353,7 +355,6 @@
 				0B25AC521ACFEAEE00AA7ACD /* ViewControllers */,
 				0B25AC2F1ACFE82500AA7ACD /* AppDelegate.h */,
 				0B25AC301ACFE82500AA7ACD /* AppDelegate.m */,
-				0B25AC381ACFE82500AA7ACD /* Images.xcassets */,
 				0B25AC2B1ACFE82500AA7ACD /* Supporting Files */,
 			);
 			path = Bonaque;
@@ -365,6 +366,7 @@
 				0B25AC2C1ACFE82500AA7ACD /* Info.plist */,
 				0B25AC2D1ACFE82500AA7ACD /* main.m */,
 				0B25AC511ACFE84A00AA7ACD /* Bonaque-Prefix.pch */,
+				0B6A613B1AE574B200A0BDE9 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -456,6 +458,7 @@
 		0B25AC561ACFEB3700AA7ACD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0B6A613D1AE578FF00A0BDE9 /* Mogul PopularScript.ttf */,
 				0BB34A5A1AD8FA4D00F9EFE1 /* drink_sound.caf */,
 				0BB34A5B1AD8FA4D00F9EFE1 /* water_sound.caf */,
 				0BDBB1251AD5F0D800A12AF2 /* Sound */,
@@ -871,10 +874,11 @@
 				0BDBB1221AD5F0C900A12AF2 /* cups.json in Resources */,
 				0BA893221ADC465D0082A4ED /* AdviceTableViewCell.xib in Resources */,
 				0BA8932B1ADC4EE10082A4ED /* PurposeTableViewCell.xib in Resources */,
+				0B6A613C1AE574B200A0BDE9 /* Images.xcassets in Resources */,
 				0BA8930D1ADC29410082A4ED /* MainAdviceCollectionViewCell.xib in Resources */,
+				0B6A613E1AE578FF00A0BDE9 /* Mogul PopularScript.ttf in Resources */,
 				0BB34A5C1AD8FA4D00F9EFE1 /* drink_sound.caf in Resources */,
 				0B25AC8D1AD124CB00AA7ACD /* SettingsTableViewCell.xib in Resources */,
-				0B25AC391ACFE82500AA7ACD /* Images.xcassets in Resources */,
 				0BB34A5D1AD8FA4D00F9EFE1 /* water_sound.caf in Resources */,
 				0BDBB1241AD5F0C900A12AF2 /* purposes_mn.json in Resources */,
 			);

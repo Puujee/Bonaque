@@ -13,24 +13,27 @@
     BOOL isFirst;
     
     float titleHeight;
-    float contentHeight;
+    float titleWidth;
+    float contentWidth;
     float fontSize;
     float titleFontSize;
     float chartTitleFontSize;
     float chartDescFontSize;
-    float buttonHeight;
     
-    float progressHeight;
-    float progresTopMargin;
     float chartsWidth;
     float normalWidth;
+    float buttonHeight;
     
     float rightMargin;
-    float margin;
+    float leftMargin;
     float topMargin;
-    float titleWidth;
-    float contentWidth;
     float botMargin;
+    
+    float mansHeight;
+    float mansWidth;
+    
+    float titleBotMargin;
+    float titleTopMargin;
 }
 
 @property (nonatomic) PNPieChart *pieChart;
@@ -40,85 +43,110 @@
 @synthesize delegate;
 
 - (void)awakeFromNib {
-    progressHeight = 236;
-    progresTopMargin = 246;
+    titleHeight = 22;
+    titleWidth = 120;
+    contentWidth = 87;
+    fontSize = 16;
+    titleFontSize = 14;
     
-    titleHeight = 18;
-    contentHeight = 20;
-    fontSize = 14;
-    titleFontSize = 12;
+    
     chartTitleFontSize = 28;
     chartDescFontSize = 11;
-    buttonHeight = 40;
-    normalWidth = 75;
-    rightMargin = 25;
     
-    topMargin = 3;
-    botMargin = 5;
-    margin = 3;
-    titleWidth = 100;
-    contentWidth = 77;
+    buttonHeight = 60;
     
+    normalWidth = 140;
+    rightMargin = 10;
+    
+    topMargin = 15;
+    titleTopMargin = 15;
+    botMargin = 10;
+    leftMargin = 10;
+
+    
+    mansHeight = 200;
+    titleBotMargin = 35;
 
     if ([UIScreen isiPhone5]) {
-        normalWidth = 85;
-        progressHeight = 252;
-        progresTopMargin = 283;
-        margin = 5;
-        topMargin = 10;
-        buttonHeight = 55;
-        
-        titleHeight = 20;
-        contentHeight = 22;
+        titleHeight = 25;
+        titleWidth = 120;
+        contentWidth = 80;
         fontSize = 16;
         titleFontSize = 14;
+        
+        
         chartTitleFontSize = 30;
         chartDescFontSize = 13;
-        rightMargin = 25;
-        titleWidth = 120;
-        contentWidth = 87;
+        
+        buttonHeight = 70;
+        
+        normalWidth = 140;
+        rightMargin = 10;
+        
+        topMargin = 20;
+        titleTopMargin = 25;
+        leftMargin = 0;
+        botMargin = 17;
+        
+        mansHeight = 250;
+        titleBotMargin = 45;
     }
     else if ([UIScreen isiPhone6]){
-        normalWidth = 115;
-        progressHeight = 349;
-        progresTopMargin = 364;
-        
-        margin = 5;
-        topMargin = 10;
-        buttonHeight = 60;
-        
         titleHeight = 26;
-        contentHeight = 28;
+        titleWidth = 130;
+        contentWidth = 97;
         fontSize = 18;
         titleFontSize = 16;
+        
+        
         chartTitleFontSize = 32;
         chartDescFontSize = 15;
-        rightMargin = 30;
-        titleWidth = 140;
-        contentWidth = 97;
+        
+        buttonHeight = 80;
+        
+        normalWidth = 170;
+        rightMargin = 10;
+        
+        topMargin = 20;
+        titleTopMargin = 25;
+        leftMargin = 0;
+        botMargin = 27;
+        
+        titleBotMargin = 50;
+        
+        rightMargin = 20;
+        
+        mansHeight = 300;
     }
     else if ([UIScreen isiPhone6Plus]){
-        normalWidth = 130;
-        progressHeight = 339;
-        progresTopMargin = 381;
-        
-        margin = 5;
-        topMargin = 20;
-        buttonHeight = 65;
-        
-        titleHeight = 26;
-        contentHeight = 28;
-        fontSize = 18;
-        titleFontSize = 16;
-        chartTitleFontSize = 32;
-        chartDescFontSize = 15;
-        rightMargin = 30;
+        titleHeight = 35;
         titleWidth = 140;
         contentWidth = 97;
+        fontSize = 18;
+        titleFontSize = 18;
         
-        botMargin = 25;
+        chartTitleFontSize = 32;
+        chartDescFontSize = 15;
+        
+        buttonHeight = 90;
+        
+        normalWidth = 180;
+        rightMargin = 10;
+        
+        topMargin = 25;
+        titleTopMargin = 35;
+        leftMargin = 0;
+        botMargin = 28;
+        
+        mansHeight = 250;
+        titleBotMargin = 65;
+        
+        rightMargin = 20;
+        
+        mansHeight = 330;
     }
     chartsWidth = normalWidth;
+    mansWidth = mansHeight/16*9;
 
     [self.layer setCornerRadius:3];
     self.clipsToBounds = YES;
@@ -132,7 +160,6 @@
     else{
         _maskedImage.image = [UIImage imageNamed:@"woman_new"];
     }
-    ATLog(@"%@", _maskedImage.image);
 }
 
 -(void)updateDatas{
@@ -178,12 +205,12 @@
     
     [self calculateFrames];
 
-    float fullHeight = progressHeight;
+    float fullHeight = mansHeight;
     float currentHeight = (fullHeight*lastItem.currentWaterPercent.floatValue)/ 100;
 //    float currentHeight = (fullHeight*100)/ 100;
     [UIView animateWithDuration:1.5f delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGRect rect = _percentMaskedView.frame;
-        rect.origin.y = progresTopMargin - currentHeight;
+        rect.origin.y = mansHeight - currentHeight;
         rect.size.height = currentHeight;
         _percentMaskedView.frame = rect;
     } completion:^(BOOL finished) {
@@ -201,42 +228,49 @@
 
 
 -(void)calculateFrames{
-    _firstTitleLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - titleWidth, topMargin, titleWidth, titleHeight);
-    _firstContentLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - contentWidth - (titleWidth - contentWidth)/2 , CGRectGetMaxY(_firstTitleLabel.frame) + margin, contentWidth, titleHeight);
+    {
+        CGRect rect = _maskedImagesBgView.frame;
+        rect.origin.x = leftMargin;
+        rect.origin.y  = topMargin;
+        rect.size.height = mansHeight;
+        rect.size.width = mansWidth;
+        _maskedImagesBgView.frame= rect;
+        
+        _maskedImage.frame = _maskedImagesBgView.bounds;
+    }
+    _firstTitleLabel.frame = CGRectMake(rightMargin, CGRectGetHeight(self.frame) - titleBotMargin, titleWidth, titleHeight);
+    _firstContentLabel.frame = CGRectMake(CGRectGetMaxX(_firstTitleLabel.frame), CGRectGetMinY(_firstTitleLabel.frame), contentWidth, titleHeight);
     
-    _secondTitleLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - titleWidth, CGRectGetMaxY(_firstContentLabel.frame) + margin, titleWidth, titleHeight);
-    _secondContentLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - contentWidth  - (titleWidth - contentWidth)/2, CGRectGetMaxY(_secondTitleLabel.frame) + margin, contentWidth, titleHeight);
+    _secondTitleLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - titleWidth - contentWidth + 10, titleTopMargin, titleWidth, titleHeight);
+    _secondContentLabel.frame = CGRectMake(CGRectGetMaxX(_secondTitleLabel.frame) - 10, CGRectGetMinY(_secondTitleLabel.frame), contentWidth, titleHeight);
     
-    _thirdTitleLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - titleWidth, CGRectGetMaxY(_secondContentLabel.frame) + margin, titleWidth, titleHeight);
-    _thirdContentLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - contentWidth - (titleWidth - contentWidth)/2 , CGRectGetMaxY(_thirdTitleLabel.frame) + margin, contentWidth, titleHeight);
+    _thirdTitleLabel.hidden = YES;
+    _thirdContentLabel.hidden = YES;
+//    _thirdTitleLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - titleWidth, CGRectGetMaxY(_secondContentLabel.frame) + margin, titleWidth, titleHeight);
+//    _thirdContentLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - contentWidth - (titleWidth - contentWidth)/2 , CGRectGetMaxY(_thirdTitleLabel.frame) + margin, contentWidth, titleHeight);
     
     if (!isFirst) {
         isFirst = YES;
         CGRect rect = _percentMaskedView.frame;
-        rect.origin.y = progresTopMargin;
+        rect.origin.x = 5;
+        rect.size.width = mansWidth - 10;
+        rect.origin.y = mansHeight;
         rect.size.height = 0 ;
         _percentMaskedView.frame = rect;
-      
-        
-        
-//        [_decreaseButton removeFromSuperview];
-//        [_decreaseButton setTranslatesAutoresizingMaskIntoConstraints:YES];
-//        _decreaseButton.frame = CGRectMake(CGRectGetMinX(_addButton.frame) - rightMargin/3 - buttonHeight, CGRectGetHeight(self.frame) - buttonHeight - botMargin, buttonHeight, buttonHeight);
-//        [self addSubview:_decreaseButton];
-        
     }
 //    [_addButton removeFromSuperview];
 //    [_addButton setTranslatesAutoresizingMaskIntoConstraints:YES];
     _addButton.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - buttonHeight, CGRectGetHeight(self.frame) - buttonHeight - botMargin, buttonHeight, buttonHeight);
+    [_addButton.layer setCornerRadius:buttonHeight/2];
+    _addButton.clipsToBounds = YES;
+    [_addButton setBackgroundImage:[HXColor imageWithColor:UIColorFromRGB(0x67be27)] forState:UIControlStateNormal];
 //    [self addSubview:_addButton];
-    
-    ATLog(@"%@", _addButton.frame);
     
     CGRect chartRect = _chartView.frame;
     chartRect.size.height = chartsWidth;
     chartRect.size.width = chartsWidth;
-    chartRect.origin.x = CGRectGetWidth(self.frame)- chartsWidth - rightMargin - (titleWidth - chartsWidth)/2;
-    chartRect.origin.y = CGRectGetMaxY(_thirdContentLabel.frame) + margin *2;
+    chartRect.origin.x = CGRectGetWidth(self.frame)- chartsWidth - rightMargin;
+    chartRect.origin.y = (CGRectGetHeight(self.frame) - chartsWidth)/2 - rightMargin;
     _chartView.frame = chartRect;
     
     CGRect currentLitreRect = _currentLitreLabel.frame;

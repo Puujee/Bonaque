@@ -11,20 +11,20 @@
 @implementation DatabaseManager
 
 +(void)setAdvices{
-    NSData *adviceEn = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"advices_en" ofType:@"json"]];
-    NSError *errorEn;
-    NSDictionary *dicEN = [NSJSONSerialization JSONObjectWithData:adviceEn options:NSJSONReadingMutableContainers error:&errorEn];
-    if (!errorEn) {
-        NSArray *enArray = [dicEN objectForKey:@"advices"];
-        for (NSDictionary *dic in enArray) {
-            Advice   *item = [NSEntityDescription insertNewObjectForEntityForName:@"Advice" inManagedObjectContext:DATABASE.managedObjectContext];
-            item.language  = [NSNumber numberWithInt:0];
-            item.id = [NSNumber numberWithInt:[dic[@"id"] intValue]];
-            item.title = dic[@"title"];
-            item.content = dic[@"content"];
-            item.icon = dic[@"icon"];
-        }
-    }
+//    NSData *adviceEn = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"advices_en" ofType:@"json"]];
+//    NSError *errorEn;
+//    NSDictionary *dicEN = [NSJSONSerialization JSONObjectWithData:adviceEn options:NSJSONReadingMutableContainers error:&errorEn];
+//    if (!errorEn) {
+//        NSArray *enArray = [dicEN objectForKey:@"advices"];
+//        for (NSDictionary *dic in enArray) {
+//            Advice   *item = [NSEntityDescription insertNewObjectForEntityForName:@"Advice" inManagedObjectContext:DATABASE.managedObjectContext];
+//            item.language  = [NSNumber numberWithInt:0];
+//            item.id = [NSNumber numberWithInt:[dic[@"id"] intValue]];
+//            item.title = dic[@"title"];
+//            item.content = dic[@"content"];
+//            item.icon = dic[@"icon"];
+//        }
+//    }
     NSData *adviceMn = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"advices_mn" ofType:@"json"]];
     NSError *errorMn;
     NSDictionary *dicMN = [NSJSONSerialization JSONObjectWithData:adviceMn options:NSJSONReadingMutableContainers error:&errorMn];

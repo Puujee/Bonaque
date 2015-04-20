@@ -58,7 +58,7 @@
         contentTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10,CGRectGetMinX(bgImageView.frame), CGRectGetWidth(contentView.frame),44)];
         contentTitleLabel.textAlignment = NSTextAlignmentCenter;
         contentTitleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        contentTitleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:40];
+        contentTitleLabel.font = [UIFont fontWithName:@"MogulPopularScript" size:45];
         contentTitleLabel.text = @"Баяр хүргье";
         contentTitleLabel.numberOfLines = 3;
         contentTitleLabel.backgroundColor = CLEAR_COLOR;

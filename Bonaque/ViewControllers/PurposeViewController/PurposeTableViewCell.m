@@ -47,7 +47,7 @@
             _dayLabel.text = [dateFormatter stringFromDate:purposeLog.endDate];
             
             _purposeTitleLabel.textColor = MAIN_COLOR;
-            _purposeDescription.text = [NSString stringWithFormat:@"Баяр хүргэе. Та %@ хоног ус уугаад энэ цомыг авсан байна.", _item.days];
+            _purposeDescription.text = [NSString stringWithFormat:@"Баяр хүргэе. Та %@ хоног ус уугаад энэ цолыг авсан байна.", _item.days];
           
             _topLineView.backgroundColor = borderColor;
             _bottomLineView.backgroundColor = borderColor;

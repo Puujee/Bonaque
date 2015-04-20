@@ -66,7 +66,7 @@
 -(void)shareButtonClicked{
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
     content.contentURL = [NSURL URLWithString:ITUNES_DOWNLOAD_URL];
-    content.contentTitle =  [NSString stringWithFormat:@"%@ цом авлаа.", _item.title];
+    content.contentTitle =  [NSString stringWithFormat:@"%@ авлаа.", _item.title];
     content.contentDescription = [NSString stringWithFormat:@"%@ өдөр ус уув.", _item.days];
     [FBSDKShareDialog showFromViewController:mainViewController
                                  withContent:content
@@ -80,7 +80,7 @@
     imageView.image=  [UIImage imageNamed:[NSString stringWithFormat:@"%@_achived", _item.icon]];
     
     
-    contentLabel.text = [NSString stringWithFormat:@"Та %@ өдөр ус ууж \"%@\" цомийг авлаа.", _item.days, [_item.title uppercaseString]];
+    contentLabel.text = [NSString stringWithFormat:@"Та %@ өдөр ус ууж \"%@\"-г авлаа.", _item.days, [_item.title uppercaseString]];
 }
 
 -(void)goBack{
