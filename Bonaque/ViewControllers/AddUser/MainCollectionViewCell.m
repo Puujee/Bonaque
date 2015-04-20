@@ -123,9 +123,6 @@
     [self.layer setCornerRadius:3];
     self.clipsToBounds = YES;
     
-    _addButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    _decreaseButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    
     [self loadLabeslConstant];
     
     Person *user = [DATABASE getUser];
@@ -219,12 +216,8 @@
         rect.origin.y = progresTopMargin;
         rect.size.height = 0 ;
         _percentMaskedView.frame = rect;
-        [_addButton removeFromSuperview];
-        [_addButton setTranslatesAutoresizingMaskIntoConstraints:YES];
-        _addButton.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - buttonHeight, CGRectGetHeight(self.frame) - buttonHeight - botMargin, buttonHeight, buttonHeight);
-        [self addSubview:_addButton];
+      
         
-        ATLog(@"%@", _addButton.frame);
         
 //        [_decreaseButton removeFromSuperview];
 //        [_decreaseButton setTranslatesAutoresizingMaskIntoConstraints:YES];
@@ -232,6 +225,12 @@
 //        [self addSubview:_decreaseButton];
         
     }
+//    [_addButton removeFromSuperview];
+//    [_addButton setTranslatesAutoresizingMaskIntoConstraints:YES];
+    _addButton.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - buttonHeight, CGRectGetHeight(self.frame) - buttonHeight - botMargin, buttonHeight, buttonHeight);
+//    [self addSubview:_addButton];
+    
+    ATLog(@"%@", _addButton.frame);
     
     CGRect chartRect = _chartView.frame;
     chartRect.size.height = chartsWidth;

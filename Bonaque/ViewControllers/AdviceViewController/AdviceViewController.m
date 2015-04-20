@@ -95,7 +95,17 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    AdviceDetailView *pickerContainer = [[AdviceDetailView alloc] initWithFrame:[[APPDEL window] bounds]];
+    //    pickerContainer.delegate = self;
+    pickerContainer.item = [_itemArray objectAtIndex:indexPath.row];
+    pickerContainer.mainViewController = self;
+    pickerContainer.tag  = 201;
+    [[APPDEL window] addSubview:pickerContainer];
+    
+    [pickerContainer showContentView];
+    
 //    AdviceDetailViewController *viewController = [[AdviceDetailViewController alloc] initWithNibName:nil bundle:nil];
 //    viewController.item = [_itemArray objectAtIndex:indexPath.row];
 //    [self.navigationController pushViewController:viewController animated:YES];

@@ -42,14 +42,14 @@
     gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     gregorian.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:9];
     
-    rightBarButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [rightBarButton setImage:[UIImage imageNamed:@"ic-chart-line"] forState:UIControlStateNormal];
-    //    [rightBarButton setTitle:@"Bar" forState:UIControlStateNormal];
-    rightBarButton.frame = CGRectMake(0, 0, 30, 30);
-    
-    [rightBarButton addTarget:self  action:@selector(changeChartMode:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *revealBarbutton = [[UIBarButtonItem alloc] initWithCustomView:rightBarButton];
-    self.navigationItem.rightBarButtonItem = revealBarbutton;
+//    rightBarButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [rightBarButton setImage:[UIImage imageNamed:@"ic-chart-line"] forState:UIControlStateNormal];
+//    //    [rightBarButton setTitle:@"Bar" forState:UIControlStateNormal];
+//    rightBarButton.frame = CGRectMake(0, 0, 30, 30);
+//    
+//    [rightBarButton addTarget:self  action:@selector(changeChartMode:) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *revealBarbutton = [[UIBarButtonItem alloc] initWithCustomView:rightBarButton];
+//    self.navigationItem.rightBarButtonItem = revealBarbutton;
     
     self.title = [[LANGUAGE getArrayForKey:@"menus"] objectAtIndex:1];
     
@@ -119,10 +119,10 @@
         [nextButton addTarget:self action:@selector(nextBarChartButtonPressed) forControlEvents:UIControlEventTouchUpInside];
         [titleContainer addSubview:nextButton];
     }
-    lineCharts = [[LineChartsView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleContainer.frame), CGRectGetWidth(self.view.frame), 530)];
-    lineCharts.backgroundColor = [UIColor clearColor];
-    lineCharts.hidden = YES;
-    [scrollView addSubview:lineCharts];
+//    lineCharts = [[LineChartsView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleContainer.frame), CGRectGetWidth(self.view.frame), 530)];
+//    lineCharts.backgroundColor = [UIColor clearColor];
+//    lineCharts.hidden = YES;
+//    [scrollView addSubview:lineCharts];
     
     float height = 570;
     if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {
@@ -357,8 +357,8 @@
     NSDateComponents *components = [gregorian components:(NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:lastDate];
     //    _selectedDate  =components.day;
     components.day = 1;
-    NSDate *firstDayOfMonth = [gregorian dateFromComponents:components];
-    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:firstDayOfMonth];
+//    NSDate *firstDayOfMonth = [gregorian dateFromComponents:components];
+//    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:firstDayOfMonth];
     
     NSCalendar *c = [NSCalendar currentCalendar];
     NSRange days = [c rangeOfUnit:NSDayCalendarUnit
@@ -369,8 +369,8 @@
     NSInteger monthLength = days.length;
     NSMutableArray* month=[NSMutableArray arrayWithCapacity:monthLength];
     NSDateComponents *componentsz = [gregorian components:(NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:lastDate];
-    components.day = 1;
-    NSDate *datez = [gregorian dateFromComponents:components];
+    componentsz.day = 1;
+    NSDate *datez = [gregorian dateFromComponents:componentsz];
     for (int i = 0; i < monthLength; i++) {
         NSDateComponents *compsToAdd = [[NSDateComponents alloc] init];
         compsToAdd.day = i + 1;

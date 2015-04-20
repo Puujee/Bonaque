@@ -7,6 +7,7 @@
 //
 
 #import "AbstractViewController.h"
+#import "AdviceDetailView.h"
 
 @interface AdviceViewController : AbstractViewController
 

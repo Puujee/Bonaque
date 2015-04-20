@@ -26,10 +26,9 @@
       "heightClass" : "regular"
     },
     {
-      "heightClass" : "regular",
       "idiom" : "iphone",
-      "filename" : "woman_new-667h@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "heightClass" : "regular"
     },
     {
       "heightClass" : "regular",

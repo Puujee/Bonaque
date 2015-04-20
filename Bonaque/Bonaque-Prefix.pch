@@ -60,6 +60,8 @@
 #define kFIRST_DATE @"kFIRST_DATE"
 #define kLAST_DRINKED_ML @"kLAST_DRINKED_ML"
 
+#define ITUNES_DOWNLOAD_URL @"http://itunes.com/apps/bonaqua"
+
 
 #define LANGUAGE_KEY [[NSUserDefaults standardUserDefaults] valueForKey:@"languageKey"]
 #define LANGUAGE [LanguageManager getLanguage]

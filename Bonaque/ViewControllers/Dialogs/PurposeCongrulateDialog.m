@@ -65,7 +65,7 @@
 
 -(void)shareButtonClicked{
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-    content.contentURL = [NSURL URLWithString:@"https://developers.facebook.com"];
+    content.contentURL = [NSURL URLWithString:ITUNES_DOWNLOAD_URL];
     content.contentTitle =  [NSString stringWithFormat:@"%@ цом авлаа.", _item.title];
     content.contentDescription = [NSString stringWithFormat:@"%@ өдөр ус уув.", _item.days];
     [FBSDKShareDialog showFromViewController:mainViewController

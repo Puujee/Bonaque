@@ -27,6 +27,7 @@
 		0B3286141ADC02870066599E /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3286121ADC02870066599E /* MainCollectionViewCell.m */; };
 		0B3286151ADC02870066599E /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3286131ADC02870066599E /* MainCollectionViewCell.xib */; };
 		0B3F9CD51AE4EDD80064EB37 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F9CD41AE4EDD80064EB37 /* UIView+Toast.m */; };
+		0B3F9CD91AE521F50064EB37 /* AdviceDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F9CD81AE521F50064EB37 /* AdviceDetailView.m */; };
 		0B6319871AD9FE4E003A3543 /* AbstractContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6319861AD9FE4E003A3543 /* AbstractContainerView.m */; };
 		0B63198A1ADA00C4003A3543 /* AddWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6319891ADA00C4003A3543 /* AddWaterView.m */; };
 		0B6319AA1ADA8AAB003A3543 /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B63198D1ADA8AAB003A3543 /* PNBar.m */; };
@@ -156,6 +157,8 @@
 		0B3286131ADC02870066599E /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainCollectionViewCell.xib; path = ../AddUser/MainCollectionViewCell.xib; sourceTree = "<group>"; };
 		0B3F9CD31AE4EDD80064EB37 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		0B3F9CD41AE4EDD80064EB37 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		0B3F9CD71AE521F50064EB37 /* AdviceDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceDetailView.h; sourceTree = "<group>"; };
+		0B3F9CD81AE521F50064EB37 /* AdviceDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdviceDetailView.m; sourceTree = "<group>"; };
 		0B6319851AD9FE4E003A3543 /* AbstractContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractContainerView.h; sourceTree = "<group>"; };
 		0B6319861AD9FE4E003A3543 /* AbstractContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractContainerView.m; sourceTree = "<group>"; };
 		0B6319881ADA00C4003A3543 /* AddWaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWaterView.h; sourceTree = "<group>"; };
@@ -610,6 +613,8 @@
 				0BA8931E1ADC465D0082A4ED /* AdviceTableViewCell.h */,
 				0BA8931F1ADC465D0082A4ED /* AdviceTableViewCell.m */,
 				0BA893201ADC465D0082A4ED /* AdviceTableViewCell.xib */,
+				0B3F9CD71AE521F50064EB37 /* AdviceDetailView.h */,
+				0B3F9CD81AE521F50064EB37 /* AdviceDetailView.m */,
 				0BA893231ADC49E10082A4ED /* AdviceDetailViewController */,
 			);
 			path = AdviceViewController;
@@ -949,6 +954,7 @@
 				0B6C8E471AE0DF9F004A2BBA /* CircleProgressView.m in Sources */,
 				0B3286141ADC02870066599E /* MainCollectionViewCell.m in Sources */,
 				0BDBB0D01AD4D4B600A12AF2 /* DatePickerContainerView.m in Sources */,
+				0B3F9CD91AE521F50064EB37 /* AdviceDetailView.m in Sources */,
 				0BA893161ADC3BE60082A4ED /* ProfileViewController.m in Sources */,
 				0B25AC8C1AD124CB00AA7ACD /* SettingsTableViewCell.m in Sources */,
 				0BA893211ADC465D0082A4ED /* AdviceTableViewCell.m in Sources */,
