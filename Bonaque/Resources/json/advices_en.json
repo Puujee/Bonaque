@@ -1,0 +1,28 @@
+{
+    "advices": [
+                {
+                "id": "1",
+                "title": "Water & Weight",
+                "content": "Drinking water regularly, suppresses your appetite. Water contains no calories, hence, contributing significantly to weight loss.",
+                "icon": "imd_advice_1"
+                },
+                {
+                "id": "2",
+                "title": "Water & Skin",
+                "content": "Water moisturises your skin and keeps it fresh. It helps maintain the elasticity and suppleness of the skin and prevents dryness.",
+                "icon": "imd_advice_2"
+                },
+                {
+                "id": "3",
+                "title": "Water & Brain",
+                "content": "Water moisturises your skin and keeps it fresh. It helps maintain the elasticity and suppleness of the skin and prevents dryness.",
+                "icon": "imd_advice_3"
+                },
+                {
+                "id": "4",
+                "title": "Water & Headeche",
+                "content": "Water moisturises your skin and keeps it fresh. It helps maintain the elasticity and suppleness of the skin and prevents dryness.",
+                "icon": "imd_advice_4"
+                }
+                ]
+}

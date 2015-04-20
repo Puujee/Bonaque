@@ -1,0 +1,81 @@
+//
+//  Bonaque-Prefix.pch
+//  Bonaque
+//
+//  Created by Puujee on 4/4/15.
+//  Copyright (c) 2015 Od Innovation LLC. All rights reserved.
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "AbstractViewController.h"
+    #import "AppDelegate.h"
+    #import "Database.h"
+    #import <ATLog/ATLog.h>
+    #import <HexColors/HexColor.h>
+    #import <SWRevealViewController/SWRevealViewController.h>
+    #import "LanguageManager.h"
+    #import <BSKeyboardControls/BSKeyboardControls.h>
+    #import "TextFieldedCell.h"
+    #import "TextFieldedCellItem.h"
+    #import "CheckBoxCell.h"
+    #import "TextFieldedCellItem.h"
+    #import "Utils.h"
+    #import <MBProgressHUD/MBProgressHUD.h>
+    #import "DatabaseManager.h"
+#import <SVWebViewController/SVModalWebViewController.h>
+#import "UIScreen+GSInfo.h"
+#endif
+
+
+#define DATABASE [Database getDatabase]
+#define APPDEL   (AppDelegate *)[[UIApplication sharedApplication] delegate]
+#define USERDEF [NSUserDefaults standardUserDefaults]
+#define CLEAR_COLOR [UIColor clearColor]
+
+#define currentDevice [UIDevice currentDevice]
+#define isiPhone [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone
+#define ALPHA	@"АБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФХЦЧШЩЪЫЬЭЮЯ#"
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+#define BG_COLOR UIColorFromRGB(0xf0f0f0)
+#define MAIN_LIGHT_FONT @"HelveticaNeue-Light"
+#define MAIN_COLOR UIColorFromRGB(0x03a9f4)
+#define SECOND_COLOR UIColorFromRGB(0xc3e1fb)
+
+#define kITS_SET_STATIC_VALUES @"kITS_SET_STATIC_VALUES"
+#define kITS_SHOW_TUT @"kITS_SHOW_TUT"
+#define kITS_ANY_SOUND @"kITS_ANY_SOUND"
+#define kNOTIFICATION_STATE @"kNOTIFICATION_STATE"
+#define kSTART_TIME @"kSTART_TIME"
+#define kEND_TIME @"kEND_TIME"
+#define kSELECTED_LANGUAGE @"kSELECTED_LANGUAGE"
+#define kSELECTED_SOUND @"kSELECTED_SOUND"
+#define kINTERVAL @"kINTERVAL"
+#define kWEIGHT_INTERVAL @"kWEIGHT_INTERVAL"
+#define kLAST_UPDATE_WEIGHT @"kLAST_UPDATE_WEIGHT"
+#define kFIRST_DATE @"kFIRST_DATE"
+#define kLAST_DRINKED_ML @"kLAST_DRINKED_ML"
+
+
+#define LANGUAGE_KEY [[NSUserDefaults standardUserDefaults] valueForKey:@"languageKey"]
+#define LANGUAGE [LanguageManager getLanguage]
+#define ITS_MONGOLIAN [LANGUAGE_KEY isEqualToString:@"mn"]
+
+#define IOS7_OR_LATER [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
+
+// Measurements
+#define ML_PER_KG  40
+#define ML  1000
+
+#define WEIGHT_UNDERWEIGHT_ID  0
+#define WEIGHT_NORMAL_ID  1
+#define WEIGHT_OVERWEIGHT_ID  2
+#define WEIGHT_OBESE_ID  3
+
+#define BMI_MEASURE_UNDERWEIGHT  18.5
+#define BMI_MEASURE_NORMAL  25
+#define BMI_MEASURE_OVERWEIGHT 30

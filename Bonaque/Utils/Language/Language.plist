@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>menus</key>
+		<array>
+			<string>Main Screen</string>
+			<string>Charts</string>
+			<string>Advices</string>
+			<string>Purposes</string>
+			<string>Settings</string>
+		</array>
+		<key>advices</key>
+		<string>Advices</string>
+		<key>purposes</key>
+		<string>Purposes</string>
+		<key>settings</key>
+		<string>Settings</string>
+		<key>cancel</key>
+		<string>Cancel</string>
+		<key>enabled</key>
+		<string>Enabled</string>
+		<key>disabled</key>
+		<string>Disabled</string>
+		<key>set</key>
+		<string>Set</string>
+		<key>loading_title</key>
+		<string>Please wait</string>
+		<key>loading</key>
+		<string>Loading...</string>
+		<key>choose_lang</key>
+		<string>Select a language</string>
+		<key>lang</key>
+		<string>Language</string>
+		<key>en</key>
+		<string>English</string>
+		<key>mn</key>
+		<string>Монгол хэл</string>
+		<key>choose_gender</key>
+		<string>Your gender</string>
+		<key>male</key>
+		<string>Male</string>
+		<key>female</key>
+		<string>Female</string>
+		<key>start</key>
+		<string>Start</string>
+		<key>dailyPurposeStatus</key>
+		<string>Purpose</string>
+		<key>dailyPurpose</key>
+		<string>Daily goal</string>
+		<key>weight</key>
+		<string>Your weight</string>
+		<key>configuration</key>
+		<string>Configuration</string>
+		<key>water_notif</key>
+		<string>Water Notification</string>
+		<key>app</key>
+		<string>App</string>
+		<key>notification</key>
+		<string>Notifications</string>
+		<key>app_sound</key>
+		<string>App Sound</string>
+		<key>start_time</key>
+		<string>Start time</string>
+		<key>end_time</key>
+		<string>End time</string>
+		<key>interval</key>
+		<string>Interval</string>
+		<key>notif_sound</key>
+		<string>Notification Sound</string>
+		<key>choose_notif_sound</key>
+		<string>Select notification sound</string>
+		<key>day_interval</key>
+		<string>Days Interval</string>
+		<key>rate_app</key>
+		<string>Rate App</string>
+		<key>share_bonaqua</key>
+		<string>Share Bonaqua</string>
+		<key>fb_like</key>
+		<string>Facebook Like</string>
+		<key>tw_follow</key>
+		<string>Twitter Follow</string>
+		<key>version</key>
+		<string>Version</string>
+		<key>choose_interval</key>
+		<string>Select interval</string>
+		<key>every15min</key>
+		<string>Every 15 minutes</string>
+		<key>every_halfhour</key>
+		<string>Every half hour</string>
+		<key>select_start_time</key>
+		<string>Select a notification start time</string>
+		<key>select_end_time</key>
+		<string>Select a notification end time</string>
+		<key>choose</key>
+		<string>SELECT</string>
+		<key>close</key>
+		<string>CLOSE</string>
+		<key>interval_array</key>
+		<array>
+			<string>Every 15 minutes</string>
+			<string>Every half hour</string>
+			<string>Every 1 hour</string>
+			<string>Every 1:30 hours</string>
+			<string>Every 2 hours</string>
+			<string>Every 3 hours</string>
+			<string>Every 4 hours</string>
+		</array>
+		<key>weight_interval</key>
+		<array>
+			<string>Everyday</string>
+			<string>Every 3 days</string>
+			<string>Every 7 days</string>
+			<string>Every 14 days</string>
+			<string>Every 21 days</string>
+			<string>Every 30 days</string>
+			<string>Every 60 days</string>
+		</array>
+		<key>name</key>
+		<string>Your name</string>
+		<key>height</key>
+		<string>Your height</string>
+		<key>alert_empty_field</key>
+		<string>Please</string>
+		<key>water_size</key>
+		<string>Cup size</string>
+		<key>min_litre</key>
+		<string>l</string>
+		<key>weight_index</key>
+		<string>Your weight index</string>
+		<key>completion</key>
+		<string>completion</string>
+		<key>todays_target</key>
+		<string>Todays target</string>
+		<key>litre</key>
+		<string>litre</string>
+		<key>notif_title</key>
+		<string>Lets drink water!</string>
+		<key>days_remaining</key>
+		<string>days remaining</string>
+		<key>drinked_water</key>
+		<string>days drinked water. You won!</string>
+		<key>today_advice</key>
+		<string>Todays advice</string>
+		<key>weight_reminder_interval</key>
+		<array>
+			<string>Everyday</string>
+			<string>Every 3 days</string>
+			<string>Every 7 days</string>
+			<string>Every 14 days</string>
+			<string>Every 21 days</string>
+			<string>Every 30 days</string>
+			<string>Every 60 days</string>
+		</array>
+		<key>config_weight</key>
+		<string>Weight Notification</string>
+		<key>select_interval</key>
+		<string>Select interval</string>
+		<key>insert_weight</key>
+		<string>Insert weight</string>
+		<key>insert</key>
+		<string>Insert</string>
+		<key>must_insert_weight</key>
+		<string>Please you must insert weight.</string>
+		<key>error_duplicate_cup</key>
+		<string>This cup size error</string>
+		<key>new_cup_add</key>
+		<string>New cup add</string>
+		<key>kg</key>
+		<string>kg</string>
+		<key>cm</key>
+		<string>cm</string>
+		<key>ages</key>
+		<string>ages</string>
+		<key>profile_1</key>
+		<string>ТОГТМОЛ УУЖ ЭХЭЛСЭН ӨДӨР</string>
+		<key>profile_2</key>
+		<string>ТАНЫ УУСАН УСНЫ ХЭМЖЭЭ /литр/</string>
+		<key>profile_3</key>
+		<string>ТАНЫ ӨДӨРТ УУЖ БУЙ ДУНДАЖ УСНЫ ХЭМЖЭЭ /литр/</string>
+		<key>profile_4</key>
+		<string>ТОГТМОЛ УС УУЖ ЭХЭЛСНЭЭС ХОЙШХИ ХАМГИЙН ИХ ЖИН /кг/</string>
+		<key>profile_5</key>
+		<string>ТОГТМОЛ УС УУЖ ЭХЭЛСНЭЭС ХОЙШХИ ХАМГИЙН БАГА ЖИН /кг/</string>
+		<key>insert_cup_size</key>
+		<string>Insert your cup size</string>
+		<key>chart1_title</key>
+		<string>Chart1</string>
+		<key>chart2_title</key>
+		<string>Chart2</string>
+		<key>week_days</key>
+		<array>
+			<string>Mon</string>
+			<string>Tue</string>
+			<string>Wed</string>
+			<string>Thu</string>
+			<string>Fri</string>
+			<string>Sat</string>
+			<string>Sun</string>
+		</array>
+		<key>next_week</key>
+		<string>next week</string>
+		<key>prev_week</key>
+		<string>previous week</string>
+	</dict>
+	<dict>
+		<key>menus</key>
+		<array>
+			<string>Үндсэн дэлгэц</string>
+			<string>График</string>
+			<string>Зөвлөгөө</string>
+			<string>Цом</string>
+			<string>Тохиргоо</string>
+		</array>
+		<key>advices</key>
+		<string>Зөвлөгөө</string>
+		<key>purposes</key>
+		<string>Цом</string>
+		<key>settings</key>
+		<string>Тохиргоо</string>
+		<key>cancel</key>
+		<string>Болих</string>
+		<key>enabled</key>
+		<string>Идэвхитэй</string>
+		<key>disabled</key>
+		<string>Идэвхигүй</string>
+		<key>set</key>
+		<string>Тохируулах</string>
+		<key>loading_title</key>
+		<string>Түр хүлээнэ үү</string>
+		<key>loading</key>
+		<string>Loading...</string>
+		<key>choose_lang</key>
+		<string>Хэл сонгох</string>
+		<key>lang</key>
+		<string>Хэлний сонголт</string>
+		<key>en</key>
+		<string>English</string>
+		<key>mn</key>
+		<string>Монгол хэл</string>
+		<key>choose_gender</key>
+		<string>Таны хүйс</string>
+		<key>male</key>
+		<string>Эрэгтэй</string>
+		<key>female</key>
+		<string>Эмэгтэй</string>
+		<key>start</key>
+		<string>Эхлэх</string>
+		<key>dailyPurposeStatus</key>
+		<string>Өдрийн төлөвлөгөө</string>
+		<key>dailyPurpose</key>
+		<string>Өндөөрийн төлөв</string>
+		<key>weight</key>
+		<string>Таны жин</string>
+		<key>configuration</key>
+		<string>Үндсэн тохиргоо</string>
+		<key>water_notif</key>
+		<string>Ус уух мэдэгдэл</string>
+		<key>app</key>
+		<string>Апп</string>
+		<key>notification</key>
+		<string>Мэдэгдэл</string>
+		<key>app_sound</key>
+		<string>Аппны дуу</string>
+		<key>start_time</key>
+		<string>Эхлэх цаг</string>
+		<key>end_time</key>
+		<string>Дуусах цаг</string>
+		<key>interval</key>
+		<string>Интервал</string>
+		<key>notif_sound</key>
+		<string>Мэдэгдэлийн дуу</string>
+		<key>choose_notif_sound</key>
+		<string>Мэдэгдэлийн дуугаа сонгох</string>
+		<key>day_interval</key>
+		<string>Хугацаа</string>
+		<key>rate_app</key>
+		<string>Апп-д үнэлгээ өгөх</string>
+		<key>share_bonaqua</key>
+		<string>Share Bonaqua</string>
+		<key>fb_like</key>
+		<string>Facebook Like</string>
+		<key>tw_follow</key>
+		<string>Twitter Follow</string>
+		<key>version</key>
+		<string>Хувилбар</string>
+		<key>choose_interval</key>
+		<string>Интервал сонгох</string>
+		<key>every15min</key>
+		<string>Every 15 minutes</string>
+		<key>every_halfhour</key>
+		<string>Every half hour</string>
+		<key>select_start_time</key>
+		<string>Мэдэгдэл өгч эхлэх хугацааг сонгох</string>
+		<key>select_end_time</key>
+		<string>Мэдэгдэл өгч дуусах хугацааг сонгох</string>
+		<key>choose</key>
+		<string>СОНГОХ</string>
+		<key>close</key>
+		<string>ХААХ</string>
+		<key>interval_array</key>
+		<array>
+			<string>15 минут тутамд</string>
+			<string>Хагас цаг тутамд</string>
+			<string>1 цаг тутамд</string>
+			<string>1:30 минут тутамд</string>
+			<string>2 цаг тутамд </string>
+			<string>3 цаг тутамд</string>
+			<string>4 цаг тутамд</string>
+		</array>
+		<key>weight_interval</key>
+		<array>
+			<string>Everyday</string>
+			<string>Every 3 days</string>
+			<string>Every 7 days</string>
+			<string>Every 14 days</string>
+			<string>Every 21 days</string>
+			<string>Every 30 days</string>
+			<string>Every 60 days</string>
+		</array>
+		<key>name</key>
+		<string>Хэрэглэгчийн нэр</string>
+		<key>height</key>
+		<string>Таны өндөр</string>
+		<key>alert_empty_field</key>
+		<string>Та бүх талбарыг гүйцэт бөглөнө үү</string>
+		<key>water_size</key>
+		<string>Усны хэмжээ</string>
+		<key>min_litre</key>
+		<string>л</string>
+		<key>weight_index</key>
+		<string>Таны жингийн индекс</string>
+		<key>completion</key>
+		<string>Биелэлт</string>
+		<key>todays_target</key>
+		<string>Өдрийн зорилго</string>
+		<key>litre</key>
+		<string>литр</string>
+		<key>notif_title</key>
+		<string>Ус уух цаг боллоо!</string>
+		<key>days_remaining</key>
+		<string>өдөр үлдсэн</string>
+		<key>drinked_water</key>
+		<string>өдөр ус уусан. Та ялсан байна!</string>
+		<key>today_advice</key>
+		<string>Өнөөдрийн зөвлөгөө</string>
+		<key>weight_reminder_interval</key>
+		<array>
+			<string>1 хоног тутамд</string>
+			<string>3 хоног тутамд</string>
+			<string>7 хоног тутамд</string>
+			<string>14 хоног тутамд</string>
+			<string>21 хоног тутамд</string>
+			<string>30 хоног тутамд</string>
+			<string>60 хоног тутамд</string>
+		</array>
+		<key>config_weight</key>
+		<string>Жин асуух</string>
+		<key>select_interval</key>
+		<string>Сануулгын хугацаа</string>
+		<key>insert_weight</key>
+		<string>Жингээ оруулах</string>
+		<key>insert</key>
+		<string>Оруулах</string>
+		<key>must_insert_weight</key>
+		<string>Та жингээ оруулна уу</string>
+		<key>error_duplicate_cup</key>
+		<string>Энэ аяганы хэмжээ өмнө нь хадгалагдсан байна.</string>
+		<key>new_cup_add</key>
+		<string>Шинэ аяга нэмэх</string>
+		<key>kg</key>
+		<string>кг</string>
+		<key>cm</key>
+		<string>см</string>
+		<key>ages</key>
+		<string>настай</string>
+		<key>profile_1</key>
+		<string>ТОГТМОЛ УУЖ ЭХЭЛСЭН ӨДӨР</string>
+		<key>profile_2</key>
+		<string>ТАНЫ УУСАН УСНЫ ХЭМЖЭЭ /литр/</string>
+		<key>profile_3</key>
+		<string>ТАНЫ ӨДӨРТ УУЖ БУЙ ДУНДАЖ УСНЫ ХЭМЖЭЭ /литр/</string>
+		<key>profile_4</key>
+		<string>ТОГТМОЛ УС УУЖ ЭХЭЛСНЭЭС ХОЙШХИ ХАМГИЙН ИХ ЖИН /кг/</string>
+		<key>profile_5</key>
+		<string>ТОГТМОЛ УС УУЖ ЭХЭЛСНЭЭС ХОЙШХИ ХАМГИЙН БАГА ЖИН /кг/</string>
+		<key>insert_cup_size</key>
+		<string>Аяга нэмэх</string>
+		<key>chart1_title</key>
+		<string>Chart1</string>
+		<key>chart2_title</key>
+		<string>Chart2</string>
+		<key>next_week</key>
+		<string>Дараах 7 хоног</string>
+		<key>prev_week</key>
+		<string>Өмнөх 7 хоног</string>
+		<key>week_days</key>
+		<array>
+			<string>Дa</string>
+			<string>Мя</string>
+			<string>Лх</string>
+			<string>Пү</string>
+			<string>Ба</string>
+			<string>Бя</string>
+			<string>Ня</string>
+		</array>
+	</dict>
+</array>
+</plist>

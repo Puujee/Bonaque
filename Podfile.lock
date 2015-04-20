@@ -1,0 +1,90 @@
+PODS:
+  - AFNetworking (2.5.2):
+    - AFNetworking/NSURLConnection (= 2.5.2)
+    - AFNetworking/NSURLSession (= 2.5.2)
+    - AFNetworking/Reachability (= 2.5.2)
+    - AFNetworking/Security (= 2.5.2)
+    - AFNetworking/Serialization (= 2.5.2)
+    - AFNetworking/UIKit (= 2.5.2)
+  - AFNetworking/NSURLConnection (2.5.2):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.2):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.2)
+  - AFNetworking/Security (2.5.2)
+  - AFNetworking/Serialization (2.5.2)
+  - AFNetworking/UIKit (2.5.2):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - ATLog (0.0.2)
+  - Bolts (1.1.4)
+  - BSKeyboardControls (2.2)
+  - Facebook-iOS-SDK (4.0.1):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit (= 4.0.1)
+    - Facebook-iOS-SDK/LoginKit (= 4.0.1)
+    - Facebook-iOS-SDK/ShareKit (= 4.0.1)
+  - Facebook-iOS-SDK/CoreKit (4.0.1):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit/no-arc (= 4.0.1)
+  - Facebook-iOS-SDK/CoreKit/no-arc (4.0.1):
+    - Bolts (~> 1.0)
+  - Facebook-iOS-SDK/LoginKit (4.0.1):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/ShareKit (4.0.1):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit
+  - HexColors (2.2.1)
+  - macros_blocks (0.0.1)
+  - MBProgressHUD (0.9.1)
+  - SCNetworkReachability (2.0.4):
+    - SCNetworkReachability/Core (= 2.0.4)
+  - SCNetworkReachability/Core (2.0.4):
+    - macros_blocks (= 0.0.1)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+  - SVWebViewController (1.0)
+  - SWRevealViewController (2.0.2)
+  - UAAppReviewManager (0.1.7)
+  - UIActivityIndicator-for-SDWebImage (1.2):
+    - SDWebImage (~> 3.7)
+  - UICountingLabel (1.2.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - ATLog (~> 0.0.2)
+  - BSKeyboardControls
+  - Facebook-iOS-SDK
+  - HexColors
+  - MBProgressHUD (~> 0.9.1)
+  - SCNetworkReachability
+  - SVWebViewController
+  - SWRevealViewController (~> 2.0.0)
+  - UAAppReviewManager (~> 0.1.0)
+  - UIActivityIndicator-for-SDWebImage (~> 1.2)
+  - UICountingLabel (~> 1.2.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
+  ATLog: e9c8afd11e4108381fdc862e9ccb793435f8c259
+  Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
+  BSKeyboardControls: b701935e789961102e3f20063bba7185800a2d3f
+  Facebook-iOS-SDK: 6d05532c97e9c542f8d87f94b7f6ee217493d00b
+  HexColors: abfd172e329dab59888614ccba6f216cec59289d
+  macros_blocks: da2106a0975514e16f3669f2f50a02efaff642cf
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  SCNetworkReachability: 4d836180e9ef916da4ef68a34fec748f88950712
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901
+  SWRevealViewController: ada01e8de5fbe7c27295b3759916b8af8dd89196
+  UAAppReviewManager: daa1a615986ffd94943aca5caf831a786736367c
+  UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+
+COCOAPODS: 0.36.0

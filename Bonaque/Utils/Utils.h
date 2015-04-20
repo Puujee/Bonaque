@@ -1,0 +1,42 @@
+//
+//  Utils.h
+//  Bondooloi
+//
+//  Created by L on 10/1/14.
+//  Copyright (c) 2014 L. All rights reserved.
+//
+
+#import <MessageUI/MFMailComposeViewController.h>
+#import <Foundation/Foundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+
+
+/*!
+ * @brief Аппанд нийтлэг ашиглагдаж байгаа функцуудийн Class
+ */
+
+@interface Utils : NSObject
+
++ (Utils *)getUtils;
+
+/*!
+ *  Аппад алерт харуулна.
+ *
+ *  @param message Алертийн текст
+ */
++ (void) showAlert:(NSString *)message;
+
++(void)setAlarm:(NSString *)title withDate:(NSString *)date;
++(void)setAlarmSchedule;
++(void)removeLocalNotification:(NSString *)title;
+
++(NSDate *)dateFromHouurs:(NSString *)hour;
+
++(SystemSoundID)createSystemSoundId:(NSString*)filename;
++(void)playSystemSoundWithName:(NSString *)path;
+
++(void)showCongrulatePurpose:(Purpose *)item;
+
++(int)getIntervalWeightReminder;
+
+@end
