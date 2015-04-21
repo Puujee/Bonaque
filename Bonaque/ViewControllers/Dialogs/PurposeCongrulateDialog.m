@@ -24,7 +24,7 @@
 -(id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        titleLabel.text = @"Танд баяр хүргье!";
+        titleLabel.text = @"Танд баяр хүргэе!";
         
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleLabel.frame) + 10, CGRectGetWidth(contentView.frame), 60)];
         imageView.contentMode = UIViewContentModeScaleAspectFit;

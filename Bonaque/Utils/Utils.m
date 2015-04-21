@@ -51,7 +51,7 @@ Utils     *sharedUtils;
 }
 
 +(void)setAlarmSchedule{
-    [Utils  removeLocalNotification:@"Ус уух цаг боллоо!"];
+    [Utils  removeLocalNotification:@"Ус уух цаг боллоо"];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"HH:mm";
@@ -86,16 +86,12 @@ Utils     *sharedUtils;
         intervalHour = 1;
     }
     else if (interval == 3){
-        intervalHour = 1;
-        intervalMinute = 30;
-    }
-    else if (interval == 4){
         intervalHour = 2;
     }
-    else if (interval == 5){
+    else if (interval == 4){
         intervalHour = 3;
     }
-    else if (interval == 6){
+    else if (interval == 5){
         intervalHour = 4;
     }
     
@@ -195,7 +191,7 @@ Utils     *sharedUtils;
     }
     else {
         NSString *cafPath =
-        [[NSBundle mainBundle] pathForResource:filename ofType:@"caf"];
+        [[NSBundle mainBundle] pathForResource:filename ofType:@""];
         NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
         err = AudioServicesCreateSystemSoundID((__bridge CFURLRef) cafURL, &soundID);
     }

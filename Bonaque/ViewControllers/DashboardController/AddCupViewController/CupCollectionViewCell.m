@@ -101,7 +101,7 @@
 
 -(void)setItem:(Cup *)item{
     _item = item;
-    label.text =  [NSString stringWithFormat:@"%@ ml", item.ml];
+    label.text =  [NSString stringWithFormat:@"%@ мл", item.ml];
     imageView.image = [UIImage imageNamed:_item.icon];
     [self setNeedsLayout];
 

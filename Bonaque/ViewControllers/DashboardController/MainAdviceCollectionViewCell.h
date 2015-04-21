@@ -14,5 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *adviceDescriptionLabel;
 @property (nonatomic, strong) Advice *item;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 
 @end

@@ -38,7 +38,7 @@
             titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
             titleLabel.backgroundColor = CLEAR_COLOR;
             titleLabel.numberOfLines = 99;
-            titleLabel.text = @"УСНЫ ГРАФИК";
+            titleLabel.text = @"УСНЫ ХЭРЭГЛЭЭ";
             titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
             titleLabel.textColor = MAIN_COLOR;
             [topChartContainer addSubview:titleLabel];
@@ -78,7 +78,7 @@
                 [badView.layer setCornerRadius:10];
                 [view addSubview:badView];
                 
-                label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 30, 20)];
+                label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 31, 20)];
                 label.textAlignment = NSTextAlignmentLeft;
                 label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:11];
                 label.backgroundColor = CLEAR_COLOR;
@@ -94,12 +94,12 @@
                 [badView.layer setCornerRadius:10];
                 [view addSubview:badView];
                 
-                label3 = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 45, 20)];
+                label3 = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 32, 20)];
                 label3.textAlignment = NSTextAlignmentLeft;
                 label3.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:11];
                 label3.backgroundColor = CLEAR_COLOR;
                 label3.numberOfLines = 99;
-                label3.text = @"Дундаж";
+                label3.text = @"Дунд";
                 label3.textColor = UIColorFromRGB(0xffcc33);
                 [view addSubview:label3];
             }
@@ -138,7 +138,7 @@
             titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
             titleLabel.backgroundColor = CLEAR_COLOR;
             titleLabel.numberOfLines = 99;
-            titleLabel.text = @"ЖИНГИЙН ГРАФИК";
+            titleLabel.text = @"БИЕИЙН ЖИН";
             titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
             titleLabel.textColor = MAIN_COLOR;
             [bottomChartContainer addSubview:titleLabel];
@@ -176,12 +176,12 @@
                 [badView.layer setCornerRadius:10];
                 [view addSubview:badView];
                 
-                label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 50, 20)];
+                label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 28, 20)];
                 label.textAlignment = NSTextAlignmentLeft;
                 label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:10];
                 label.backgroundColor = CLEAR_COLOR;
                 label.numberOfLines = 99;
-                label.text = @"Туранхай";
+                label.text = @"Бага";
                 label.textColor = UIColorFromRGB(0x0db1a0);
                 [view addSubview:label];
             }
@@ -192,7 +192,7 @@
                 [badView.layer setCornerRadius:10];
                 [view addSubview:badView];
                 
-                label3 = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 35, 20)];
+                label3 = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 40, 20)];
                 label3.textAlignment = NSTextAlignmentLeft;
                 label3.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:10];
                 label3.backgroundColor = CLEAR_COLOR;
@@ -208,12 +208,12 @@
                 [badView.layer setCornerRadius:10];
                 [view addSubview:badView];
                 
-                label4 = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 85, 20)];
+                label4 = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(badView.frame) + 5, 0, 60, 20)];
                 label4.textAlignment = NSTextAlignmentLeft;
                 label4.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:10];
                 label4.backgroundColor = CLEAR_COLOR;
                 label4.numberOfLines = 99;
-                label4.text = @"Бага зэрэг тарган";
+                label4.text = @"Илүүдэлтэй";
                 label4.textColor = UIColorFromRGB(0xffa200);
                 [view addSubview:label4];
             }
@@ -232,11 +232,11 @@
                 label5.text = @"Тарган";
                 label5.textColor = UIColorFromRGB(0xea31a2);
                 [view addSubview:label5];
-                if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {
-                    badView.frame = CGRectMake(15, 25, 20, 20);
-                    label5.frame = CGRectMake(CGRectGetMaxX(badView.frame) + 5, 25, 60, 20);
-                    view.frame = CGRectMake(0, CGRectGetMaxY(self.firstBarChart.frame), CGRectGetWidth(self.frame), 50);
-                }
+//                if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {
+//                    badView.frame = CGRectMake(15, 25, 20, 20);
+//                    label5.frame = CGRectMake(CGRectGetMaxX(badView.frame) + 5, 25, 60, 20);
+//                    view.frame = CGRectMake(0, CGRectGetMaxY(self.firstBarChart.frame), CGRectGetWidth(self.frame), 50);
+//                }
             }
         }
     }

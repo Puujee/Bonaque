@@ -75,7 +75,6 @@
 		0BAFA7F91ADECD6000F2F3E6 /* ChangeLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAFA7F81ADECD6000F2F3E6 /* ChangeLanguageViewController.m */; };
 		0BAFA7FC1ADECD6000F2F3E6 /* UIScreen+GSInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAFA7FB1ADECD6000F2F3E6 /* UIScreen+GSInfo.m */; };
 		0BB32AB81ADEA60900608E68 /* UIImage+AssetLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB32AB31ADEA60900608E68 /* UIImage+AssetLaunchImage.m */; };
-		0BB34A5C1AD8FA4D00F9EFE1 /* drink_sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB34A5A1AD8FA4D00F9EFE1 /* drink_sound.caf */; };
 		0BB34A5D1AD8FA4D00F9EFE1 /* water_sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB34A5B1AD8FA4D00F9EFE1 /* water_sound.caf */; };
 		0BBC2AFF1AE4911800DF9F43 /* LineChartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC2AFE1AE4911800DF9F43 /* LineChartsView.m */; };
 		0BBC2B021AE4A33C00DF9F43 /* Barchart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC2B011AE4A33C00DF9F43 /* Barchart.m */; };
@@ -104,6 +103,7 @@
 		0BDBB1221AD5F0C900A12AF2 /* cups.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BDBB11D1AD5F0C900A12AF2 /* cups.json */; };
 		0BDBB1231AD5F0C900A12AF2 /* purposes_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BDBB11E1AD5F0C900A12AF2 /* purposes_en.json */; };
 		0BDBB1241AD5F0C900A12AF2 /* purposes_mn.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BDBB11F1AD5F0C900A12AF2 /* purposes_mn.json */; };
+		0BEEB6A31AE613BF00E937CC /* sms-received.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0BEEB6A21AE613BF00E937CC /* sms-received.wav */; };
 		0BF8EF141ADEBCC900680837 /* TutorialItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8EF131ADEBCC900680837 /* TutorialItem.m */; };
 		1485CC1AFFA75EA6902EF31B /* libPods-Bonaque.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C704B0530E7B98F61F3CD0 /* libPods-Bonaque.a */; };
 /* End PBXBuildFile section */
@@ -250,7 +250,6 @@
 		0BAFA7FB1ADECD6000F2F3E6 /* UIScreen+GSInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+GSInfo.m"; sourceTree = "<group>"; };
 		0BB32AB21ADEA60900608E68 /* UIImage+AssetLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AssetLaunchImage.h"; sourceTree = "<group>"; };
 		0BB32AB31ADEA60900608E68 /* UIImage+AssetLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AssetLaunchImage.m"; sourceTree = "<group>"; };
-		0BB34A5A1AD8FA4D00F9EFE1 /* drink_sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drink_sound.caf; sourceTree = "<group>"; };
 		0BB34A5B1AD8FA4D00F9EFE1 /* water_sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = water_sound.caf; sourceTree = "<group>"; };
 		0BBC2AFD1AE4911800DF9F43 /* LineChartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChartsView.h; sourceTree = "<group>"; };
 		0BBC2AFE1AE4911800DF9F43 /* LineChartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartsView.m; sourceTree = "<group>"; };
@@ -299,6 +298,7 @@
 		0BDBB11D1AD5F0C900A12AF2 /* cups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cups.json; sourceTree = "<group>"; };
 		0BDBB11E1AD5F0C900A12AF2 /* purposes_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purposes_en.json; sourceTree = "<group>"; };
 		0BDBB11F1AD5F0C900A12AF2 /* purposes_mn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purposes_mn.json; sourceTree = "<group>"; };
+		0BEEB6A21AE613BF00E937CC /* sms-received.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sms-received.wav"; sourceTree = "<group>"; };
 		0BF8EF121ADEBCC900680837 /* TutorialItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialItem.h; sourceTree = "<group>"; };
 		0BF8EF131ADEBCC900680837 /* TutorialItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialItem.m; sourceTree = "<group>"; };
 		44B50B3A8B56E8FE1947B7A9 /* Pods-Bonaque.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonaque.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonaque/Pods-Bonaque.release.xcconfig"; sourceTree = "<group>"; };
@@ -458,8 +458,8 @@
 		0B25AC561ACFEB3700AA7ACD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0BEEB6A21AE613BF00E937CC /* sms-received.wav */,
 				0B6A613D1AE578FF00A0BDE9 /* Mogul PopularScript.ttf */,
-				0BB34A5A1AD8FA4D00F9EFE1 /* drink_sound.caf */,
 				0BB34A5B1AD8FA4D00F9EFE1 /* water_sound.caf */,
 				0BDBB1251AD5F0D800A12AF2 /* Sound */,
 				0BDBB11A1AD5F0A400A12AF2 /* json */,
@@ -864,6 +864,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BDBB1231AD5F0C900A12AF2 /* purposes_en.json in Resources */,
+				0BEEB6A31AE613BF00E937CC /* sms-received.wav in Resources */,
 				0BDBB1211AD5F0C900A12AF2 /* advices_mn.json in Resources */,
 				0BAFA7D01ADD075E00F2F3E6 /* MainPurposeCollectionViewCell.xib in Resources */,
 				0BDBB1201AD5F0C900A12AF2 /* advices_en.json in Resources */,
@@ -877,7 +878,6 @@
 				0B6A613C1AE574B200A0BDE9 /* Images.xcassets in Resources */,
 				0BA8930D1ADC29410082A4ED /* MainAdviceCollectionViewCell.xib in Resources */,
 				0B6A613E1AE578FF00A0BDE9 /* Mogul PopularScript.ttf in Resources */,
-				0BB34A5C1AD8FA4D00F9EFE1 /* drink_sound.caf in Resources */,
 				0B25AC8D1AD124CB00AA7ACD /* SettingsTableViewCell.xib in Resources */,
 				0BB34A5D1AD8FA4D00F9EFE1 /* water_sound.caf in Resources */,
 				0BDBB1241AD5F0C900A12AF2 /* purposes_mn.json in Resources */,
@@ -1121,7 +1121,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0ad7271b-f90a-40ca-962a-bb7aecb8dce4";
+				PROVISIONING_PROFILE = "33338e63-ffe1-46c4-b2c6-e9b66f13321c";
 			};
 			name = Debug;
 		};
@@ -1138,7 +1138,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0ad7271b-f90a-40ca-962a-bb7aecb8dce4";
+				PROVISIONING_PROFILE = "33338e63-ffe1-46c4-b2c6-e9b66f13321c";
 			};
 			name = Release;
 		};

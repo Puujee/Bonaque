@@ -88,7 +88,7 @@
         label= [[UILabel alloc] initWithFrame:CGRectMake(70, 3, CGRectGetWidth(titleContainer.bounds) - 140, 44)];
         label.textAlignment = NSTextAlignmentCenter;
         label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        label.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:18];
+        label.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:13];
         label.text = [[LANGUAGE getStringForKey:@"chart1_title"] uppercaseString];
         label.backgroundColor = [UIColor clearColor];
         label.numberOfLines = 99;
@@ -194,9 +194,14 @@
 
 -(void)setTitleLabel:(NSArray *)weekArray{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"MM/dd";
+    dateFormatter.dateFormat = @"yyyy/MM";
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-    NSString *labelText= [NSString stringWithFormat:@"%@ - %@", [dateFormatter stringFromDate:[weekArray objectAtIndex:0] ], [dateFormatter stringFromDate:[weekArray lastObject]]];
+    
+    NSDateFormatter *dateFormatter1 = [[NSDateFormatter alloc] init];
+    dateFormatter1.dateFormat = @"dd";
+    [dateFormatter1 setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    
+    NSString *labelText= [NSString stringWithFormat:@"%@    %@ - %@", [dateFormatter stringFromDate:[weekArray objectAtIndex:0] ], [dateFormatter1 stringFromDate:[weekArray objectAtIndex:0] ], [dateFormatter1 stringFromDate:[weekArray lastObject] ]];
     label.text = labelText;
 }
 

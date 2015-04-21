@@ -20,6 +20,8 @@
     // Initialization code
     [self.layer setCornerRadius:3];
     self.clipsToBounds = YES;
+    
+    _purposImageBgView.backgroundColor = MAIN_COLOR;
 }
 
 -(void)layoutSubviews{
@@ -44,6 +46,12 @@
 //    rect.size.height = rect.size.height - margin*2;
 //    _purposeImageView.frame = rect;
 //    _purposeImageView.center = _purposImageBgView.center;
+    
+    if ([UIScreen isiPhone6Plus] || [UIScreen isiPhone6]) {
+        _purposeContentView.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:15];
+        _countdownLabel.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:40];
+    }
+    
     _purposeImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_achived", item.icon]];
 
 }

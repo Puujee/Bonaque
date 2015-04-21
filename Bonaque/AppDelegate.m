@@ -79,11 +79,11 @@
         [USERDEF setBool:YES forKey:kITS_ANY_SOUND];
         [USERDEF setBool:NO forKey:kNOTIFICATION_STATE];
         [USERDEF setInteger:1 forKey:kSELECTED_LANGUAGE];
-        [USERDEF setValue:@"10:00" forKey:kSTART_TIME];
-        [USERDEF setValue:@"18:00" forKey:kEND_TIME];
+        [USERDEF setValue:@"8:00" forKey:kSTART_TIME];
+        [USERDEF setValue:@"20:00" forKey:kEND_TIME];
         [USERDEF setInteger:0 forKey:kSELECTED_SOUND];
         [USERDEF setInteger:2 forKey:kINTERVAL];
-        [USERDEF setInteger:0 forKey:kWEIGHT_INTERVAL];
+        [USERDEF setInteger:2 forKey:kWEIGHT_INTERVAL];
         [USERDEF setObject:[NSDate date] forKey:kLAST_UPDATE_WEIGHT];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"HH:mm";

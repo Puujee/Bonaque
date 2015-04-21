@@ -34,6 +34,9 @@
     
     float titleBotMargin;
     float titleTopMargin;
+    
+    float topGoalMargin;
+    float goalLabelFont;
 }
 
 @property (nonatomic) PNPieChart *pieChart;
@@ -63,6 +66,8 @@
     botMargin = 10;
     leftMargin = 10;
 
+    topGoalMargin = 40;
+    goalLabelFont = 14;
     
     mansHeight = 200;
     titleBotMargin = 35;
@@ -88,6 +93,9 @@
         leftMargin = 0;
         botMargin = 17;
         
+        topGoalMargin = 70;
+        goalLabelFont = 15;
+        
         mansHeight = 250;
         titleBotMargin = 45;
     }
@@ -112,10 +120,12 @@
         leftMargin = 0;
         botMargin = 27;
         
+        topGoalMargin = 80;
+        goalLabelFont = 17;
+        
         titleBotMargin = 50;
         
         rightMargin = 20;
-        
         mansHeight = 300;
     }
     else if ([UIScreen isiPhone6Plus]){
@@ -141,8 +151,10 @@
         mansHeight = 250;
         titleBotMargin = 65;
         
-        rightMargin = 20;
+        topGoalMargin = 90;
+        goalLabelFont = 17;
         
+        rightMargin = 20;
         mansHeight = 330;
     }
     chartsWidth = normalWidth;
@@ -238,16 +250,16 @@
         
         _maskedImage.frame = _maskedImagesBgView.bounds;
     }
-    _firstTitleLabel.frame = CGRectMake(rightMargin, CGRectGetHeight(self.frame) - titleBotMargin, titleWidth, titleHeight);
+    _secondTitleLabel.frame = CGRectMake(rightMargin, CGRectGetHeight(self.frame) - titleBotMargin + 10, titleWidth, titleHeight);
+    _secondContentLabel.frame = CGRectMake(CGRectGetMaxX(_secondTitleLabel.frame) - 10, CGRectGetMinY(_secondTitleLabel.frame), contentWidth, titleHeight);
+
+    _firstTitleLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - titleWidth - contentWidth, titleTopMargin, titleWidth, titleHeight);
     _firstContentLabel.frame = CGRectMake(CGRectGetMaxX(_firstTitleLabel.frame), CGRectGetMinY(_firstTitleLabel.frame), contentWidth, titleHeight);
     
-    _secondTitleLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - titleWidth - contentWidth + 10, titleTopMargin, titleWidth, titleHeight);
-    _secondContentLabel.frame = CGRectMake(CGRectGetMaxX(_secondTitleLabel.frame) - 10, CGRectGetMinY(_secondTitleLabel.frame), contentWidth, titleHeight);
-    
     _thirdTitleLabel.hidden = YES;
-    _thirdContentLabel.hidden = YES;
+//    _thirdContentLabel.hidden = YES;
 //    _thirdTitleLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - titleWidth, CGRectGetMaxY(_secondContentLabel.frame) + margin, titleWidth, titleHeight);
-//    _thirdContentLabel.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - contentWidth - (titleWidth - contentWidth)/2 , CGRectGetMaxY(_thirdTitleLabel.frame) + margin, contentWidth, titleHeight);
+    _thirdContentLabel.frame = CGRectMake(leftMargin, CGRectGetMinX(_maskedImagesBgView.frame) + topGoalMargin, mansWidth, titleHeight);
     
     if (!isFirst) {
         isFirst = YES;
@@ -257,13 +269,14 @@
         rect.origin.y = mansHeight;
         rect.size.height = 0 ;
         _percentMaskedView.frame = rect;
+        _percentMaskedView.backgroundColor = MAIN_COLOR;
     }
 //    [_addButton removeFromSuperview];
 //    [_addButton setTranslatesAutoresizingMaskIntoConstraints:YES];
     _addButton.frame = CGRectMake(CGRectGetWidth(self.frame) - rightMargin - buttonHeight, CGRectGetHeight(self.frame) - buttonHeight - botMargin, buttonHeight, buttonHeight);
     [_addButton.layer setCornerRadius:buttonHeight/2];
     _addButton.clipsToBounds = YES;
-    [_addButton setBackgroundImage:[HXColor imageWithColor:UIColorFromRGB(0x67be27)] forState:UIControlStateNormal];
+    [_addButton setBackgroundImage:[HXColor imageWithColor:UIColorFromRGB(0x67dd17)] forState:UIControlStateNormal];
 //    [self addSubview:_addButton];
     
     CGRect chartRect = _chartView.frame;
@@ -300,22 +313,23 @@
     {
         _secondTitleLabel.text = @"Биеийн жин";
         _secondTitleLabel.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:titleFontSize];
-        _secondTitleLabel.textColor = UIColorFromRGB(0xff8400);
+        _secondTitleLabel.textColor = UIColorFromRGB(0xffc107);
         
         [_secondContentLabel.layer setCornerRadius:3];
         _secondContentLabel.clipsToBounds = YES;
-        _secondContentLabel.backgroundColor = UIColorFromRGB(0xff8400);
+        _secondContentLabel.backgroundColor = UIColorFromRGB(0xffc107);
         _secondContentLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:fontSize];
     }
     {
         _thirdTitleLabel.text = @"Биелэлт";
         _thirdTitleLabel.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:titleFontSize];
-        _thirdTitleLabel.textColor = UIColorFromRGB(0x67be27);
+        _thirdTitleLabel.textColor = UIColorFromRGB(0x67dd17);
         
         [_thirdContentLabel.layer setCornerRadius:3];
-        _thirdContentLabel.clipsToBounds = YES;
-        _thirdContentLabel.backgroundColor = UIColorFromRGB(0x67be27);
-        _thirdContentLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:fontSize];
+//        _thirdContentLabel.clipsToBounds = YES;
+        _thirdContentLabel.backgroundColor = [UIColor clearColor];
+//        _thirdContentLabel.backgroundColor = UIColorFromRGB(0x67dd17);
+        _thirdContentLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:goalLabelFont];
     }
 
 //    _percentTitleLabel.text = [LANGUAGE getStringForKey:@"completion"];

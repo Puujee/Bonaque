@@ -32,7 +32,7 @@
         [_tableView registerNib:[UINib nibWithNibName:@"AdviceTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
         {
             UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 160)];
-            tableHeaderView.backgroundColor = UIColorFromRGB(0xa9cadb);
+            tableHeaderView.backgroundColor = SECOND_COLOR;
             
             UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 100, CGRectGetHeight(tableHeaderView.frame))];
             bgImageView.image = [UIImage imageNamed:@"imd_advice_big"];

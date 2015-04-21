@@ -47,7 +47,7 @@
                                                                                 action:@selector(doneSelecting)];
     [[self navigationItem] setRightBarButtonItem:doneButton];
     
-    _itemArray = @[@"Standart", @"Water Sound", @"Drink Sound"];
+    _itemArray = @[@"Стандарт ая", @"Аяга дүүрэх"];
     [self.view addSubview:self.tableView];
 }
 
@@ -97,12 +97,11 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     selectedRow = indexPath.row;
-    if (indexPath.row == 1) {
-        ATLog(@"sound");
-        [Utils  playSystemSoundWithName:@"water_sound"];
+    if (indexPath.row == 0) {
+        [Utils  playSystemSoundWithName:@"sms-received.wav"];
     }
-    else if (indexPath.row == 2){
-        [Utils  playSystemSoundWithName:@"drink_sound"];
+    if (indexPath.row == 1) {
+        [Utils  playSystemSoundWithName:@"water_sound.caf"];
     }
     [_tableView reloadData];
 }

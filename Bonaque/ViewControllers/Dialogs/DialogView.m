@@ -59,7 +59,7 @@
         contentTitleLabel.textAlignment = NSTextAlignmentCenter;
         contentTitleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         contentTitleLabel.font = [UIFont fontWithName:@"MogulPopularScript" size:45];
-        contentTitleLabel.text = @"Баяр хүргье";
+        contentTitleLabel.text = @"Баяр хүргэе";
         contentTitleLabel.numberOfLines = 3;
         contentTitleLabel.backgroundColor = CLEAR_COLOR;
         contentTitleLabel.textColor = [UIColor blackColor];
@@ -96,14 +96,14 @@
         bgImageView.center = contentView.center;
         
         titleLabel.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) + 10 ,CGRectGetMinY(bgImageView.frame) + 10, CGRectGetWidth(bgImageView.frame) - 20,50);
-        titleLabel.text = @"Та өнөөдрийнхөө усны хэрэгцээг хангалттай авч чадлаа.";
+        titleLabel.text = @"Та өдрийн хэрэгцээгээ хангалттай авч чадлаа.";
         
         contentImageView.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) +((CGRectGetWidth(bgImageView.frame) - 250)/2), CGRectGetMaxY(titleLabel.frame) + 10, 250, 210);
         contentImageView.image = [UIImage imageNamed:@"dialog_1-symbol"];
         
         backButton.frame = CGRectMake(CGRectGetMinX(bgImageView.frame), CGRectGetMaxY(contentImageView.frame) + 10, CGRectGetWidth(bgImageView.frame), 80);
         
-        contentTitleLabel.text = @"Баяр хүргье!";
+        contentTitleLabel.text = @"Баяр хүргэе!";
         contentTitleLabel.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) + 40, CGRectGetMaxY(titleLabel.frame) + 10, CGRectGetWidth(bgImageView.frame) - 80, 210);
         contentTitleLabel.textColor = UIColorFromRGB(0x62d60d);
     }
@@ -122,7 +122,7 @@
         contentImageView.image = [UIImage imageNamed:@"dialog_2-symbol"];
         
         titleLabel.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) + 10 ,CGRectGetMaxY(contentImageView.frame) + 10, CGRectGetWidth(bgImageView.frame) - 20,50);
-        titleLabel.text = @"Таны өнөөдрийн усны хэрэглээ хэвийн хэмжээнээс хэтрэх гэж байна.";
+        titleLabel.text = @"Таны өдрийн усны хэрэглээ хэтрэх гэж байна.";
         titleLabel.textColor = [UIColor whiteColor];
 
         
@@ -139,16 +139,17 @@
         bgImageView.frame = CGRectMake(0, 0, 270, 440);
         bgImageView.center = contentView.center;
         
-        contentTitleLabel.text = @"Зогс!!!";
+        contentTitleLabel.text = @"Хангалттай!!!";
         contentTitleLabel.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) + 40, CGRectGetMinY(bgImageView.frame) + 10, CGRectGetWidth(bgImageView.frame) - 80, 50);
         contentTitleLabel.textColor = [UIColor whiteColor];
+        contentTitleLabel.font = [UIFont fontWithName:@"MogulPopularScript" size:43];
         
         
         contentImageView.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) +((CGRectGetWidth(bgImageView.frame) - 137)/2), CGRectGetMaxY(contentTitleLabel.frame) + 10, 137, 137);
         contentImageView.image = [UIImage imageNamed:@"dialog_3-symbol"];
         
         titleLabel.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) + 10 ,CGRectGetMaxY(contentImageView.frame) + 10, CGRectGetWidth(bgImageView.frame) - 20,50);
-        titleLabel.text = @"Таны өнөөдрийн усны хэрэглээ хэтэрсэн байна.";
+        titleLabel.text = @"Таны өдрийн усны хэрэглээ хэтэрсэн байна.";
         titleLabel.textColor = [UIColor whiteColor];
         
         

@@ -76,6 +76,7 @@
                 <outlet property="adviceDescriptionLabel" destination="3ik-JM-qk6" id="jfB-0Y-jxW"/>
                 <outlet property="adviceImageView" destination="Rj1-dg-mZb" id="wax-Nl-xQt"/>
                 <outlet property="adviceTitleLabel" destination="OeB-2L-p7O" id="dp3-kN-tlT"/>
+                <outlet property="bgView" destination="nTx-rT-zU4" id="50c-M4-N5i"/>
             </connections>
             <point key="canvasLocation" x="302.5" y="390"/>
         </collectionViewCell>

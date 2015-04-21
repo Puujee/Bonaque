@@ -61,6 +61,11 @@
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gJr-3k-fBo"/>
+                            </mask>
+                        </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqc-Vs-M4l">
                         <rect key="frame" x="0.0" y="55" width="151" height="35"/>
@@ -79,6 +84,7 @@
                 <constraint firstAttribute="trailing" secondItem="mqc-Vs-M4l" secondAttribute="trailing" id="00f-LK-lcN"/>
                 <constraint firstItem="NbO-Tt-qxP" firstAttribute="top" secondItem="ns8-QN-Iit" secondAttribute="top" id="Hhp-ZW-lE8"/>
                 <constraint firstAttribute="trailing" secondItem="NbO-Tt-qxP" secondAttribute="trailing" id="Kyf-Jb-IPp"/>
+                <constraint firstAttribute="bottom" secondItem="WLy-Gq-JeE" secondAttribute="bottom" constant="8" id="N0T-UJ-Fbq"/>
                 <constraint firstItem="WLy-Gq-JeE" firstAttribute="leading" secondItem="ns8-QN-Iit" secondAttribute="leading" constant="8" id="P9b-2f-fVn"/>
                 <constraint firstAttribute="trailing" secondItem="WLy-Gq-JeE" secondAttribute="trailing" constant="8" id="avZ-pY-eoB"/>
                 <constraint firstItem="WLy-Gq-JeE" firstAttribute="top" secondItem="mqc-Vs-M4l" secondAttribute="bottom" id="bx1-5n-c6B"/>

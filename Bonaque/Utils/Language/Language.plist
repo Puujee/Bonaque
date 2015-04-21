@@ -304,7 +304,6 @@
 			<string>15 минут тутамд</string>
 			<string>Хагас цаг тутамд</string>
 			<string>1 цаг тутамд</string>
-			<string>1:30 минут тутамд</string>
 			<string>2 цаг тутамд </string>
 			<string>3 цаг тутамд</string>
 			<string>4 цаг тутамд</string>
@@ -338,7 +337,7 @@
 		<key>litre</key>
 		<string>литр</string>
 		<key>notif_title</key>
-		<string>Ус уух цаг боллоо!</string>
+		<string>Ус уух цаг боллоо</string>
 		<key>days_remaining</key>
 		<string>өдөр үлдсэн</string>
 		<key>drinked_water</key>

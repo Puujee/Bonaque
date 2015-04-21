@@ -306,7 +306,7 @@
     else if (indexPath.section == 3){
         if (indexPath.row == 0) {
             SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-            [fbPost setInitialText:@""];
+            [fbPost setInitialText:[NSString stringWithFormat:@"Сайн уу, Bonaqua-г суулгаж үзээрэй.%@", ITUNES_DOWNLOAD_URL]];
             [self presentViewController:fbPost animated:YES completion:nil];
             
             [fbPost setCompletionHandler:^(SLComposeViewControllerResult result) {
@@ -377,6 +377,7 @@
         [USERDEF setInteger:index forKey:kINTERVAL];
         [[_itemArray objectAtIndex:1] replaceObjectAtIndex:4 withObject:item];
         [_tableView reloadData];
+        [Utils setAlarmSchedule];
     }
     else if (view.tag == 302){
         SettingsItem *item = [[_itemArray objectAtIndex:2] objectAtIndex:0];

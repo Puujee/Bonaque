@@ -30,10 +30,8 @@
 
     _checkLabel.hidden = YES;
     
-    UIColor *borderColor = UIColorFromRGB(0x67be27);
-    
-    
-    
+    UIColor *borderColor = UIColorFromRGB(0x67dd17);
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     PurposeLog *purposeLog = [DATABASE getPurposeLogWithID:_item.purposeID.intValue];
     if (purposeLog) {
         _dayLabel.text = [NSString stringWithFormat:@"%@ %@", purposeLog.daysRemaining , [LANGUAGE getStringForKey:@"days_remaining"]];
@@ -52,7 +50,7 @@
             _topLineView.backgroundColor = borderColor;
             _bottomLineView.backgroundColor = borderColor;
             _checkLabel.hidden = NO;
-
+            self.selectionStyle = UITableViewCellSelectionStyleGray;
         }
         else{
             _purposeDescription.text = item.content;
@@ -78,7 +76,7 @@
         if (index > 0) {
             PurposeLog *log = [logItems objectAtIndex:index - 1];
             if (log.daysRemaining.intValue == 0) {
-                _topLineView.backgroundColor = UIColorFromRGB(0x67be27);
+                _topLineView.backgroundColor = UIColorFromRGB(0x67dd17);
             }
         }
     }
@@ -90,7 +88,7 @@
     _purposeImageView.clipsToBounds = YES;
     
     [_checkLabel.layer setCornerRadius:10];
-    [_checkLabel.layer setBorderColor:UIColorFromRGB(0x67be27).CGColor];
+    [_checkLabel.layer setBorderColor:UIColorFromRGB(0x67dd17).CGColor];
     [_checkLabel.layer setBorderWidth:2];
     _checkLabel.clipsToBounds = YES;
     _checkLabel.hidden = YES;

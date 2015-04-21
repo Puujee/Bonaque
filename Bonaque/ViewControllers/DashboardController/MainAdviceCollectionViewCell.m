@@ -21,8 +21,13 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    if ([UIScreen isiPhone6Plus] || [UIScreen isiPhone6]) {
+        _adviceDescriptionLabel.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:15];
+    }
     [self.layer setCornerRadius:3];
     self.clipsToBounds = YES;
+    
+    _bgView.backgroundColor = MAIN_COLOR;
 }
 
 @end
