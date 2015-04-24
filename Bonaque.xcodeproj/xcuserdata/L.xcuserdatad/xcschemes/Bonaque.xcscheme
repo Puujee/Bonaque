@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0B25AC271ACFE82500AA7ACD"
-               BuildableName = "Bonaque.app"
-               BlueprintName = "Bonaque"
+               BuildableName = "Bonaqua.app"
+               BlueprintName = "Bonaqua"
                ReferencedContainer = "container:Bonaque.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B25AC271ACFE82500AA7ACD"
-            BuildableName = "Bonaque.app"
-            BlueprintName = "Bonaque"
+            BuildableName = "Bonaqua.app"
+            BlueprintName = "Bonaqua"
             ReferencedContainer = "container:Bonaque.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -77,8 +77,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B25AC271ACFE82500AA7ACD"
-            BuildableName = "Bonaque.app"
-            BlueprintName = "Bonaque"
+            BuildableName = "Bonaqua.app"
+            BlueprintName = "Bonaqua"
             ReferencedContainer = "container:Bonaque.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,8 +96,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B25AC271ACFE82500AA7ACD"
-            BuildableName = "Bonaque.app"
-            BlueprintName = "Bonaque"
+            BuildableName = "Bonaqua.app"
+            BlueprintName = "Bonaqua"
             ReferencedContainer = "container:Bonaque.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

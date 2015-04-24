@@ -27,6 +27,10 @@
 		0B3286151ADC02870066599E /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3286131ADC02870066599E /* MainCollectionViewCell.xib */; };
 		0B381C3B1AE5F269000B4B68 /* NormalSettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B381C391AE5F269000B4B68 /* NormalSettingsTableViewCell.m */; };
 		0B381C3C1AE5F269000B4B68 /* NormalSettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B381C3A1AE5F269000B4B68 /* NormalSettingsTableViewCell.xib */; };
+		0B381C491AEF6FE5000B4B68 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B381C481AEF6FE5000B4B68 /* libGoogleAnalyticsServices.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		0B381C4B1AEF6FFB000B4B68 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B381C4A1AEF6FFB000B4B68 /* libz.1.2.5.dylib */; };
+		0B381C4D1AEF7118000B4B68 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B381C4C1AEF7118000B4B68 /* CoreData.framework */; };
+		0B381C4F1AEF7128000B4B68 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B381C4E1AEF7128000B4B68 /* SystemConfiguration.framework */; };
 		0B3F9CD51AE4EDD80064EB37 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F9CD41AE4EDD80064EB37 /* UIView+Toast.m */; };
 		0B3F9CD91AE521F50064EB37 /* AdviceDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F9CD81AE521F50064EB37 /* AdviceDetailView.m */; };
 		0B6319871AD9FE4E003A3543 /* AbstractContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6319861AD9FE4E003A3543 /* AbstractContainerView.m */; };
@@ -80,6 +84,10 @@
 		0BB34A5D1AD8FA4D00F9EFE1 /* water_sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB34A5B1AD8FA4D00F9EFE1 /* water_sound.caf */; };
 		0BBC2AFF1AE4911800DF9F43 /* LineChartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC2AFE1AE4911800DF9F43 /* LineChartsView.m */; };
 		0BBC2B021AE4A33C00DF9F43 /* Barchart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC2B011AE4A33C00DF9F43 /* Barchart.m */; };
+		0BC84A241AEF71AD00FCB401 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC84A231AEF71AD00FCB401 /* CFNetwork.framework */; };
+		0BC84A261AEF71B700FCB401 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC84A251AEF71B700FCB401 /* libsqlite3.dylib */; };
+		0BC84A301AEF78E800FCB401 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC84A2E1AEF78E800FCB401 /* Crashlytics.framework */; };
+		0BC84A311AEF78E800FCB401 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC84A2F1AEF78E800FCB401 /* Fabric.framework */; };
 		0BDBB0CD1AD416C900A12AF2 /* PickerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDBB0CC1AD416C900A12AF2 /* PickerContainerView.m */; };
 		0BDBB0D01AD4D4B600A12AF2 /* DatePickerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDBB0CF1AD4D4B500A12AF2 /* DatePickerContainerView.m */; };
 		0BDBB0D71AD4DE5600A12AF2 /* ChooseSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDBB0D61AD4DE5600A12AF2 /* ChooseSoundViewController.m */; };
@@ -122,7 +130,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B25AC281ACFE82500AA7ACD /* Bonaque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonaque.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B25AC281ACFE82500AA7ACD /* Bonaqua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonaqua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B25AC2C1ACFE82500AA7ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B25AC2D1ACFE82500AA7ACD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B25AC2F1ACFE82500AA7ACD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +169,10 @@
 		0B381C381AE5F269000B4B68 /* NormalSettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalSettingsTableViewCell.h; sourceTree = "<group>"; };
 		0B381C391AE5F269000B4B68 /* NormalSettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalSettingsTableViewCell.m; sourceTree = "<group>"; };
 		0B381C3A1AE5F269000B4B68 /* NormalSettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalSettingsTableViewCell.xib; sourceTree = "<group>"; };
+		0B381C481AEF6FE5000B4B68 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../Downloads/GoogleAnalyticsServicesiOS_3.10/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		0B381C4A1AEF6FFB000B4B68 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		0B381C4C1AEF7118000B4B68 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0B381C4E1AEF7128000B4B68 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B3F9CD31AE4EDD80064EB37 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		0B3F9CD41AE4EDD80064EB37 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		0B3F9CD71AE521F50064EB37 /* AdviceDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceDetailView.h; sourceTree = "<group>"; };
@@ -261,6 +273,16 @@
 		0BBC2AFE1AE4911800DF9F43 /* LineChartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartsView.m; sourceTree = "<group>"; };
 		0BBC2B001AE4A33C00DF9F43 /* Barchart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barchart.h; sourceTree = "<group>"; };
 		0BBC2B011AE4A33C00DF9F43 /* Barchart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barchart.m; sourceTree = "<group>"; };
+		0BC84A231AEF71AD00FCB401 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0BC84A251AEF71B700FCB401 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0BC84A271AEF78E800FCB401 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		0BC84A281AEF78E800FCB401 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		0BC84A291AEF78E800FCB401 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		0BC84A2A1AEF78E800FCB401 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		0BC84A2B1AEF78E800FCB401 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		0BC84A2C1AEF78E800FCB401 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		0BC84A2E1AEF78E800FCB401 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		0BC84A2F1AEF78E800FCB401 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		0BDBB0CB1AD416C900A12AF2 /* PickerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerContainerView.h; sourceTree = "<group>"; };
 		0BDBB0CC1AD416C900A12AF2 /* PickerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerContainerView.m; sourceTree = "<group>"; };
 		0BDBB0CE1AD4D4B500A12AF2 /* DatePickerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerContainerView.h; sourceTree = "<group>"; };
@@ -318,6 +340,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC84A261AEF71B700FCB401 /* libsqlite3.dylib in Frameworks */,
+				0BC84A241AEF71AD00FCB401 /* CFNetwork.framework in Frameworks */,
+				0BC84A301AEF78E800FCB401 /* Crashlytics.framework in Frameworks */,
+				0B381C4F1AEF7128000B4B68 /* SystemConfiguration.framework in Frameworks */,
+				0B381C4D1AEF7118000B4B68 /* CoreData.framework in Frameworks */,
+				0BC84A311AEF78E800FCB401 /* Fabric.framework in Frameworks */,
+				0B381C4B1AEF6FFB000B4B68 /* libz.1.2.5.dylib in Frameworks */,
+				0B381C491AEF6FE5000B4B68 /* libGoogleAnalyticsServices.a in Frameworks */,
 				1485CC1AFFA75EA6902EF31B /* libPods-Bonaque.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +376,7 @@
 		0B25AC291ACFE82500AA7ACD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B25AC281ACFE82500AA7ACD /* Bonaque.app */,
+				0B25AC281ACFE82500AA7ACD /* Bonaqua.app */,
 				0B25AC411ACFE82500AA7ACD /* BonaqueTests.xctest */,
 			);
 			name = Products;
@@ -454,6 +484,9 @@
 		0B25AC551ACFEB2200AA7ACD /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				0BC84A2E1AEF78E800FCB401 /* Crashlytics.framework */,
+				0BC84A2F1AEF78E800FCB401 /* Fabric.framework */,
+				0B381C3D1AEF6FA8000B4B68 /* GAI */,
 				0B3F9CD21AE4EDCD0064EB37 /* Toast */,
 				0B6C8E421AE0DF9F004A2BBA /* ProgressView */,
 				0BB32AAE1ADEA60900608E68 /* UIImage-XCAssets-develop */,
@@ -547,6 +580,19 @@
 				0B6319861AD9FE4E003A3543 /* AbstractContainerView.m */,
 			);
 			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		0B381C3D1AEF6FA8000B4B68 /* GAI */ = {
+			isa = PBXGroup;
+			children = (
+				0BC84A271AEF78E800FCB401 /* GAI.h */,
+				0BC84A281AEF78E800FCB401 /* GAIDictionaryBuilder.h */,
+				0BC84A291AEF78E800FCB401 /* GAIFields.h */,
+				0BC84A2A1AEF78E800FCB401 /* GAILogger.h */,
+				0BC84A2B1AEF78E800FCB401 /* GAITrackedViewController.h */,
+				0BC84A2C1AEF78E800FCB401 /* GAITracker.h */,
+			);
+			path = GAI;
 			sourceTree = "<group>";
 		};
 		0B3F9CD21AE4EDCD0064EB37 /* Toast */ = {
@@ -786,6 +832,12 @@
 		AD2DA0E8BB73467C594C6C2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BC84A251AEF71B700FCB401 /* libsqlite3.dylib */,
+				0BC84A231AEF71AD00FCB401 /* CFNetwork.framework */,
+				0B381C4E1AEF7128000B4B68 /* SystemConfiguration.framework */,
+				0B381C4C1AEF7118000B4B68 /* CoreData.framework */,
+				0B381C4A1AEF6FFB000B4B68 /* libz.1.2.5.dylib */,
+				0B381C481AEF6FE5000B4B68 /* libGoogleAnalyticsServices.a */,
 				A8C704B0530E7B98F61F3CD0 /* libPods-Bonaque.a */,
 			);
 			name = Frameworks;
@@ -794,23 +846,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B25AC271ACFE82500AA7ACD /* Bonaque */ = {
+		0B25AC271ACFE82500AA7ACD /* Bonaqua */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B25AC4B1ACFE82500AA7ACD /* Build configuration list for PBXNativeTarget "Bonaque" */;
+			buildConfigurationList = 0B25AC4B1ACFE82500AA7ACD /* Build configuration list for PBXNativeTarget "Bonaqua" */;
 			buildPhases = (
 				22C6692AD6AED00F15249585 /* Check Pods Manifest.lock */,
 				0B25AC241ACFE82500AA7ACD /* Sources */,
 				0B25AC251ACFE82500AA7ACD /* Frameworks */,
 				0B25AC261ACFE82500AA7ACD /* Resources */,
 				CE5BA3771AFCC1C3985BF289 /* Copy Pods Resources */,
+				0BC84A2D1AEF78E800FCB401 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Bonaque;
+			name = Bonaqua;
 			productName = Bonaque;
-			productReference = 0B25AC281ACFE82500AA7ACD /* Bonaque.app */;
+			productReference = 0B25AC281ACFE82500AA7ACD /* Bonaqua.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0B25AC401ACFE82500AA7ACD /* BonaqueTests */ = {
@@ -863,7 +916,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B25AC271ACFE82500AA7ACD /* Bonaque */,
+				0B25AC271ACFE82500AA7ACD /* Bonaqua */,
 				0B25AC401ACFE82500AA7ACD /* BonaqueTests */,
 			);
 		};
@@ -907,6 +960,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0BC84A2D1AEF78E800FCB401 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 362b73eb9a34dcc737a76061c909db31b00c9db4 a53376a4c27bb4fa5cff2adef7f7703cf71c24021b93d7f9081bb8ca4a5f76f8";
+		};
 		22C6692AD6AED00F15249585 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1040,7 +1106,7 @@
 /* Begin PBXTargetDependency section */
 		0B25AC431ACFE82500AA7ACD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0B25AC271ACFE82500AA7ACD /* Bonaque */;
+			target = 0B25AC271ACFE82500AA7ACD /* Bonaqua */;
 			targetProxy = 0B25AC421ACFE82500AA7ACD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1131,12 +1197,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bonaque/Controls",
+				);
 				GCC_PREFIX_HEADER = "Bonaque/Bonaque-Prefix.pch";
 				INFOPLIST_FILE = Bonaque/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/L/Downloads/GoogleAnalyticsServicesiOS_3.10,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "33338e63-ffe1-46c4-b2c6-e9b66f13321c";
+				PROVISIONING_PROFILE = "da895897-1e8e-4bf1-bcb2-4cfbc2a90770";
 			};
 			name = Debug;
 		};
@@ -1149,12 +1223,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bonaque/Controls",
+				);
 				GCC_PREFIX_HEADER = "Bonaque/Bonaque-Prefix.pch";
 				INFOPLIST_FILE = Bonaque/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/L/Downloads/GoogleAnalyticsServicesiOS_3.10,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "33338e63-ffe1-46c4-b2c6-e9b66f13321c";
+				PROVISIONING_PROFILE = "da895897-1e8e-4bf1-bcb2-4cfbc2a90770";
 			};
 			name = Release;
 		};
@@ -1204,7 +1286,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B25AC4B1ACFE82500AA7ACD /* Build configuration list for PBXNativeTarget "Bonaque" */ = {
+		0B25AC4B1ACFE82500AA7ACD /* Build configuration list for PBXNativeTarget "Bonaqua" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B25AC4C1ACFE82500AA7ACD /* Debug */,

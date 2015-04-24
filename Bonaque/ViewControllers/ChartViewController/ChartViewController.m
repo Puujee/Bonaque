@@ -39,6 +39,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.screenName = @"Graphic";
+    
     gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     gregorian.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:9];
     
@@ -79,16 +81,24 @@
     }
 //    [scrollView addSubview:segmentContainerView];
     
-    UIView *titleContainer = [[UIView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.view.frame) - 20, 50)];
+    
+    float height = 50;
+    float fontSize = 15;
+    if ([UIScreen isiPhone4] || [UIScreen isiPhone5]) {
+        height  = 35;
+        fontSize = 13;
+    }
+    
+    UIView *titleContainer = [[UIView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.view.frame) - 20, height)];
     titleContainer.backgroundColor = [UIColor whiteColor];
     [titleContainer.layer setCornerRadius:4];
     titleContainer.clipsToBounds = YES;
     [scrollView addSubview:titleContainer];
     {
-        label= [[UILabel alloc] initWithFrame:CGRectMake(70, 3, CGRectGetWidth(titleContainer.bounds) - 140, 44)];
+        label= [[UILabel alloc] initWithFrame:CGRectMake(70, 3, CGRectGetWidth(titleContainer.bounds) - 140, height - 6)];
         label.textAlignment = NSTextAlignmentCenter;
         label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        label.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:13];
+        label.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:fontSize];
         label.text = [[LANGUAGE getStringForKey:@"chart1_title"] uppercaseString];
         label.backgroundColor = [UIColor clearColor];
         label.numberOfLines = 99;
@@ -98,7 +108,7 @@
         [titleContainer addSubview:label];
         
         UIButton *prevButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        prevButton.frame = CGRectMake(10, 7, 60, 35);
+        prevButton.frame = CGRectMake(10, 0, 60, height);
         [prevButton setTitle:@"Өмнөх" forState:UIControlStateNormal];
         [prevButton setImage:[UIImage imageNamed:@"ic_graphic_prev"] forState:UIControlStateNormal];
         prevButton.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -108,7 +118,7 @@
         [titleContainer addSubview:prevButton];
         
         UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        nextButton.frame = CGRectMake(CGRectGetMaxX(label.frame) + 5, 7, 60, 35);
+        nextButton.frame = CGRectMake(CGRectGetMaxX(label.frame) + 5,0, 60, height);
         [nextButton setTitle:@"Дараах" forState:UIControlStateNormal];
         [nextButton setImage:[UIImage imageNamed:@"ic_graphic_next"] forState:UIControlStateNormal];
         [nextButton setImageEdgeInsets:UIEdgeInsetsMake(0, 50, 0, 0)];
@@ -119,21 +129,26 @@
         [nextButton addTarget:self action:@selector(nextBarChartButtonPressed) forControlEvents:UIControlEventTouchUpInside];
         [titleContainer addSubview:nextButton];
     }
+    
+    ATLog(@"%@", CGRectGetMaxY(titleContainer.frame));
+
 //    lineCharts = [[LineChartsView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleContainer.frame), CGRectGetWidth(self.view.frame), 530)];
 //    lineCharts.backgroundColor = [UIColor clearColor];
 //    lineCharts.hidden = YES;
 //    [scrollView addSubview:lineCharts];
     
-    float height = 570;
+//    float height = 570;
 //    if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {
 //        height = 595;
 //    }
     
-    barCharts    = [[Barchart alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleContainer.frame), CGRectGetWidth(self.view.frame), height)];
+    barCharts    = [[Barchart alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleContainer.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - height - 20 - 64)];
+    
+    ATLog(@"%@", barCharts.frame);
     barCharts.backgroundColor = [UIColor clearColor];
     [scrollView addSubview:barCharts];
     
-    scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetMaxY(barCharts.frame) + 10);
+    scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetMaxY(barCharts.frame));
     [self calculateTopChartData:[NSDate date]];
 }
 

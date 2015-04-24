@@ -82,6 +82,7 @@
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
     content.contentURL = [NSURL URLWithString:ITUNES_DOWNLOAD_URL];
     content.contentTitle =  [NSString stringWithFormat:@"Усны тухай зөвлөгөө."];
+    content.imageURL = [NSURL URLWithString:MAIN_IMAGE_URL];
     content.contentDescription = [NSString stringWithFormat:@"%@.", _item.content];
     [FBSDKShareDialog showFromViewController:mainViewController
                                  withContent:content
@@ -108,6 +109,35 @@
     if (scrollView.contentSize.height <= 200) {
         scrollView.contentSize = CGSizeMake(CGRectGetWidth(scrollView.frame), CGRectGetHeight(scrollView.frame) + 1);
     }
+}
+
+-(void)itsSourceClicked{
+    self.title = @"Эх сурвалж";
+    scrollView.frame = CGRectMake(0, CGRectGetMaxY(titleLabel.frame), CGRectGetWidth(contentView.frame), 230);
+    NSString *sourceText = @"World Health Organization. Guidelines for drinking water quality 4th edition. 2011.\n\nХөдөөгийн хүн амын ус хангамж, ариун цэвэр, эрүүл ахуй ном. 2007 он.";
+    imageView.frame = CGRectMake(15, 10, CGRectGetWidth(contentView.frame) - 30, 60);
+    imageView.image = [UIImage imageNamed:@"imd_advice_big"];
+    
+    CGRect contentSize = [sourceText boundingRectWithSize:CGSizeMake(CGRectGetWidth(contentView.frame) - 30, 9999)
+                                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                                  attributes:@{NSFontAttributeName:contentLabel.font}
+                                                     context:nil];
+    contentLabel.text = sourceText;
+    contentLabel.frame = CGRectMake(15, CGRectGetMaxY(imageView.frame) + 10, CGRectGetWidth(contentView.frame) - 30, contentSize.size.height);
+    scrollView.contentSize = CGSizeMake(CGRectGetWidth(contentView.frame), CGRectGetMaxY(contentLabel.frame) + 10);
+    
+    CGRect rect = contentView.frame;
+    //        if ([UIScreen isiPhone4]) {
+    //            rect.origin.y = rect.origin.y - 50;
+    //        }
+    rect.size.height = CGRectGetMaxY(scrollView.frame) + 44;
+    contentView.frame = rect;
+    
+    if (scrollView.contentSize.height <= 200) {
+        scrollView.contentSize = CGSizeMake(CGRectGetWidth(scrollView.frame), CGRectGetHeight(scrollView.frame) + 1);
+    }
+    backButton .frame =  CGRectMake(0, CGRectGetHeight(contentView.frame) - 44, CGRectGetWidth(titleLabel.frame), 44);
+    shareButton.hidden = YES;
 }
 
 -(void)goBack{

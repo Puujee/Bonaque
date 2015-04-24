@@ -10,6 +10,8 @@
 #import "PickerContainerView.h"
 #import "ChangeLanguageViewController.h"
 #import "InAppAlarmView.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate () <PickerContainerViewDelegate, SWRevealViewControllerDelegate>
 
@@ -19,12 +21,26 @@
 @synthesize viewController = _viewController;
 @synthesize rearViewController;
 
+
+-(void)addGoogleAnalytics{
+    [Fabric with:@[CrashlyticsKit]];
+    
+//    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [[GAI sharedInstance].logger setLogLevel:kGAILogLevelNone];
+    [GAI sharedInstance].dispatchInterval = 120;
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-62147510-1"];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    ATLog(@"%@", [[UIScreen mainScreen] bounds].size.height);
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
+    [self addGoogleAnalytics];
+    
     self.window.backgroundColor = BG_COLOR;
     [self setStaticValues];
     [self showLoginViewController];

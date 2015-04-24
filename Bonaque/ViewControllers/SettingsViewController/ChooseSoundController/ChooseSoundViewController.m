@@ -41,6 +41,7 @@
     self.title = @"Дуу сонгох";
     [self showBackButton];
     selectedRow = [USERDEF integerForKey:kSELECTED_SOUND];
+    [Utils setAlarmSchedule];
     
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                 target:self

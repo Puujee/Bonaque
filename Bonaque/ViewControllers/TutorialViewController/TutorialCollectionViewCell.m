@@ -44,7 +44,13 @@
 -(void)setItem:(TutorialItem *)item{
     _item = item;
     self.backgroundColor = _item.color;
-    imageView.image = [UIImage imageNamed:_item.imageName];
+//    if([UIScreen isiPhone6]){
+//        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@-667h@2x.png", _item.imageName]];
+//    }
+//    else{
+        imageView.image = [UIImage imageNamed:_item.imageName];
+//    }
+    
     titleLabel.text = _item.title;
 }
 

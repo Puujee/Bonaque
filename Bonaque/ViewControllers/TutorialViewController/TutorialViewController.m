@@ -51,12 +51,13 @@
     
     
     UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - 50, CGRectGetWidth(self.view.frame), 50)];
+    bottomView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3f];
     [self.view addSubview:bottomView];
     {
         
         bottomPageControll = [[UIPageControl alloc] initWithFrame:CGRectMake(100, 10, CGRectGetWidth(self.view.frame) - 200, 30)];
         bottomPageControll.backgroundColor = CLEAR_COLOR;
-        bottomPageControll.numberOfPages = 4;
+        bottomPageControll.numberOfPages = 5;
         [bottomView addSubview:bottomPageControll];
         
         skipButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -78,29 +79,36 @@
     {
         TutorialItem *item = [TutorialItem new];
         item.color = UIColorFromRGB(0xa9cadb);
-        item.title = @"Таны усны хэрэгцээнд хяналт тавина";
+//        item.title = @"Таны усны хэрэгцээнд хяналт тавина";
         item.imageName = @"img_tutorial_1";
         [tempArray addObject:item];
     }
     {
         TutorialItem *item = [TutorialItem new];
         item.color = UIColorFromRGB(0x72a5c2);
-        item.title = @"Таны жингийн 70% нь ус байдаг";
+//        item.title = @"Таны жингийн 70% нь ус байдаг";
         item.imageName = @"img_tutorial_2";
         [tempArray addObject:item];
     }
     {
         TutorialItem *item = [TutorialItem new];
         item.color = UIColorFromRGB(0x3aaad2);
-        item.title = @"Өдөрт хэр их ус уух ёстойгоо мэдэж аваарай";
-        item.imageName = @"img_tutorial_1";
+//        item.title = @"Өдөрт хэр их ус уух ёстойгоо мэдэж аваарай";
+        item.imageName = @"img_tutorial_3";
         [tempArray addObject:item];
     }
     {
         TutorialItem *item = [TutorialItem new];
         item.color = UIColorFromRGB(0x0b86b0);
-        item.title = @"Хэзээ ус уухыг чинь сануулна";
-        item.imageName = @"img_tutorial_1";
+//        item.title = @"Хэзээ ус уухыг чинь сануулна";
+        item.imageName = @"img_tutorial_4";
+        [tempArray addObject:item];
+    }
+    {
+        TutorialItem *item = [TutorialItem new];
+        item.color = UIColorFromRGB(0x0b86b0);
+        //        item.title = @"Хэзээ ус уухыг чинь сануулна";
+        item.imageName = @"img_tutorial_5";
         [tempArray addObject:item];
     }
     imageArray = tempArray;
@@ -119,7 +127,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    return 4;
+//    return 4;
     return imageArray.count;
 }
 

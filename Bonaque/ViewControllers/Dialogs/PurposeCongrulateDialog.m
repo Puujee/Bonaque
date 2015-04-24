@@ -68,6 +68,7 @@
     content.contentURL = [NSURL URLWithString:ITUNES_DOWNLOAD_URL];
     content.contentTitle =  [NSString stringWithFormat:@"%@ авлаа.", _item.title];
     content.contentDescription = [NSString stringWithFormat:@"%@ өдөр ус уув.", _item.days];
+    content.imageURL = [NSURL URLWithString:MAIN_IMAGE_URL];
     [FBSDKShareDialog showFromViewController:mainViewController
                                  withContent:content
                                     delegate:nil];

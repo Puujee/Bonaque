@@ -30,29 +30,28 @@
         //        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         [_tableView registerNib:[UINib nibWithNibName:@"AdviceTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-        {
-            UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 160)];
-            tableHeaderView.backgroundColor = SECOND_COLOR;
-            
-            UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 100, CGRectGetHeight(tableHeaderView.frame))];
-            bgImageView.image = [UIImage imageNamed:@"imd_advice_big"];
-            bgImageView.contentMode = UIViewContentModeScaleAspectFit;
-            [tableHeaderView addSubview:bgImageView];
-            
-            
-            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(bgImageView.frame) + 10, 30, CGRectGetWidth(self.view.frame) - (CGRectGetMaxX(bgImageView.frame) + 20), CGRectGetHeight(tableHeaderView.frame) - 50)];
-            label.textAlignment = NSTextAlignmentLeft;
-            label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:13];
-            label.backgroundColor = CLEAR_COLOR;
-            label.numberOfLines = 99;
-            label.text = @"World Health Organization. Guidelines for drinking water quality 4th edition. 2011.\n\nХөдөөгийн хүн амын ус хангамж, ариун цэвэр, эрүүл ахуй ном. 2007 он.";
-            label.lineBreakMode = NSLineBreakByWordWrapping;
-            label.textColor = [UIColor whiteColor];
-            [tableHeaderView addSubview:label];
-            
-            _tableView.tableHeaderView = tableHeaderView;
-        }
+//        {
+//            UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 160)];
+//            tableHeaderView.backgroundColor = SECOND_COLOR;
+//            
+//            UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 100, CGRectGetHeight(tableHeaderView.frame))];
+//            bgImageView.image = [UIImage imageNamed:@"imd_advice_big"];
+//            bgImageView.contentMode = UIViewContentModeScaleAspectFit;
+//            [tableHeaderView addSubview:bgImageView];
+//            
+//            
+//            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(bgImageView.frame) + 10, 30, CGRectGetWidth(self.view.frame) - (CGRectGetMaxX(bgImageView.frame) + 20), CGRectGetHeight(tableHeaderView.frame) - 50)];
+//            label.textAlignment = NSTextAlignmentLeft;
+//            label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+//            label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:13];
+//            label.backgroundColor = CLEAR_COLOR;
+//            label.numberOfLines = 99;
+//            label.lineBreakMode = NSLineBreakByWordWrapping;
+//            label.textColor = [UIColor whiteColor];
+//            [tableHeaderView addSubview:label];
+//            
+//            _tableView.tableHeaderView = tableHeaderView;
+//        }
     }
     return _tableView;
 }
@@ -61,10 +60,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.screenName = @"Advice";
+
     self.title = [[LANGUAGE getArrayForKey:@"menus"] objectAtIndex:2];
-    _itemArray = [DATABASE getAdviceLanguageArray];
     
+    UIButton *rightBarButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [rightBarButton  setImage:[UIImage imageNamed:@"link_icon"] forState:UIControlStateNormal];
+    [rightBarButton addTarget:self action:@selector(showSource) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *back = [[UIBarButtonItem alloc]initWithCustomView:rightBarButton];
+    self.navigationItem.rightBarButtonItem = back;
+    
+    _itemArray = [DATABASE getAdviceLanguageArray];
     [self.view addSubview:self.tableView];
+}
+
+-(void)showSource{
+    ATLog(@"");
+    AdviceDetailView *pickerContainer = [[AdviceDetailView alloc] initWithFrame:[[APPDEL window] bounds]];
+    //    pickerContainer.delegate = self;
+    [pickerContainer itsSourceClicked];
+    pickerContainer.tag  = 201;
+    [[APPDEL window] addSubview:pickerContainer];
+    
+    [pickerContainer showContentView];
 }
 
 #pragma mark

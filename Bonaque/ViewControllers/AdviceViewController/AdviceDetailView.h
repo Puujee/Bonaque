@@ -13,4 +13,6 @@
 @property (nonatomic, strong) Purpose *item;
 @property (nonatomic, strong) UIViewController *mainViewController;
 
+-(void)itsSourceClicked;
+
 @end

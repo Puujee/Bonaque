@@ -33,7 +33,7 @@
 
 +(NSDate *)dateFromHouurs:(NSString *)hour;
 
-+(SystemSoundID)createSystemSoundId:(NSString*)filename ;
++(SystemSoundID)createSystemSoundId:(NSString*)filename withExtension:(NSString *)ext;
 +(void)playSystemSoundWithName:(NSString *)path withExtension:(NSString *)ext;
 
 +(void)showCongrulatePurpose:(Purpose *)item;

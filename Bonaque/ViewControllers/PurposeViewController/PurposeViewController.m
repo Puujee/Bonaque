@@ -37,6 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.screenName = @"Purpose";
     self.title = [[LANGUAGE getArrayForKey:@"menus"] objectAtIndex:3];
     _itemArray = [DATABASE getpurposeLanguageArray];
     [self.view addSubview:self.tableView];
@@ -90,6 +91,7 @@
             content.contentURL = [NSURL URLWithString:ITUNES_DOWNLOAD_URL];
             content.contentTitle =  [NSString stringWithFormat:@"%@ цол авлаа.", item.title];
             content.contentDescription = [NSString stringWithFormat:@"%@ өдөр ус уув.", item.days];
+            content.imageURL = [NSURL URLWithString:MAIN_IMAGE_URL];
             [FBSDKShareDialog showFromViewController:self
                                          withContent:content
                                             delegate:nil];

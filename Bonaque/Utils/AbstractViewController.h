@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface AbstractViewController : UIViewController
+@interface AbstractViewController : GAITrackedViewController
 
 @property (nonatomic, assign) BOOL isNavigation;
 

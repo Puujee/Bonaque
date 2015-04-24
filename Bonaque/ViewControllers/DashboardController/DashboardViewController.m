@@ -42,6 +42,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.screenName = @"Dashboard";
+    
     self.title = [[LANGUAGE getArrayForKey:@"menus"] objectAtIndex:0];
     
     
@@ -109,8 +111,6 @@
     [super viewDidAppear:animated];
     [mainCollectionView reloadData];
     [self checkWeightReminder];
-    
-
 }
 
 -(void)addWater{

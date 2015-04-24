@@ -13,6 +13,7 @@
 #import "DatePickerContainerView.h"
 #import "ChooseSoundViewController.h"
 #import "NormalSettingsTableViewCell.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface SettingsViewController ()<UITableViewDataSource, UITableViewDelegate, PickerContainerViewDelegate, DatePickerContainerViewDelegate >{
 }
@@ -52,6 +53,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.screenName = @"Settings";
     self.title = [LANGUAGE getStringForKey:@"settings"];
     [self.view addSubview:self.tableView];
     [self reloadLeftMenuItems];
@@ -111,7 +113,9 @@
         [sectionArray addObject:[SettingsItem createItemWithTitle:[LANGUAGE getStringForKey:@"rate_app"] description:@"" itsHaveCheckBox:NO]];
         [sectionArray addObject:[SettingsItem createItemWithTitle:[LANGUAGE getStringForKey:@"tw_follow"] description:@"" itsHaveCheckBox:NO]];
         [sectionArray addObject:[SettingsItem createItemWithTitle:@"Instagram Follow" description:@"" itsHaveCheckBox:NO]];
-        [sectionArray addObject:[SettingsItem createItemWithTitle:[LANGUAGE getStringForKey:@"version"] description:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] itsHaveCheckBox:NO]];
+        [sectionArray addObject:[SettingsItem createItemWithTitle:[LANGUAGE getStringForKey:@"version"] description:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] itsHaveCheckBox:NO]];
+//        [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+
         [tempArray addObject:sectionArray];
     }
     _itemArray = tempArray;
@@ -296,32 +300,41 @@
     }
     else if (indexPath.section == 3){
         if (indexPath.row == 0) {
-            SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-            [fbPost setInitialText:[NSString stringWithFormat:@"Сайн уу, Bonaqua-г суулгаж үзээрэй.%@", ITUNES_DOWNLOAD_URL]];
-            [self presentViewController:fbPost animated:YES completion:nil];
-            
-            [fbPost setCompletionHandler:^(SLComposeViewControllerResult result) {
-                
-                
-                switch (result) {
-                    case SLComposeViewControllerResultCancelled:
-                        NSLog(@"Post Canceled");
-                        break;
-                    case SLComposeViewControllerResultDone:
-                        NSLog(@"Post Sucessful");
-                        break;
-                        
-                    default:
-                        break;
-                }
-                
-                [self dismissViewControllerAnimated:YES completion:nil];
-                
-            }];
+            FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+            content.contentURL = [NSURL URLWithString:@"https://itunes.apple.com/us/app/bonaqua/id989085719?mt=8"];
+            content.contentTitle =  [NSString stringWithFormat:@"Bonaqua: Ус уухыг сануулах аппликэйшн"];
+            content.contentDescription  = @"GET IT ON APP STORE";
+            content.imageURL = [NSURL URLWithString:MAIN_IMAGE_URL];
+//            content.contentDescription = [NSString stringWithFormat:@"%@.", _item.content];
+            [FBSDKShareDialog showFromViewController:self
+                                         withContent:content
+                                            delegate:nil];
+//            SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+//            [fbPost setInitialText:[NSString stringWithFormat:@"Сайн уу, Bonaqua-г суулгаж үзээрэй.%@", ITUNES_DOWNLOAD_URL]];
+//            [self presentViewController:fbPost animated:YES completion:nil];
+//            
+//            [fbPost setCompletionHandler:^(SLComposeViewControllerResult result) {
+//                
+//                
+//                switch (result) {
+//                    case SLComposeViewControllerResultCancelled:
+//                        NSLog(@"Post Canceled");
+//                        break;
+//                    case SLComposeViewControllerResultDone:
+//                        NSLog(@"Post Sucessful");
+//                        break;
+//                        
+//                    default:
+//                        break;
+//                }
+//                
+//                [self dismissViewControllerAnimated:YES completion:nil];
+//                
+//            }];
         }
         else if (indexPath.row == 1){
-            if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id545174222"]]) {
-                  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id545174222"]];
+            if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id989085719"]]) {
+                  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id989085719"]];
             }
         }
         else if (indexPath.row == 2){

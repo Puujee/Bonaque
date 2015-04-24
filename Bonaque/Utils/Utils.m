@@ -45,6 +45,16 @@ Utils     *sharedUtils;
     localNotification.alertAction = @"Bonaqua app";
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     [localNotification setRepeatInterval: NSCalendarUnitDay];
+    int soundID = (int)[USERDEF integerForKey:kSELECTED_SOUND];
+    if (soundID == 0) {
+        localNotification.soundName = UILocalNotificationDefaultSoundName;
+    }
+    else if (soundID == 1){
+        localNotification.soundName = @"water_sound.caf";
+    }
+    else {
+        localNotification.soundName = @"water_sound6.wav";
+    }
     localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 //    [Utils showAlert:[NSString stringWithFormat:@"%@ өдөр тэмдэглэгдлээ. Та МИНИЙ БУЛАН хэсэг рүү орж тэмдэглэсэн үзвэрүүдээ харах боломжтой", date]];

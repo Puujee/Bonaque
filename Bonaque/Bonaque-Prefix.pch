@@ -24,8 +24,10 @@
     #import "Utils.h"
     #import <MBProgressHUD/MBProgressHUD.h>
     #import "DatabaseManager.h"
-#import <SVWebViewController/SVModalWebViewController.h>
-#import "UIScreen+GSInfo.h"
+    #import <SVWebViewController/SVModalWebViewController.h>
+    #import "UIScreen+GSInfo.h"
+    #import "GAI.h"
+    #import "GAIFields.h"
 #endif
 
 
@@ -62,7 +64,9 @@
 #define kFIRST_WEIGHT_ML @"kFIRST_WEIGHT_ML"
 
 
-#define ITUNES_DOWNLOAD_URL @"http://itunes.com/apps/bonaqua"
+#define ITUNES_DOWNLOAD_URL @"https://itunes.apple.com/us/app/bonaqua/id989085719?mt=8"
+
+#define MAIN_IMAGE_URL @"http://khasbros.com/11169048_10204273551744591_418829900_n.jpg"
 
 
 #define LANGUAGE_KEY [[NSUserDefaults standardUserDefaults] valueForKey:@"languageKey"]

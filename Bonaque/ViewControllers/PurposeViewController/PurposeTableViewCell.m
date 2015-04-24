@@ -21,8 +21,8 @@
 
 -(void)setItem:(Purpose *)item{
     _item = item;
-    _topLineView.backgroundColor = [UIColor blackColor];
-    _bottomLineView.backgroundColor = [UIColor blackColor];
+    _topLineView.backgroundColor = UIColorFromRGB(0xd5d5d5);
+    _bottomLineView.backgroundColor = UIColorFromRGB(0xd5d5d5);
     _purposeTitleLabel.text = _item.title;
     _purposeTitleLabel.textColor = [UIColor blackColor];
     _purposeImageView.image = [UIImage imageNamed:_item.icon];

@@ -24,18 +24,48 @@
 -(id)initWithFrame:(CGRect)frame    {
     self= [super initWithFrame:frame];
     if (self) {
-        UIView *topChartContainer = [[UIView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.frame) - 20, 270)];
+        
+        float topMargin = 10;
+        float textHeight = 20;
+        float yLabelFontSize = 11;
+        float yLabelLeftMargin = -115;
+        float yLabelTopMargin = 60;
+        float titleLabelFont = 15;
+        
+        if ([UIScreen isiPhone4]) {
+            textHeight = 15;
+            topMargin = 5;
+            yLabelFontSize = 8;
+            yLabelLeftMargin = -75;
+            yLabelTopMargin = 45;
+            titleLabelFont = 13;
+        }
+        else if ([UIScreen isiPhone5]){
+            yLabelFontSize = 9;
+            yLabelLeftMargin = -92;
+            yLabelTopMargin = 45;
+            titleLabelFont = 13;
+        }
+        else if ([UIScreen isiPhone6Plus]){
+            yLabelLeftMargin = -133;
+
+        }
+        
+        float height = (CGRectGetHeight(self.frame) - (topMargin + textHeight)*2 - 20 - topMargin - 20 - 30)/2;
+
+        UIView *topChartContainer = [[UIView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.frame) - 20, height + topMargin + textHeight + 30)];
         topChartContainer.backgroundColor = [UIColor whiteColor];
         [topChartContainer.layer setCornerRadius:4];
         topChartContainer.clipsToBounds = YES;
         [self addSubview:topChartContainer];
 //        Person *user = [DATABASE getUser];
         PersonLog *log = [DATABASE getTodaysPersonLog];
+        
         {
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, CGRectGetHeight(topChartContainer.frame), 20)];
+            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, topMargin, CGRectGetHeight(topChartContainer.frame), textHeight)];
             titleLabel.textAlignment = NSTextAlignmentLeft;
             titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
+            titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:titleLabelFont];
             titleLabel.backgroundColor = CLEAR_COLOR;
             titleLabel.numberOfLines = 99;
             titleLabel.text = @"УСНЫ ХЭРЭГЛЭЭ";
@@ -43,19 +73,19 @@
             titleLabel.textColor = MAIN_COLOR;
             [topChartContainer addSubview:titleLabel];
             
-            UILabel *yLabelTitle = [[UILabel alloc] initWithFrame:CGRectMake(-120, 60, CGRectGetHeight(topChartContainer.frame), 20)];
+            UILabel *yLabelTitle = [[UILabel alloc] initWithFrame:CGRectMake(yLabelLeftMargin, yLabelTopMargin, CGRectGetHeight(topChartContainer.frame), 20)];
             yLabelTitle.textAlignment = NSTextAlignmentLeft;
             yLabelTitle.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            yLabelTitle.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:11];
+            yLabelTitle.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:yLabelFontSize];
             yLabelTitle.backgroundColor = CLEAR_COLOR;
             yLabelTitle.numberOfLines = 99;
             yLabelTitle.transform  =  CGAffineTransformMakeRotation(M_PI/2 *3);
-            yLabelTitle.text = @"Өдөрт уусан усны хэмжээ(литр)";
+            yLabelTitle.text = @"Өдөрт уусан усны хэмжээ (литр)";
             yLabelTitle.lineBreakMode = NSLineBreakByWordWrapping;
             yLabelTitle.textColor = [UIColor lightGrayColor];
             [topChartContainer addSubview:yLabelTitle];
             
-            self.firstBarChart = [[PNBarChart alloc] initWithFrame:CGRectMake(25, 40, CGRectGetWidth(topChartContainer.frame)-30, 200.0)];
+            self.firstBarChart = [[PNBarChart alloc] initWithFrame:CGRectMake(25, CGRectGetMaxY(titleLabel.frame), CGRectGetWidth(topChartContainer.frame)-30, height)];
             self.firstBarChart.backgroundColor = [UIColor clearColor];
             self.firstBarChart.yLabelFormatter = ^(CGFloat yValue){
                 CGFloat yValueParsed = yValue;
@@ -120,22 +150,21 @@
                 [view addSubview:label4];
             }
         }
-        float height = 270;
 //        if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {
 //            height = 295;
 //        }
         
-        UIView *bottomChartContainer = [[UIView alloc] initWithFrame:CGRectMake(10,  CGRectGetMaxY(topChartContainer.frame) + 10, CGRectGetWidth(self.frame) - 20, height)];
+        UIView *bottomChartContainer = [[UIView alloc] initWithFrame:CGRectMake(10,  CGRectGetMaxY(topChartContainer.frame) + 10, CGRectGetWidth(self.frame) - 20, height + topMargin + textHeight + 30)];
         bottomChartContainer.backgroundColor = [UIColor whiteColor];
         [bottomChartContainer.layer setCornerRadius:4];
         bottomChartContainer.clipsToBounds = YES;
         [self addSubview:bottomChartContainer];
         
         {
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, CGRectGetHeight(topChartContainer.frame), 20)];
+            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, topMargin, CGRectGetHeight(topChartContainer.frame), textHeight)];
             titleLabel.textAlignment = NSTextAlignmentLeft;
             titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
+            titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:titleLabelFont];
             titleLabel.backgroundColor = CLEAR_COLOR;
             titleLabel.numberOfLines = 99;
             titleLabel.text = @"БИЕИЙН ЖИН";
@@ -143,19 +172,19 @@
             titleLabel.textColor = MAIN_COLOR;
             [bottomChartContainer addSubview:titleLabel];
             
-            UILabel *yLabelTitle = [[UILabel alloc] initWithFrame:CGRectMake(-120, 40, CGRectGetHeight(topChartContainer.frame), 20)];
+            UILabel *yLabelTitle = [[UILabel alloc] initWithFrame:CGRectMake(yLabelLeftMargin, yLabelTopMargin - 20, CGRectGetHeight(topChartContainer.frame), 20)];
             yLabelTitle.textAlignment = NSTextAlignmentLeft;
             yLabelTitle.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            yLabelTitle.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:11];
+            yLabelTitle.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:yLabelFontSize];
             yLabelTitle.backgroundColor = CLEAR_COLOR;
             yLabelTitle.numberOfLines = 99;
             yLabelTitle.transform  =  CGAffineTransformMakeRotation(M_PI/2 *3);
-            yLabelTitle.text = @"Таны биеийн жин(кг)";
+            yLabelTitle.text = @"Таны биеийн жин (кг)";
             yLabelTitle.lineBreakMode = NSLineBreakByWordWrapping;
             yLabelTitle.textColor = [UIColor lightGrayColor];
             [bottomChartContainer addSubview:yLabelTitle];
             
-            self.secondBarChart = [[PNBarChart alloc] initWithFrame:CGRectMake(25, 40, CGRectGetWidth(topChartContainer.frame)- 30, 200.0)];
+            self.secondBarChart = [[PNBarChart alloc] initWithFrame:CGRectMake(25, CGRectGetMaxY(titleLabel.frame), CGRectGetWidth(topChartContainer.frame)- 30, height)];
             self.secondBarChart.backgroundColor = [UIColor clearColor];
             self.secondBarChart.labelMarginTop = 5.0;
             self.secondBarChart.yLabelFormatter = ^(CGFloat yValue){
@@ -229,7 +258,7 @@
                 label5.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:10];
                 label5.backgroundColor = CLEAR_COLOR;
                 label5.numberOfLines = 99;
-                label5.text = @"Тарган";
+                label5.text = @"Хэт их";
                 label5.textColor = UIColorFromRGB(0xea31a2);
                 [view addSubview:label5];
 //                if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {

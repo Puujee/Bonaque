@@ -28,6 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.screenName = @"AddCupViewController";
+
     [self showBackButton];
     self.title = [LANGUAGE getStringForKey:@"water_size"];
     
