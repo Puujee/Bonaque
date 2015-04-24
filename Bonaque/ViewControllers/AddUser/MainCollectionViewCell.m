@@ -221,7 +221,6 @@
     float currentHeight = (fullHeight*lastItem.currentWaterPercent.floatValue)/ 100;
 //    float currentHeight = (fullHeight*100)/ 100;
     
-    ATLog(@"%@", lastItem.currentWaterPercent.floatValue);
     [UIView animateWithDuration:1.5f delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGRect rect = _percentMaskedView.frame;
         rect.origin.y = mansHeight - currentHeight;

@@ -1194,8 +1194,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dorjgochoo Norovtseren (FC445YRA6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dorjgochoo Norovtseren (FC445YRA6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1209,8 +1209,9 @@
 					"$(inherited)",
 					/Users/L/Downloads/GoogleAnalyticsServicesiOS_3.10,
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "da895897-1e8e-4bf1-bcb2-4cfbc2a90770";
+				PROVISIONING_PROFILE = "b1d84228-50a0-4ec1-a0e1-f1284fc268e5";
 			};
 			name = Debug;
 		};
@@ -1220,8 +1221,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dorjgochoo Norovtseren (FC445YRA6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dorjgochoo Norovtseren (FC445YRA6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1235,8 +1236,9 @@
 					"$(inherited)",
 					/Users/L/Downloads/GoogleAnalyticsServicesiOS_3.10,
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "da895897-1e8e-4bf1-bcb2-4cfbc2a90770";
+				PROVISIONING_PROFILE = "b1d84228-50a0-4ec1-a0e1-f1284fc268e5";
 			};
 			name = Release;
 		};

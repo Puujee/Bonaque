@@ -129,8 +129,6 @@
         [nextButton addTarget:self action:@selector(nextBarChartButtonPressed) forControlEvents:UIControlEventTouchUpInside];
         [titleContainer addSubview:nextButton];
     }
-    
-    ATLog(@"%@", CGRectGetMaxY(titleContainer.frame));
 
 //    lineCharts = [[LineChartsView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleContainer.frame), CGRectGetWidth(self.view.frame), 530)];
 //    lineCharts.backgroundColor = [UIColor clearColor];

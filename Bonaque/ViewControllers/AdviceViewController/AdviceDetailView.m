@@ -104,7 +104,6 @@
     contentLabel.text = _item.content;
     contentLabel.frame = CGRectMake(15, CGRectGetMaxY(imageView.frame) + 10, CGRectGetWidth(contentView.frame) - 30, contentSize.size.height);
     scrollView.contentSize = CGSizeMake(CGRectGetWidth(contentView.frame), CGRectGetMaxY(contentLabel.frame) + 10);
-    ATLog(@"%@", contentLabel.frame);
     
     if (scrollView.contentSize.height <= 200) {
         scrollView.contentSize = CGSizeMake(CGRectGetWidth(scrollView.frame), CGRectGetHeight(scrollView.frame) + 1);
