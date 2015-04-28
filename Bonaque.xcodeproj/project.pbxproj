@@ -25,6 +25,8 @@
 		0B25AC8D1AD124CB00AA7ACD /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B25AC8B1AD124CB00AA7ACD /* SettingsTableViewCell.xib */; };
 		0B3286141ADC02870066599E /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3286121ADC02870066599E /* MainCollectionViewCell.m */; };
 		0B3286151ADC02870066599E /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3286131ADC02870066599E /* MainCollectionViewCell.xib */; };
+		0B381C3B1AE5F269000B4B68 /* NormalSettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B381C391AE5F269000B4B68 /* NormalSettingsTableViewCell.m */; };
+		0B381C3C1AE5F269000B4B68 /* NormalSettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B381C3A1AE5F269000B4B68 /* NormalSettingsTableViewCell.xib */; };
 		0B3F9CD51AE4EDD80064EB37 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F9CD41AE4EDD80064EB37 /* UIView+Toast.m */; };
 		0B3F9CD91AE521F50064EB37 /* AdviceDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F9CD81AE521F50064EB37 /* AdviceDetailView.m */; };
 		0B6319871AD9FE4E003A3543 /* AbstractContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6319861AD9FE4E003A3543 /* AbstractContainerView.m */; };
@@ -156,6 +158,9 @@
 		0B3286111ADC02870066599E /* MainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainCollectionViewCell.h; path = ../AddUser/MainCollectionViewCell.h; sourceTree = "<group>"; };
 		0B3286121ADC02870066599E /* MainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainCollectionViewCell.m; path = ../AddUser/MainCollectionViewCell.m; sourceTree = "<group>"; };
 		0B3286131ADC02870066599E /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainCollectionViewCell.xib; path = ../AddUser/MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		0B381C381AE5F269000B4B68 /* NormalSettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalSettingsTableViewCell.h; sourceTree = "<group>"; };
+		0B381C391AE5F269000B4B68 /* NormalSettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalSettingsTableViewCell.m; sourceTree = "<group>"; };
+		0B381C3A1AE5F269000B4B68 /* NormalSettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalSettingsTableViewCell.xib; sourceTree = "<group>"; };
 		0B3F9CD31AE4EDD80064EB37 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		0B3F9CD41AE4EDD80064EB37 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		0B3F9CD71AE521F50064EB37 /* AdviceDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceDetailView.h; sourceTree = "<group>"; };
@@ -531,6 +536,9 @@
 				0B25AC891AD124CB00AA7ACD /* SettingsTableViewCell.h */,
 				0B25AC8A1AD124CB00AA7ACD /* SettingsTableViewCell.m */,
 				0B25AC8B1AD124CB00AA7ACD /* SettingsTableViewCell.xib */,
+				0B381C381AE5F269000B4B68 /* NormalSettingsTableViewCell.h */,
+				0B381C391AE5F269000B4B68 /* NormalSettingsTableViewCell.m */,
+				0B381C3A1AE5F269000B4B68 /* NormalSettingsTableViewCell.xib */,
 				0BDBB0CB1AD416C900A12AF2 /* PickerContainerView.h */,
 				0BDBB0CC1AD416C900A12AF2 /* PickerContainerView.m */,
 				0BDBB0CE1AD4D4B500A12AF2 /* DatePickerContainerView.h */,
@@ -879,6 +887,7 @@
 				0BDBB1221AD5F0C900A12AF2 /* cups.json in Resources */,
 				0BA893221ADC465D0082A4ED /* AdviceTableViewCell.xib in Resources */,
 				0BA8932B1ADC4EE10082A4ED /* PurposeTableViewCell.xib in Resources */,
+				0B381C3C1AE5F269000B4B68 /* NormalSettingsTableViewCell.xib in Resources */,
 				0B6A613C1AE574B200A0BDE9 /* Images.xcassets in Resources */,
 				0BA8930D1ADC29410082A4ED /* MainAdviceCollectionViewCell.xib in Resources */,
 				0B6A613E1AE578FF00A0BDE9 /* Mogul PopularScript.ttf in Resources */,
@@ -972,6 +981,7 @@
 				0BAFA7DF1ADEC83100F2F3E6 /* EmptyCollectionViewCell.m in Sources */,
 				0BDBB0FA1AD54AA100A12AF2 /* TextFieldedCell.m in Sources */,
 				0B6319871AD9FE4E003A3543 /* AbstractContainerView.m in Sources */,
+				0B381C3B1AE5F269000B4B68 /* NormalSettingsTableViewCell.m in Sources */,
 				0B25AC591ACFEB4B00AA7ACD /* Database.m in Sources */,
 				0BAFA7F21ADECD6000F2F3E6 /* ProfileTableViewCell.m in Sources */,
 				0B25AC641ACFECED00AA7ACD /* LeftMenuViewController.m in Sources */,
@@ -1120,6 +1130,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREFIX_HEADER = "Bonaque/Bonaque-Prefix.pch";
 				INFOPLIST_FILE = Bonaque/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -1137,6 +1148,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dorjgochoo Norovtseren (XDRSK6277F)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREFIX_HEADER = "Bonaque/Bonaque-Prefix.pch";
 				INFOPLIST_FILE = Bonaque/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;

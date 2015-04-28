@@ -85,6 +85,7 @@
 
 -(void)setTitle:(NSString *)title{
     _title = title;
+    ATLog(@"%@", _title);
     titleLabel.text = _title;
 }
 

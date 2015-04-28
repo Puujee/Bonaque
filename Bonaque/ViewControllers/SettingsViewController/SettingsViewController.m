@@ -12,6 +12,7 @@
 #import "PickerContainerView.h"
 #import "DatePickerContainerView.h"
 #import "ChooseSoundViewController.h"
+#import "NormalSettingsTableViewCell.h"
 
 @interface SettingsViewController ()<UITableViewDataSource, UITableViewDelegate, PickerContainerViewDelegate, DatePickerContainerViewDelegate >{
 }
@@ -42,6 +43,7 @@
 //        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         [_tableView registerNib:[UINib nibWithNibName:@"SettingsTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+        [_tableView registerNib:[UINib nibWithNibName:@"NormalSettingsTableViewCell" bundle:nil] forCellReuseIdentifier:@"normal_cell"];
     }
     return _tableView;
 }
@@ -131,22 +133,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if(indexPath.section == 3 && indexPath.row < 4){
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"normal_cell"];
-        
-        UILabel *titleLabel;
-        if (cell == nil)
-        {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"normal_cell"] ;
-            titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 320, 50)];
-            titleLabel.font = [UIFont systemFontOfSize:16];
-            titleLabel.textColor    = [UIColor blackColor];
-            titleLabel.textAlignment = NSTextAlignmentLeft;
-            titleLabel.tag = 233;
-            [cell.contentView addSubview:titleLabel];
+        NormalSettingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"normal_cell"];
+        if (cell == nil) {
+            cell = [[NormalSettingsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"normal_cell"] ;
         }
-        titleLabel = (UILabel *)[cell.contentView viewWithTag:233];
         SettingsItem *item = [[_itemArray objectAtIndex:indexPath.section ] objectAtIndex:indexPath.row];
-        titleLabel.text = item.title;
+        cell.nameLabel.text = item.title;
         return cell;
     }
     SettingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -358,7 +350,6 @@
         if (index == [USERDEF integerForKey:kSELECTED_LANGUAGE]) {
             return;
         }
-        [Utils setAlarmSchedule];
         [Utils removeLocalNotification:[LANGUAGE getStringForKey:@"notif_title"]];
         SettingsItem *item = [[_itemArray objectAtIndex:0] objectAtIndex:0];
         item.description = [_languageArray objectAtIndex:index];

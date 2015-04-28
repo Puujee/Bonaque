@@ -44,6 +44,10 @@
 }
 
 
+-(void)setTitle:(NSString *)title{
+    [super setTitle:title];
+}
+
 
 -(void)chooseButtonSelected{
     [self goBack];

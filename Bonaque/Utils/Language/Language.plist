@@ -292,9 +292,9 @@
 		<key>every_halfhour</key>
 		<string>Every half hour</string>
 		<key>select_start_time</key>
-		<string>Мэдэгдэл өгч эхлэх хугацааг сонгох</string>
+		<string>Эхлэх хугацааг сонгох</string>
 		<key>select_end_time</key>
-		<string>Мэдэгдэл өгч дуусах хугацааг сонгох</string>
+		<string>Дуусах хугацааг сонгох</string>
 		<key>choose</key>
 		<string>СОНГОХ</string>
 		<key>close</key>
