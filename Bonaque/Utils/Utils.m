@@ -35,11 +35,9 @@ Utils     *sharedUtils;
     [customAlertView show];
 }
 
-+(void)setAlarm:(NSString *)title withDate:(NSString *)date{
++(void)setAlarm:(NSString *)title withDate:(NSDate *)date{
     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-    NSDate* result = [Utils dateFromHouurs:date];
-
-    ATLog(@"%@", result);
+    NSDate* result = date;
     localNotification.fireDate = result;
     localNotification.alertBody = title;
     localNotification.alertAction = @"Bonaqua app";
@@ -62,10 +60,19 @@ Utils     *sharedUtils;
 
 +(void)setAlarmSchedule{
     [Utils  removeLocalNotification:[LANGUAGE getStringForKey:@"notif_title"]];
-    
+    PersonLog *lastLog = [DATABASE getTodaysPersonLog];
+    if (lastLog.currentWaterPercent.floatValue >= 100) {
+        [Utils setAlarmScheduleItsToday:NO];
+    }
+    else{
+        [Utils setAlarmScheduleItsToday:YES];
+    }
+}
+
++(void)setAlarmScheduleItsToday:(BOOL)itsToday{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"HH:mm";
-//    ATLog(@"%@", [USERDEF valueForKey:kSTART_TIME]);
+    //    ATLog(@"%@", [USERDEF valueForKey:kSTART_TIME]);
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate *startTime = [dateFormatter dateFromString:[USERDEF valueForKey:kSTART_TIME]];
     unsigned unitFlagsTime = NSCalendarUnitHour | NSCalendarUnitMinute |  NSCalendarUnitSecond;
@@ -78,7 +85,6 @@ Utils     *sharedUtils;
     NSDateComponents *endTimeComponents = [gregorian components:unitFlagsTime fromDate:endTime];
     
     NSInteger endHour = endTimeComponents.hour;
-//    NSInteger endMinute = endTimeComponents.minute;
     
     int lastNotifHour = (int)startHour;
     int lastNotifMinute = (int)startMinute;
@@ -108,23 +114,34 @@ Utils     *sharedUtils;
     for (int i = (int)startHour; i < endHour; i++) {
         for (int z = 0; z < 60; z++) {
             if (i == lastNotifHour && z == lastNotifMinute) {
-                [Utils setAlarm:[LANGUAGE getStringForKey:@"notif_title"] withDate:[NSString stringWithFormat:@"%ld:%ld", (long)lastNotifHour, (long)lastNotifMinute]];
+                if (itsToday) {
+                    [Utils setAlarm:[LANGUAGE getStringForKey:@"notif_title"] withDate:[Utils dateFromHouurs:[NSString stringWithFormat:@"%ld:%ld", (long)lastNotifHour, (long)lastNotifMinute]]];
+                }
+                else{
+                    [Utils setAlarm:[LANGUAGE getStringForKey:@"notif_title"] withDate:[Utils addOneDayFromHouurs:[NSString stringWithFormat:@"%ld:%ld", (long)lastNotifHour, (long)lastNotifMinute]]];
+
+                }
                 lastNotifHour += intervalHour;
                 lastNotifMinute += intervalMinute;
             }
             if (lastNotifMinute >= 60) {
                 lastNotifHour += 1;
                 lastNotifMinute = lastNotifMinute - 60;
-//                ATLog(@"%@:%@", lastNotifHour, lastNotifMinute);
+                //                ATLog(@"%@:%@", lastNotifHour, lastNotifMinute);
             }
         }
         if (lastNotifHour > endHour) {
             break;
         }
     }
-//    UIApplication *app = [UIApplication sharedApplication];
-//    ATLog(@"%@", [app scheduledLocalNotifications]);
-    
+}
+
++(void)changeAlarmsDate{
+    [Utils  removeLocalNotification:[LANGUAGE getStringForKey:@"notif_title"]];
+    [Utils setAlarmScheduleItsToday:NO];
+    UIApplication *app = [UIApplication sharedApplication];
+    NSArray *eventArray = [app scheduledLocalNotifications];
+    ATLog(@"%@", eventArray);
 }
 
 +(NSDate *)dateFromHouurs:(NSString *)hour{
@@ -142,6 +159,25 @@ Utils     *sharedUtils;
     [dateComponents setHour:[timeComponents hour]];
     [dateComponents setMinute:[timeComponents minute]];
     
+    return [gregorian dateFromComponents:dateComponents];;
+}
+
++(NSDate *)addOneDayFromHouurs:(NSString *)hour{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"HH:mm";
+    
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    
+    unsigned unitFlagsDate = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
+    NSDateComponents *dateComponents = [gregorian components:unitFlagsDate fromDate:[NSDate date]];
+    unsigned unitFlagsTime = NSCalendarUnitHour | NSCalendarUnitMinute |  NSCalendarUnitSecond;
+    NSDateComponents *timeComponents = [gregorian components:unitFlagsTime fromDate:[dateFormatter dateFromString:hour]];
+   
+    [dateComponents setDay:dateComponents.day + 1];
+    [dateComponents setHour:[timeComponents hour]];
+    [dateComponents setMinute:[timeComponents minute]];
+//    ATLog(@"%@", );
     return [gregorian dateFromComponents:dateComponents];;
 }
 

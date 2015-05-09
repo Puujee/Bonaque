@@ -85,6 +85,10 @@
 
 
 -(void)checkWeightReminder{
+//    UIApplication *app = [UIApplication sharedApplication];
+//    NSArray *eventArray = [app scheduledLocalNotifications];
+//    ATLog(@"%@", eventArray);
+
     NSDate *date = [USERDEF objectForKey:kLAST_UPDATE_WEIGHT];
     NSDateComponents *components = [gregorian components:NSCalendarUnitDay
                                                fromDate:date

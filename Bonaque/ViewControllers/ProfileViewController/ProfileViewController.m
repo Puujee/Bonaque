@@ -49,7 +49,12 @@
             [tableHeaderView addSubview:bgImageView];
             
             {
-                profileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 90, 90)];
+                UIView *imageViewBGView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 90, 90)];
+                [imageViewBGView.layer setCornerRadius:45];
+                imageViewBGView.clipsToBounds  = YES;
+                [tableHeaderView addSubview:imageViewBGView];
+                
+                profileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 90, 90)];
                 [profileImageView.layer setCornerRadius:45];
                 profileImageView.clipsToBounds  = YES;
                 //            profileImageView.center = CGPointMake(tableHeaderView.center.x, tableHeaderView.center.y - 20);
@@ -65,13 +70,21 @@
                     [profileImageView setImageWithURL:[NSURL URLWithString:user.img_url] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
                 }
                 profileImageView.backgroundColor = [UIColor grayColor];
-                [tableHeaderView addSubview:profileImageView];
+                [imageViewBGView addSubview:profileImageView];
+                
+                UILabel *changeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 65, 90, 25)];
+                changeLabel.text = @"Солих";
+                changeLabel.textColor = [UIColor whiteColor];
+                changeLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
+                changeLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8f];
+                changeLabel.textAlignment = NSTextAlignmentCenter;
+                [imageViewBGView addSubview:changeLabel];
                 
                 profileButton = [UIButton buttonWithType:UIButtonTypeCustom];
                 [profileButton setContentMode:UIViewContentModeCenter];
                 [profileButton addTarget:self action:@selector(signUpFacebook) forControlEvents:UIControlEventTouchUpInside];
                 profileButton .frame = CGRectMake(10, 10, 90, 90);
-                [tableHeaderView addSubview:profileButton];
+                [imageViewBGView addSubview:profileButton];
             }
             
             UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(profileButton.frame) + 10, 20, CGRectGetWidth(self.view.frame) - (CGRectGetMaxX(profileButton.frame) + 10), 40)];

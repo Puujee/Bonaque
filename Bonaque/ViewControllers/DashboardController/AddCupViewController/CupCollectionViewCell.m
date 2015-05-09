@@ -48,7 +48,6 @@
         label.backgroundColor = CLEAR_COLOR;
         label.textColor = MAIN_COLOR;
         [bgView addSubview:label];
-        
 //        cupButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //        cupButton.backgroundColor = [UIColor whiteColor];
 //        [cupButton setBackgroundImage:[HXColor imageWithColor:MAIN_COLOR] forState:UIControlStateHighlighted];

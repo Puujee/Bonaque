@@ -31,6 +31,8 @@
 +(void)removeLocalNotification:(NSString *)title;
 +(void)removeAllLocalNotification;
 
++(void)changeAlarmsDate;
+
 +(NSDate *)dateFromHouurs:(NSString *)hour;
 
 +(SystemSoundID)createSystemSoundId:(NSString*)filename withExtension:(NSString *)ext;

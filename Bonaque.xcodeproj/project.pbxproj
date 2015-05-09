@@ -1209,7 +1209,7 @@
 					"$(inherited)",
 					/Users/L/Downloads/GoogleAnalyticsServicesiOS_3.10,
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b1d84228-50a0-4ec1-a0e1-f1284fc268e5";
 			};
@@ -1236,7 +1236,7 @@
 					"$(inherited)",
 					/Users/L/Downloads/GoogleAnalyticsServicesiOS_3.10,
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b1d84228-50a0-4ec1-a0e1-f1284fc268e5";
 			};

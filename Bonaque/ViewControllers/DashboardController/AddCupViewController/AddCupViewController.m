@@ -112,7 +112,7 @@
         [DATABASE saveChanges];
         [DATABASE updatePurposeLog];
         if (lastLog.currentWaterPercent.floatValue >= 100) {
-            
+            [Utils changeAlarmsDate];
             DialogType type = kCongrulateDialog;
             if (lastLog.currentWaterPercent.floatValue > 120 && lastLog.currentWaterPercent.floatValue <= 160) {
                 type = kWarningDialog;
