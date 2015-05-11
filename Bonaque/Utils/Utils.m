@@ -38,6 +38,7 @@ Utils     *sharedUtils;
 +(void)setAlarm:(NSString *)title withDate:(NSDate *)date{
     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
     NSDate* result = date;
+    ATLog(@"%@", date);
     localNotification.fireDate = result;
     localNotification.alertBody = title;
     localNotification.alertAction = @"Bonaqua app";

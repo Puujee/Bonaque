@@ -63,7 +63,7 @@
 //        ChangeLanguageViewController    *frontViewController = [[ChangeLanguageViewController alloc] initWithNibName:nil bundle:nil];
 //        UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
 //        self.window.rootViewController = frontNavigationController;
-
+        [Utils removeAllLocalNotification];
         TutorialViewController *tutViewController = [[TutorialViewController alloc] initWithNibName:nil bundle:nil];
         UINavigationController *nc1 = [[UINavigationController alloc] initWithRootViewController:tutViewController];
         nc1.navigationBarHidden = YES;
