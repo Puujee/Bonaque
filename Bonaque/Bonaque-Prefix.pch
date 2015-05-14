@@ -59,6 +59,8 @@
 #define kLAST_UPDATE_WEIGHT @"kLAST_UPDATE_WEIGHT"
 #define kFIRST_DATE @"kFIRST_DATE"
 #define kLAST_DRINKED_ML @"kLAST_DRINKED_ML"
+#define kFIRST_WEIGHT_ML @"kFIRST_WEIGHT_ML"
+
 
 #define ITUNES_DOWNLOAD_URL @"http://itunes.com/apps/bonaqua"
 

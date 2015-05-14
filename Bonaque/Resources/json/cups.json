@@ -8,12 +8,12 @@
              {
              "id": "2",
              "ml": "330",
-             "icon": "cup_330"
+             "icon": "ic_cup_custom"
              },
              {
              "id": "3",
              "ml": "500",
-             "icon": "cup_500"
+             "icon": "ic_cup_custom"
              },
              {
              "id": "4",
@@ -23,7 +23,7 @@
              {
              "id": "5",
              "ml": "1500",
-             "icon": "cup_1500"
+             "icon": "ic_cup_custom"
              }
              ]
 }

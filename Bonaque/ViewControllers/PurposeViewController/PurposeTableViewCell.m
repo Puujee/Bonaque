@@ -28,6 +28,7 @@
     _purposeImageView.image = [UIImage imageNamed:_item.icon];
     [_purposeImageView.layer setBorderWidth:0];
 
+
     _checkLabel.hidden = YES;
     
     UIColor *borderColor = UIColorFromRGB(0x67dd17);
@@ -63,7 +64,8 @@
     else{
         _dayLabel .textColor = [UIColor lightGrayColor];
         _purposeDescription.textColor = [UIColor grayColor];
-        _dayLabel.text = [NSString stringWithFormat:@"%@ %@", item.days , [LANGUAGE getStringForKey:@"days_remaining"]];
+        _dayLabel.text = @"";
+//        _dayLabel.text = [NSString stringWithFormat:@"%@ %@", item.days , [LANGUAGE getStringForKey:@"days_remaining"]];
         _purposeDescription.text = item.content;
         
     }
@@ -95,6 +97,10 @@
     
     dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy.MM.dd";
+    
+    if ([UIScreen isiPhone4] || [UIScreen isiPhone5]) {
+        _purposeDescription.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:12];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

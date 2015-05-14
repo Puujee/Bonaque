@@ -174,7 +174,7 @@
     {
         ProfileItem *item = [[ProfileItem alloc] init];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"yy-MM-dd";
+        dateFormatter.dateFormat = @"yy/MM/dd";
         NSDate *firstDate = [USERDEF objectForKey:kFIRST_DATE];
         item.title = [dateFormatter stringFromDate:firstDate];
         item.desc = [LANGUAGE getStringForKey:@"profile_1"];

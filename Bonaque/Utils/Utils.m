@@ -51,7 +51,7 @@ Utils     *sharedUtils;
 }
 
 +(void)setAlarmSchedule{
-    [Utils  removeLocalNotification:@"Ус уух цаг боллоо"];
+    [Utils  removeLocalNotification:[LANGUAGE getStringForKey:@"notif_title"]];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"HH:mm";
@@ -167,6 +167,17 @@ Utils     *sharedUtils;
     }
 }
 
++(void)removeAllLocalNotification{
+    UIApplication *app = [UIApplication sharedApplication];
+    NSArray *eventArray = [app scheduledLocalNotifications];
+    for (int i=0; i<[eventArray count]; i++)
+    {
+        UILocalNotification* oneEvent = [eventArray objectAtIndex:i];
+        NSLog(@"the notification this is canceld is %@", oneEvent.alertBody);
+        [[UIApplication sharedApplication] cancelLocalNotification:oneEvent] ; // delete the notification from the system
+    }
+}
+
 +(void)showCongrulatePurpose:(Purpose *)item{
     PurposeCongrulateDialog *pickerContainer = [[PurposeCongrulateDialog alloc] initWithFrame:[[APPDEL window] bounds]];
 //    pickerContainer.delegate = self;
@@ -181,7 +192,7 @@ Utils     *sharedUtils;
 
 #pragma mark SoundPlay
 
-+(SystemSoundID)createSystemSoundId:(NSString*)filename {
++(SystemSoundID)createSystemSoundId:(NSString*)filename  withExtension:(NSString *)ext{
     
     SystemSoundID soundID;
     
@@ -191,7 +202,7 @@ Utils     *sharedUtils;
     }
     else {
         NSString *cafPath =
-        [[NSBundle mainBundle] pathForResource:filename ofType:@""];
+        [[NSBundle mainBundle] pathForResource:filename ofType:ext];
         NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
         err = AudioServicesCreateSystemSoundID((__bridge CFURLRef) cafURL, &soundID);
     }
@@ -201,8 +212,8 @@ Utils     *sharedUtils;
     return  soundID;
 }
 
-+(void)playSystemSoundWithName:(NSString *)path {
-    SystemSoundID endRecordMessageSound = [Utils createSystemSoundId:path];
++(void)playSystemSoundWithName:(NSString *)path  withExtension:(NSString *)ext{
+    SystemSoundID endRecordMessageSound = [Utils createSystemSoundId:path withExtension:ext];
     ATLog(@"%@", endRecordMessageSound);
     if (endRecordMessageSound == 0) {
         ATLog(@"can not play endRecordMessageSound");

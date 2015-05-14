@@ -20,10 +20,14 @@
 @dynamic waterGoal;
 
 +(void)createNewPersonLog:(float)height withWeight:(float)weight{
+    [PersonLog createNewPersonLog:height withWeight:weight withDate:[NSDate date]];
+}
+
++(void)createNewPersonLog:(float)height withWeight:(float)weight withDate:(NSDate *)date{
     [USERDEF setInteger:0 forKey:kLAST_DRINKED_ML];
     PersonLog   *item = [NSEntityDescription insertNewObjectForEntityForName:@"PersonLog" inManagedObjectContext:DATABASE.managedObjectContext];
     item.weight = [NSNumber numberWithFloat:weight];
-    item.date = [NSDate date];
+    item.date = date;
     item.waterGoal = [NSNumber numberWithFloat:weight *ML_PER_KG];
     int bmiIndex = 0;
     float bmiCalc = (weight / ((height / 100) * (height / 100)));

@@ -474,9 +474,34 @@ Database *sharedDatabase;
         return item ;
     }
     Person *user = [self getUser];
+    [self createMissedLogDay];
+    
     [PersonLog createNewPersonLog:user.height.floatValue withWeight:user.weight.floatValue];
     item = [[self.personLogFetchedResultController fetchedObjects] lastObject];
+//    ATLog(@"%@", [self.personLogFetchedResultController fetchedObjects]);
     return item;
+}
+
+-(void)createMissedLogDay{
+    PersonLog *lastLog = [[self.personLogFetchedResultController fetchedObjects] lastObject];
+    NSDate *date = lastLog.date;
+    
+    NSDateComponents *components = [gregorian components:NSDayCalendarUnit fromDate:date toDate:[NSDate date] options:0];
+    NSInteger interval = components.day;
+    ATLog(@"%@", date);
+    NSUInteger units = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+    Person *person = [self getUser];
+    for (int i = 0; i < interval; i++) {
+        if (i != 0) {
+            NSDateComponents *comps = [gregorian components:units fromDate:date];
+            comps.day = comps.day + i;
+            NSDate *tomorrowMidnight = [gregorian dateFromComponents:comps];
+//            ATLog(@"tommowr %@", tomorrowMidnight);
+            [PersonLog createNewPersonLog:person.height.floatValue withWeight:person.weight.floatValue withDate:tomorrowMidnight ];
+        }
+
+    }
+    ATLog(@"%@", [NSDate date]);
 }
 
 -(PersonLog *)getPersonLogWithDate:(NSDate *)date{

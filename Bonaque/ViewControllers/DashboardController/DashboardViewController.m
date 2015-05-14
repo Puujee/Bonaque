@@ -122,7 +122,7 @@
 
 -(void)addCupCompleted:(Cup *)cup{
     if ([USERDEF boolForKey:kITS_ANY_SOUND]) {
-        [Utils  playSystemSoundWithName:@"water_sound.caf"];
+        [Utils  playSystemSoundWithName:@"water_sound" withExtension:@"caf"];
     }
     int lastDrinked = (int)[USERDEF integerForKey:kLAST_DRINKED_ML];
     [self.view makeToast:[NSString stringWithFormat:@"Та %d мл ус уулаа.", lastDrinked] duration:4 position:[NSValue valueWithCGPoint:CGPointMake(self.view.center.x, CGRectGetHeight(self.view.frame) - 60)] undoButton:^{

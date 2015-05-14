@@ -124,7 +124,11 @@ ActionBlock _actionBlock;
     [wrapperView addSubview:sepView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"ic_undo"] forState:UIControlStateNormal];
     [button setTitle:@"Буцаах" forState:UIControlStateNormal];
+    
+    button.titleLabel.font = [UIFont fontWithName:MAIN_LIGHT_FONT size:15];
+    [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 15, 0, 0)];
     [button setBackgroundImage:[HXColor imageWithColor:UIColorFromRGB(0xffc107)] forState:UIControlStateNormal];
     button.frame = CGRectMake(CGRectGetMaxX(sepView.frame), 0, CGRectGetWidth(wrapperView.frame) - CGRectGetMaxX(sepView.frame), 40);
     [button addTarget:self action:@selector(toastUndoButtonClicked) forControlEvents:UIControlEventTouchUpInside];

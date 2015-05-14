@@ -47,7 +47,7 @@
                                                                                 action:@selector(doneSelecting)];
     [[self navigationItem] setRightBarButtonItem:doneButton];
     
-    _itemArray = @[@"Стандарт ая", @"Аяга дүүрэх"];
+    _itemArray = @[@"Стандарт ая", @"Аяга дүүрэх", @"Ус дугарах"];
     [self.view addSubview:self.tableView];
 }
 
@@ -98,10 +98,13 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     selectedRow = indexPath.row;
     if (indexPath.row == 0) {
-        [Utils  playSystemSoundWithName:@"sms-received.wav"];
+        [Utils  playSystemSoundWithName:@"sms-received" withExtension:@"wav"];
     }
     if (indexPath.row == 1) {
-        [Utils  playSystemSoundWithName:@"water_sound.caf"];
+        [Utils  playSystemSoundWithName:@"water_sound" withExtension:@"caf"];
+    }
+    if (indexPath.row == 2) {
+        [Utils  playSystemSoundWithName:@"water_sound6" withExtension:@"wav"];
     }
     [_tableView reloadData];
 }

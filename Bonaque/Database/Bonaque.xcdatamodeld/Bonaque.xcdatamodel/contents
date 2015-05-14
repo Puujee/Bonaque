@@ -14,11 +14,11 @@
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES">
         <attribute name="gender" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="img_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="weight" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="PersonLog" representedClassName="PersonLog" syncable="YES">
         <attribute name="currentWaterLitre" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
@@ -26,7 +26,7 @@
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="waterGoal" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
-        <attribute name="weight" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="weightBMI" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Purpose" representedClassName="Purpose" syncable="YES">

@@ -36,7 +36,7 @@
         valueTextField.placeholder = [LANGUAGE getStringForKey:@"water_size"];
         valueTextField.backgroundColor = [UIColor whiteColor];
         valueTextField.returnKeyType =  UIReturnKeyNext;
-        valueTextField.keyboardType = UIKeyboardTypeNumberPad;
+        valueTextField.keyboardType = UIKeyboardTypeDecimalPad;
         valueTextField.textColor = [UIColor blackColor];
         valueTextField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [contentView addSubview:valueTextField];
@@ -61,6 +61,10 @@
 -(void)chooseButtonSelected {
     if (valueTextField.text.length > 0) {
         weight = valueTextField.text;
+        if (weight.floatValue == 0) {
+            [Utils showAlert:@"Та 0-с их утга оруулна уу."];
+            return;
+        }
         if (![DATABASE isHaveCupMl:weight.floatValue]) {
             isInsert = YES;
             Cup   *cup = [NSEntityDescription insertNewObjectForEntityForName:@"Cup" inManagedObjectContext:DATABASE.managedObjectContext];
@@ -102,6 +106,17 @@
     else {
         [Utils showAlert:[LANGUAGE getStringForKey:@"must_insert_weight"]];
     }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    // Prevent crashing undo bug – see note below.
+    if(range.length + range.location > textField.text.length)
+    {
+        return NO;
+    }
+    
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    return (newLength > 5) ? NO : YES;
 }
 
 -(void)didFinishHide{

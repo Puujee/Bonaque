@@ -50,7 +50,7 @@
             yLabelTitle.backgroundColor = CLEAR_COLOR;
             yLabelTitle.numberOfLines = 99;
             yLabelTitle.transform  =  CGAffineTransformMakeRotation(M_PI/2 *3);
-            yLabelTitle.text = @"өдөрт уусан усны хэмжээ(литр)";
+            yLabelTitle.text = @"Өдөрт уусан усны хэмжээ(литр)";
             yLabelTitle.lineBreakMode = NSLineBreakByWordWrapping;
             yLabelTitle.textColor = [UIColor lightGrayColor];
             [topChartContainer addSubview:yLabelTitle];
@@ -121,9 +121,9 @@
             }
         }
         float height = 270;
-        if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {
-            height = 295;
-        }
+//        if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {
+//            height = 295;
+//        }
         
         UIView *bottomChartContainer = [[UIView alloc] initWithFrame:CGRectMake(10,  CGRectGetMaxY(topChartContainer.frame) + 10, CGRectGetWidth(self.frame) - 20, height)];
         bottomChartContainer.backgroundColor = [UIColor whiteColor];
@@ -150,7 +150,7 @@
             yLabelTitle.backgroundColor = CLEAR_COLOR;
             yLabelTitle.numberOfLines = 99;
             yLabelTitle.transform  =  CGAffineTransformMakeRotation(M_PI/2 *3);
-            yLabelTitle.text = @"таны биеийн жин(кг)";
+            yLabelTitle.text = @"Таны биеийн жин(кг)";
             yLabelTitle.lineBreakMode = NSLineBreakByWordWrapping;
             yLabelTitle.textColor = [UIColor lightGrayColor];
             [bottomChartContainer addSubview:yLabelTitle];

@@ -75,6 +75,8 @@
     self.navigationItem.hidesBackButton = NO;
     [self.view addSubview:self.tableView];
     [self createItems];
+    
+    [Utils removeAllLocalNotification];
 }
 
 -(void)createItems{
@@ -133,7 +135,7 @@
             TextFieldedCell *cell = [self getTextFieldedCell];
             cell.item = [_itemArray objectAtIndex:1];
             cell.valueTextField.delegate = self;
-            cell.valueTextField.keyboardType = UIKeyboardTypeNumberPad;
+            cell.valueTextField.keyboardType = UIKeyboardTypeDecimalPad;
             cell.valueTextField.indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
             //            cell.valueTextField.placeHolderTextColor = [UIColor grayColor];
             [textFieldsArray addObject:cell.valueTextField];
@@ -144,7 +146,7 @@
             cell.item = [_itemArray objectAtIndex:2];
             cell.valueTextField.delegate = self;
             cell.isLast = YES;
-            cell.valueTextField.keyboardType = UIKeyboardTypeNumberPad;
+            cell.valueTextField.keyboardType = UIKeyboardTypeDecimalPad;
             cell.valueTextField.indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
             [textFieldsArray addObject:cell.valueTextField];
             [cellTempArray addObject:cell];
@@ -217,6 +219,21 @@
     }
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    // Prevent crashing undo bug – see note below.
+    if(range.length + range.location > textField.text.length)
+    {
+        return NO;
+    }
+    
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    GSTextField *tf = (GSTextField *)textField;
+    if (tf.indexPath.row == 0) {
+        return (newLength > 30) ? NO : YES;
+    }
+    return (newLength > 5) ? NO : YES;
+}
+
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     GSTextField *tf = (GSTextField *)textField;
@@ -229,7 +246,6 @@
     else{
         [tf resignFirstResponder];
     }
-    
     return  YES;
 }
 
@@ -292,7 +308,6 @@
 }
 
 -(void)setupUser{
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     TextFieldedCell *cell = [cellArray objectAtIndex:0];
     NSString *name = cell.valueTextField.text;
     
@@ -304,13 +319,22 @@
     
     CheckBoxCell *cell3 = [cellArray objectAtIndex:1];
     int  gender = cell3.selectedValue - 100;
+    if (height.floatValue == 0) {
+        [Utils showAlert:@"Та 0-с их утга оруулна уу."];
+        return;
+    }
+    else if (weight.floatValue == 0) {
+        [Utils showAlert:@"Та 0-с их утга оруулна уу."];
+        return;
+    }
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     if (name.length > 0 && height.length > 0 && weight.length > 0) {
         Person   *item = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:DATABASE.managedObjectContext];
         item.name = name;
-        item.height = [NSNumber numberWithInt:height.floatValue];
-        item.weight = [NSNumber numberWithInt:weight.floatValue];
-        item.gender = [NSNumber numberWithInt:gender];
+        item.height = [NSNumber numberWithFloat:height.floatValue];
+        item.weight = [NSNumber numberWithFloat:weight.floatValue];
+        item.gender = [NSNumber numberWithFloat:gender];
         NSError *error = nil;
         if (![DATABASE.personFetchedResultController   performFetch:&error]) {
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
@@ -326,6 +350,7 @@
 //        [Utils setAlarmSchedule];
         [USERDEF setObject:[NSDate date] forKey:kLAST_UPDATE_WEIGHT];
         [USERDEF setObject:[NSDate date] forKey:kFIRST_DATE];
+        [USERDEF setFloat:weight.floatValue forKey:kFIRST_WEIGHT_ML];
         [APPDEL showLoginViewController];
     }
     else{

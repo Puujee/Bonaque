@@ -43,6 +43,7 @@
         
         bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 270, 440)];
         bgImageView.center = contentView.center;
+        bgImageView.contentMode = UIViewContentModeScaleAspectFit;
         [contentView addSubview:bgImageView];
         
         titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10,CGRectGetMinX(bgImageView.frame), CGRectGetWidth(contentView.frame),44)];
@@ -93,7 +94,7 @@
         bgImageView.image = [UIImage imageNamed:@"dialog_1"];
         
         bgImageView.frame = CGRectMake(0, 0, 270, 440);
-        bgImageView.center = contentView.center;
+        bgImageView.center = self.center;
         
         titleLabel.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) + 10 ,CGRectGetMinY(bgImageView.frame) + 10, CGRectGetWidth(bgImageView.frame) - 20,50);
         titleLabel.text = @"Та өдрийн хэрэгцээгээ хангалттай авч чадлаа.";
@@ -110,8 +111,8 @@
     else if (_type == kWarningDialog){
         bgImageView.image = [UIImage imageNamed:@"dialog_2"];
         
-        bgImageView.frame = CGRectMake(0, 0, 270, 440);
-        bgImageView.center = contentView.center;
+        bgImageView.frame = CGRectMake(0, 0, 270, 322);
+        bgImageView.center = self.center;
         
         contentTitleLabel.text = @"Анхаар!";
         contentTitleLabel.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) + 40, CGRectGetMinY(bgImageView.frame) + 10, CGRectGetWidth(bgImageView.frame) - 80, 50);
@@ -136,13 +137,14 @@
     else if (_type == kSuperWarningDialog){
         bgImageView.image = [UIImage imageNamed:@"dialog_3"];
         
-        bgImageView.frame = CGRectMake(0, 0, 270, 440);
-        bgImageView.center = contentView.center;
+        bgImageView.frame = CGRectMake(0, 0, 270, 322);
+        bgImageView.center = self.center;
+        
         
         contentTitleLabel.text = @"Хангалттай!!!";
-        contentTitleLabel.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) + 40, CGRectGetMinY(bgImageView.frame) + 10, CGRectGetWidth(bgImageView.frame) - 80, 50);
+        contentTitleLabel.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) + 20, CGRectGetMinY(bgImageView.frame) + 10, CGRectGetWidth(bgImageView.frame) - 40, 50);
         contentTitleLabel.textColor = [UIColor whiteColor];
-        contentTitleLabel.font = [UIFont fontWithName:@"MogulPopularScript" size:43];
+        contentTitleLabel.font = [UIFont fontWithName:@"MogulPopularScript" size:38];
         
         
         contentImageView.frame = CGRectMake(CGRectGetMinX(bgImageView.frame) +((CGRectGetWidth(bgImageView.frame) - 137)/2), CGRectGetMaxY(contentTitleLabel.frame) + 10, 137, 137);

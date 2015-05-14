@@ -58,7 +58,7 @@
 
 -(void)reloadLeftMenuItems{
     _languageArray = [NSMutableArray arrayWithObjects:[LANGUAGE getStringForKey:@"en"], [LANGUAGE getStringForKey:@"mn"], nil];
-    _soundsArray = [NSMutableArray arrayWithObjects:@"Стандарт дуу", @"Усны чимээ", @"Ус уух чимээ", nil];
+    _soundsArray = [NSMutableArray arrayWithObjects:@"Стандарт дуу", @"Усны чимээ", @"Ус дугарах", nil];
     _intervalArray = [LANGUAGE getArrayForKey:@"interval_array"];
 
     NSMutableArray *tempArray = [NSMutableArray  array];
@@ -137,7 +137,6 @@
         if (cell == nil)
         {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"normal_cell"] ;
-            
             titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 320, 50)];
             titleLabel.font = [UIFont systemFontOfSize:16];
             titleLabel.textColor    = [UIColor blackColor];
@@ -360,7 +359,6 @@
             return;
         }
         [Utils setAlarmSchedule];
-
         [Utils removeLocalNotification:[LANGUAGE getStringForKey:@"notif_title"]];
         SettingsItem *item = [[_itemArray objectAtIndex:0] objectAtIndex:0];
         item.description = [_languageArray objectAtIndex:index];

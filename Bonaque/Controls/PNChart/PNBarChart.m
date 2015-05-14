@@ -258,7 +258,6 @@
         bar.grade = grade;
         if (grade != 0) {
             label.text = [NSString stringWithFormat:@"%.f", value];
-            ATLog(@"%@", grade);
             if (grade > 1) {
                 grade = 1;
             }

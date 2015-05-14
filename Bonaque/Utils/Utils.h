@@ -29,11 +29,12 @@
 +(void)setAlarm:(NSString *)title withDate:(NSString *)date;
 +(void)setAlarmSchedule;
 +(void)removeLocalNotification:(NSString *)title;
++(void)removeAllLocalNotification;
 
 +(NSDate *)dateFromHouurs:(NSString *)hour;
 
-+(SystemSoundID)createSystemSoundId:(NSString*)filename;
-+(void)playSystemSoundWithName:(NSString *)path;
++(SystemSoundID)createSystemSoundId:(NSString*)filename ;
++(void)playSystemSoundWithName:(NSString *)path withExtension:(NSString *)ext;
 
 +(void)showCongrulatePurpose:(Purpose *)item;
 

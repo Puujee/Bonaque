@@ -90,12 +90,12 @@
     if (selected) {
         bgView.backgroundColor = MAIN_COLOR;
         label.textColor = [UIColor whiteColor];
-        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_clicked", _item.icon]];
+//        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_clicked", _item.icon]];
     }
     else{
         bgView.backgroundColor = [UIColor whiteColor];;
         label.textColor = MAIN_COLOR;
-        imageView.image = [UIImage imageNamed:_item.icon];
+//        imageView.image = [UIImage imageNamed:_item.icon];
     }
 }
 
@@ -111,14 +111,17 @@
     [super layoutSubviews];
     bgView.frame = self.contentView.bounds;
     imageView.frame = CGRectMake(0, 0, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 15);
-    if (_item.ml.intValue >= 330) {
-        imageView.frame = CGRectMake(0, 10, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 45);
+    if (_item.ml.intValue == 330) {
+//        imageView.image = [UIImage imageNamed:@"ic_cup_custom"];
+        imageView.frame = CGRectMake(0, 25, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 70);
     }
     else if (_item.ml.intValue == 500){
-        imageView.frame = CGRectMake(0, 10, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 35);
+//        imageView.image = [UIImage imageNamed:@"ic_cup_custom"];
+        imageView.frame = CGRectMake(0, 20, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 60);
     }
-    else if (_item.ml.intValue == 500){
-        imageView.frame = CGRectMake(0, 10, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 25);
+    else if (_item.ml.intValue == 1500){
+//        imageView.image = [UIImage imageNamed:@"ic_cup_custom"];
+        imageView.frame = CGRectMake(0, 10, CGRectGetWidth(bgView.bounds), CGRectGetHeight(bgView.frame)  - 50);
     }
     label.frame  = CGRectMake(10, CGRectGetHeight(bgView.frame) - 40, CGRectGetWidth(bgView.bounds) - 20, 20);
 }

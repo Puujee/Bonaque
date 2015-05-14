@@ -125,9 +125,9 @@
 //    [scrollView addSubview:lineCharts];
     
     float height = 570;
-    if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {
-        height = 595;
-    }
+//    if ([UIScreen isiPhone5] || [UIScreen isiPhone4]) {
+//        height = 595;
+//    }
     
     barCharts    = [[Barchart alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleContainer.frame), CGRectGetWidth(self.view.frame), height)];
     barCharts.backgroundColor = [UIColor clearColor];
@@ -284,7 +284,7 @@
     else if (percent <= 40){
         return UIColorFromRGB(0xe85858);
     }
-    return nil;
+    return [UIColor whiteColor];
 }
 
 -(UIColor *)getColorFromCurrentWeight:(PersonLog *)water{
@@ -301,7 +301,7 @@
     else if (water.weightBMI.intValue == 3){
         return UIColorFromRGB(0xea31a2);
     }
-    return nil;
+    return [UIColor whiteColor];
 }
 
 #pragma mark

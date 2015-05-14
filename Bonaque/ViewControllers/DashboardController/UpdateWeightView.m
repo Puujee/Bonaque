@@ -32,7 +32,7 @@
         valueTextField.placeholder = [LANGUAGE getStringForKey:@"weight"];
         valueTextField.backgroundColor = [UIColor whiteColor];
         valueTextField.returnKeyType =  UIReturnKeyNext;
-        valueTextField.keyboardType = UIKeyboardTypeNumberPad;
+        valueTextField.keyboardType = UIKeyboardTypeDecimalPad;
         valueTextField.textColor = [UIColor blackColor];
         valueTextField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [contentView addSubview:valueTextField];
@@ -67,7 +67,7 @@
         
         [USERDEF setObject:[NSDate date] forKey:kLAST_UPDATE_WEIGHT];
         Person *user = [DATABASE getUser];
-        user.weight = [NSNumber numberWithInteger:weight.intValue];
+        user.weight = [NSNumber numberWithFloat:weight.floatValue];
         
         NSError *error = nil;
         if (![DATABASE.personFetchedResultController   performFetch:&error]) {
@@ -81,6 +81,17 @@
     else {
         [Utils showAlert:@"Та жингээ оруулна уу."];
     }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    // Prevent crashing undo bug – see note below.
+    if(range.length + range.location > textField.text.length)
+    {
+        return NO;
+    }
+    
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    return (newLength > 5) ? NO : YES;
 }
 
 -(void)didFinishHide{

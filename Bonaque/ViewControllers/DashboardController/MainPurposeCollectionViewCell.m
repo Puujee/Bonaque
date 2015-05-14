@@ -20,7 +20,6 @@
     // Initialization code
     [self.layer setCornerRadius:3];
     self.clipsToBounds = YES;
-    
     _purposImageBgView.backgroundColor = MAIN_COLOR;
 }
 

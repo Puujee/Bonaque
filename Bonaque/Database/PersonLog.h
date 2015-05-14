@@ -22,4 +22,8 @@
 
 
 +(void)createNewPersonLog:(float)height withWeight:(float)weight;
+
++(void)createNewPersonLog:(float)height withWeight:(float)weight withDate:(NSDate *)date;
+
+
 @end

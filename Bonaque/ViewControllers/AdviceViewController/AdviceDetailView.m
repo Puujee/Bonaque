@@ -96,7 +96,7 @@
     imageView.image = [UIImage imageNamed:_item.icon];
     
     
-    CGRect contentSize = [_item.content boundingRectWithSize:CGSizeMake(CGRectGetWidth(contentView.frame) - 20, 9999)
+    CGRect contentSize = [_item.content boundingRectWithSize:CGSizeMake(CGRectGetWidth(contentView.frame) - 30, 9999)
                                                      options:NSStringDrawingUsesLineFragmentOrigin
                                                   attributes:@{NSFontAttributeName:contentLabel.font}
                                                      context:nil];

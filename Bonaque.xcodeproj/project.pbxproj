@@ -104,6 +104,7 @@
 		0BDBB1231AD5F0C900A12AF2 /* purposes_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BDBB11E1AD5F0C900A12AF2 /* purposes_en.json */; };
 		0BDBB1241AD5F0C900A12AF2 /* purposes_mn.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BDBB11F1AD5F0C900A12AF2 /* purposes_mn.json */; };
 		0BEEB6A31AE613BF00E937CC /* sms-received.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0BEEB6A21AE613BF00E937CC /* sms-received.wav */; };
+		0BEEB6A51AE8FAF700E937CC /* water_sound6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0BEEB6A41AE8FAF700E937CC /* water_sound6.wav */; };
 		0BF8EF141ADEBCC900680837 /* TutorialItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8EF131ADEBCC900680837 /* TutorialItem.m */; };
 		1485CC1AFFA75EA6902EF31B /* libPods-Bonaque.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C704B0530E7B98F61F3CD0 /* libPods-Bonaque.a */; };
 /* End PBXBuildFile section */
@@ -299,6 +300,7 @@
 		0BDBB11E1AD5F0C900A12AF2 /* purposes_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purposes_en.json; sourceTree = "<group>"; };
 		0BDBB11F1AD5F0C900A12AF2 /* purposes_mn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purposes_mn.json; sourceTree = "<group>"; };
 		0BEEB6A21AE613BF00E937CC /* sms-received.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sms-received.wav"; sourceTree = "<group>"; };
+		0BEEB6A41AE8FAF700E937CC /* water_sound6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = water_sound6.wav; sourceTree = "<group>"; };
 		0BF8EF121ADEBCC900680837 /* TutorialItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialItem.h; sourceTree = "<group>"; };
 		0BF8EF131ADEBCC900680837 /* TutorialItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialItem.m; sourceTree = "<group>"; };
 		44B50B3A8B56E8FE1947B7A9 /* Pods-Bonaque.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonaque.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonaque/Pods-Bonaque.release.xcconfig"; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 		0B25AC561ACFEB3700AA7ACD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0BEEB6A41AE8FAF700E937CC /* water_sound6.wav */,
 				0BEEB6A21AE613BF00E937CC /* sms-received.wav */,
 				0B6A613D1AE578FF00A0BDE9 /* Mogul PopularScript.ttf */,
 				0BB34A5B1AD8FA4D00F9EFE1 /* water_sound.caf */,
@@ -865,6 +868,7 @@
 			files = (
 				0BDBB1231AD5F0C900A12AF2 /* purposes_en.json in Resources */,
 				0BEEB6A31AE613BF00E937CC /* sms-received.wav in Resources */,
+				0BEEB6A51AE8FAF700E937CC /* water_sound6.wav in Resources */,
 				0BDBB1211AD5F0C900A12AF2 /* advices_mn.json in Resources */,
 				0BAFA7D01ADD075E00F2F3E6 /* MainPurposeCollectionViewCell.xib in Resources */,
 				0BDBB1201AD5F0C900A12AF2 /* advices_en.json in Resources */,
@@ -1066,7 +1070,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1101,7 +1105,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

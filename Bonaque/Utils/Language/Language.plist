@@ -252,7 +252,7 @@
 		<key>dailyPurpose</key>
 		<string>Өндөөрийн төлөв</string>
 		<key>weight</key>
-		<string>Таны жин</string>
+		<string>Таны жин (кг)</string>
 		<key>configuration</key>
 		<string>Үндсэн тохиргоо</string>
 		<key>water_notif</key>
@@ -319,9 +319,9 @@
 			<string>Every 60 days</string>
 		</array>
 		<key>name</key>
-		<string>Хэрэглэгчийн нэр</string>
+		<string>Таны нэр</string>
 		<key>height</key>
-		<string>Таны өндөр</string>
+		<string>Таны өндөр (см)</string>
 		<key>alert_empty_field</key>
 		<string>Та бүх талбарыг гүйцэт бөглөнө үү</string>
 		<key>water_size</key>
@@ -379,7 +379,7 @@
 		<key>profile_2</key>
 		<string>ТАНЫ УУСАН УСНЫ ХЭМЖЭЭ /литр/</string>
 		<key>profile_3</key>
-		<string>ТАНЫ ӨДӨРТ УУЖ БУЙ ДУНДАЖ УСНЫ ХЭМЖЭЭ /литр/</string>
+		<string>ТАНЫ ӨДӨРТ УУЖ БУЙ УСНЫ ДУНДАЖ ХЭМЖЭЭ   /литр/</string>
 		<key>profile_4</key>
 		<string>ТОГТМОЛ УС УУЖ ЭХЭЛСНЭЭС ХОЙШХИ ХАМГИЙН ИХ ЖИН /кг/</string>
 		<key>profile_5</key>

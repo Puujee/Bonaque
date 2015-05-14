@@ -70,7 +70,7 @@
     goalLabelFont = 14;
     
     mansHeight = 200;
-    titleBotMargin = 35;
+    titleBotMargin = 45;
 
     if ([UIScreen isiPhone5]) {
         titleHeight = 25;
@@ -220,6 +220,8 @@
     float fullHeight = mansHeight;
     float currentHeight = (fullHeight*lastItem.currentWaterPercent.floatValue)/ 100;
 //    float currentHeight = (fullHeight*100)/ 100;
+    
+    ATLog(@"%@", lastItem.currentWaterPercent.floatValue);
     [UIView animateWithDuration:1.5f delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGRect rect = _percentMaskedView.frame;
         rect.origin.y = mansHeight - currentHeight;
